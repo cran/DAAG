@@ -5,7 +5,8 @@
 Component + Residual plot for a term in a \code{lm} model.
 }
 \usage{
-component.residual(lm.obj, which=2, xlab = "Component", ylab = "C + R")
+component.residual(lm.obj = mice12.lm, which = 1, xlab = "Component",
+    ylab = "C+R")
 }
 \arguments{
   \item{lm.obj}{ A \code{lm} object }
