@@ -2,7 +2,7 @@
 \alias{spam7}
 \non_function{}
 \title{Spam E-mail Data}
-\usage{spam7}
+\usage{data(spam7)}
 \description{
 The data consist of 4601 email items, of which 1813 items were identified
 as spam.
@@ -16,9 +16,9 @@ as spam.
     \item{money}{number of occurrences of the word `money'}
     \item{n000}{number of occurrences of the string `000'}
     \item{make}{number of occurrences of the word `make'}
-    \item{yesno}{outcome variable, a factor with levels
-    \code{n} not spam,
-    \code{y} spam}
+    \item{yesno}{outcome variable}
+    \item{yesno}{\code{n} not spam}
+    \item{yesno}{\code{y} spam}
   }
 }
 \source{
@@ -29,6 +29,7 @@ of California at Irvine Repository of Machine Learning Databases
 and Domain Theories. The address is:  http://www.ics.uci.edu/~Here
 }
 \examples{
+data(spam7)
 require(rpart)
 spam.rpart <- rpart(formula = yesno ~ crl.tot + dollar + bang +
    money + n000 + make, data=spam7)

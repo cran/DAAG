@@ -2,7 +2,7 @@
 \alias{litters}
 \non_function{}
 \title{Mouse Litters}
-\usage{litters}
+\usage{data(litters)}
 \description{
 Data on the body and brain weights of 20 mice, together
 with the size of the litter.  Two mice were taken from each
@@ -26,6 +26,7 @@ and behavioral development in mice. Developmental Psychobiology
 \examples{
 print("Multiple Regression - Example 6.2")
 
+data(litters)
 pairs(litters, labels=c("lsize\n\n(litter size)", "bodywt\n\n(Body Weight)",  "brainwt\n\n(Brain Weight)"))
   # pairs(litters) gives a scatterplot matrix with less adequate labeling
 

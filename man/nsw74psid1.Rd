@@ -2,7 +2,7 @@
 \alias{nsw74psid1}
 \non_function{}
 \title{Labour Training Evaluation Data}
-\usage{nsw74psid3}
+\usage{data(nsw74psid3)}
 \description{
 This data frame contains 2675 rows and 10 columns.
 These data are pertinent to an investigation of the way that   
@@ -42,6 +42,7 @@ training programs. American Economic Review 76: 604-620.
 
 }
 \examples{
+data(nsw74psid1)
 print("Interpretation of Regression Coefficients - Example 6.6")
 
  nsw74psid1.lm <- lm(re78~ trt+ (age + educ + re74 + re75) +

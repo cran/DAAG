@@ -2,7 +2,7 @@
 \alias{orings}
 \non_function{}
 \title{Challenger O-rings Data}
-\usage{orings}
+\usage{data(orings)}
 \description{
 Record of the number and type of O-ring failures prior to the
 tragic Challenger mission in January, 1986.
@@ -26,6 +26,7 @@ Vol. 1, 1986: 129-131.
 Connecticut, U.S.A.
 }
 \examples{
+data(orings)
 oldpar <- par(mfrow=c(1,2))
 plot(Total~Temperature, data = orings[c(1,2,4,11,13,18),]) # the 
                # observations included in the pre-launch charts

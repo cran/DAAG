@@ -2,7 +2,7 @@
 \alias{carprice}
 \non_function{}
 \title{US Car Price Data}
-\usage{carprice}
+\usage{data(carprice)}
 \description{
 U.S. data extracted from \code{Cars93}, a data frame in the 
 MASS package.
@@ -15,7 +15,7 @@ MASS package.
     \item{Price}{Price for a mid-range model}
     \item{Max.Price}{Price for a `premium' model}
     \item{Range.Price}{Difference between Max.Price and Min.Price}
-    \item{RoughRange}{Rough.Range plus some N(0,.0001) noise}
+    \item{Rough.Range}{Rough.Range plus some N(0,.0001) noise}
     \item{gpm100}{The number of gallons required to travel 100 miles}
     \item{MPG.city}{Average number of miles per gallon for city driving}
     \item{MPG.highway}{Average number of miles per gallon for highway 
@@ -33,6 +33,7 @@ available from \\ http://www.stats.ox.ac.uk/pub/MASS3/.
 } 
   \examples{ 
 print("Multicollinearity - Example 6.8")
+data(carprice) 
 pairs(carprice[,-c(1,8,9)])
 
 carprice1.lm <- lm(gpm100 ~ Type+Min.Price+Price+Max.Price+Range.Price,

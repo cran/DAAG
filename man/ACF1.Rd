@@ -2,7 +2,7 @@
 \alias{ACF1}
 \non_function{}
 \title{Aberrant Crypt Foci in Rat Colons}
-\usage{ACF1}
+\usage{data(ACF1)}
 \description{
 Numbers of aberrant crypt foci (ACF) in the 
 section 1 of the colons of 22 rats subjected to a single
@@ -29,6 +29,7 @@ preneoplastic lesions in rat colon.  Carcinogenesis, 12(11): 2093-2098,
 1991.
 }
 \examples{
+data(ACF1)
 sapply(split(ACF1$count,ACF1$endtime),var)
 plot(count ~ endtime, data=ACF1, pch=16)
 pause()

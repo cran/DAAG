@@ -2,7 +2,7 @@
 \alias{possumsites}
 \non_function{}
 \title{Possum Sites}
-\usage{possumsites}
+\usage{data(possumsites)}
 \description{
 The \code{possumsites} data frame consists of latitudes, longitudes,
 and altitudes for the seven sites from Southern Victoria to central Queensland
@@ -26,6 +26,7 @@ mountain brushtail possum, Trichosurus caninus Ogilby
 \examples{
 require(oz)
 oz(sections=c(3:5, 11:16))
+data(possumsites)
 attach(possumsites)
 points(latitude, longitude, pch=16, col=2)
 chw <- par()$cxy[1]

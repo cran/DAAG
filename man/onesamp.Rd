@@ -32,6 +32,7 @@ Also produced is a confidence interval and p-value for the test.
 \author{J.H. Maindonald}
 
 \examples{
+data(pair65)
 onesamp(dset = pair65, x = "ambient", y = "heated", xlab =
         "Amount of stretch (ambient)", ylab =
         "Amount of stretch (heated)") 

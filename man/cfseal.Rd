@@ -2,7 +2,7 @@
 \alias{cfseal}
 \non_function{}
 \title{Cape Fur Seal Data}
-\usage{cfseal}
+\usage{data(cfseal)}
 \description{
 The \code{cfseal} data frame has 30 rows and 11 columns consisting
 of weight measurements for various organs taken from 30 Cape Fur
@@ -32,6 +32,7 @@ anatomy of the male Cape fur seal, Arctocephalus pusillus pusillus
 Journal of Anatomy (Cambridge) 195: 235-255.  (WWF project ZA-348)
 }
 \examples{
+data(cfseal)
 print("Allometric Growth - Example 5.7")
 
 cfseal.lm <- lm(log(heart) ~ log(weight), data=cfseal); summary(cfseal.lm)

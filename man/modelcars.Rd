@@ -2,7 +2,7 @@
 \alias{modelcars}
 \non_function{}
 \title{Model Car Data}
-\usage{modelcars}
+\usage{data(modelcars)}
 \description{
 The \code{modelcars} data frame has 12 rows and 2 columns.
 The data are for an experiment in which a model car was released
@@ -24,6 +24,7 @@ the ramp (in cm)}
 J.H. Maindonald
 }
 \examples{
+data(modelcars)
 plot(modelcars)
 modelcars.lm <- lm(distance.traveled ~ starting.point, data=modelcars)
 aov(modelcars.lm)

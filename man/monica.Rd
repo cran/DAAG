@@ -2,7 +2,7 @@
 \alias{monica}
 \non_function{}
 \title{WHO Monica Data}
-\usage{monica}
+\usage{data(monica)}
 \description{
 The \code{monica} data frame has 6357 rows and 12 columns. Note
 that \code{mifem} is the female subset of this data frame.
@@ -37,6 +37,8 @@ known}
   project; see the web site http://www.ktl.fi
 }
 \examples{
+data(monica)
+
 print("CART - Example 10.7")
 summary(monica)
 pause()

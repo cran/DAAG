@@ -2,7 +2,7 @@
 \alias{pair65}
 \non_function{}
 \title{Heated Elastic Bands}
-\usage{pair65}
+\usage{data(pair65)}
 \description{
 The \code{pair65} data frame has 9 rows and 2 columns.
 Eighteen elastic bands were divided into nine pairs, with bands
@@ -25,6 +25,7 @@ the unheated bands}
 J.H. Maindonald
 }
 \examples{
+data(pair65)
 mean(pair65$heated - pair65$ambient)
 sd(pair65$heated - pair65$ambient)
 }

@@ -2,7 +2,7 @@
 \alias{mignonette}
 \non_function{}
 \title{Darwin's Wild Mignonette Data}
-\usage{mignonette}
+\usage{data(mignonette)}
 \description{
 Data which compare the heights of crossed plants with
 self-fertilized plants.  Plants were paired within the
@@ -26,6 +26,7 @@ York.
 \examples{
 print("Is Pairing Helpful? - Example 4.3.1")
 
+data(mignonette)
 attach(mignonette)
 plot(cross ~ self, pch=rep(c(4,1), c(3,12))); abline(0,1) 
 abline(mean(cross-self), 1, lty=2)

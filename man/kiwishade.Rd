@@ -2,14 +2,13 @@
 \alias{kiwishade}
 \non_function{}
 \title{Kiwi Shading Data}
-\usage{kiwishade}
+\usage{data(kiwishade)}
 \description{
 The \code{kiwishade} data frame has 48 rows and 4 columns.
 The data are from a designed experiment that  
 compared different kiwifruit shading treatments.
 There are four vines in each plot, and four plots (one for each of four 
-treatments: none, Aug2Dec, Dec2Feb, and Feb2May) in each of three blocks
-(locations: west, north, east). Each 
+treatments) in each the three blocks. Each 
 plot has the same number of vines, each block has the same number of 
 plots, with each treatment occurring the same number of times.
 }
@@ -17,20 +16,20 @@ plots, with each treatment occurring the same number of times.
   This data frame contains the following columns:
   \describe{
     \item{yield}{Total yield (in kg)}
-    \item{plot}{a factor with levels    \code{east.Aug2Dec},
+    \item{block}{a factor indicating the location of  with levels
+\code{east}, \code{north}, \code{west} }
+\item{shade}{a factor representing the period for which
+the experimenter placed shading over the vines; with levels:
+    \code{none} no shading,    \code{Aug2Dec} August - December,
+    \code{Dec2Feb} December - February,    \code{Feb2May} February - May}}
+\item{plot}{a factor with levels    \code{east.Aug2Dec},
     \code{east.Dec2Feb},    \code{east.Feb2May},
     \code{east.none},    \code{north.Aug2Dec},
     \code{north.Dec2Feb},    \code{north.Feb2May},
     \code{north.none},    \code{west.Aug2Dec},
     \code{west.Dec2Feb},    \code{west.Feb2May},
     \code{west.none} }
-    \item{block}{a factor indicating the location of the plot with levels
-\code{east}, \code{north}, \code{west} }
-\item{shade}{a factor representing the period for which
-the experimenter placed shading over the vines; with levels:
-    \code{none} no shading,    \code{Aug2Dec} August - December,
-    \code{Dec2Feb} December - February,    \code{Feb2May} February - May}
-}
+  }
 }
 \details{
 The northernmost plots were grouped together because they
@@ -49,6 +48,7 @@ Horticultural Science 67: 481-487.
 issues. New Zealand Journal of Agricultural Research 35: 121-141.
 }
 \examples{
+data(kiwishade)
 print("Data Summary - Example 2.2.1")
 attach(kiwishade)
 kiwimeans <- aggregate(yield, by=list(block, shade), mean)

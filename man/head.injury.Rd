@@ -2,7 +2,7 @@
 \alias{head.injury}
 \non_function{}
 \title{Minor Head Injury (Simulated) Data}
-\usage{head.injury}
+\usage{data(head.injury)}
 \description{
 The \code{head.injury} data frame has 3121 rows and 11 columns.
 The data were simulated according to a simple logistic
@@ -38,5 +38,9 @@ Laupacis, A., McKnight, R.D., Verbee, R., Brison, R., Cass, D.,
 Eisenhauer, M., Greenberg, G.H., and Worthington, J. (2001) 
 The Canadian CT Head Rule for Patients with Minor Head Injury,
 The Lancet. 357: 1391-1396. 
+}
+\examples{
+data(head.injury)
+## maybe str(head.injury) ; plot(head.injury) ...
 }
 \keyword{datasets}

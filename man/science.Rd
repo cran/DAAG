@@ -2,7 +2,7 @@
 \alias{science}
 \non_function{}
 \title{School Science Survey Data}
-\usage{science}
+\usage{data(science)}
 \description{
 The \code{science} data frame has 1385 rows and 7 columns.
 
@@ -13,15 +13,15 @@ schools.
 \format{
   This data frame contains the following columns:
   \describe{
-    \item{State}{a factor with levels
+    \item{State}{a factor with levels}
    \code{ACT} Australian Capital Territory, 
    \code{NSW} New South Wales}
-    \item{PrivPub}{a factor with levels
-        \code{private} school, 
-        \code{public} school}
+    \item{PrivPub}{a factor with levels}
+    \code{private} school, 
+\code{public} school}
     \item{school}{a numeric code identifying the school}
     \item{class}{a numeric vector identifying the class}
-    \item{sex}{a factor with levels
+    \item{sex}{a factor with levels}
     \code{f}, \code{m} }
     \item{like}{ a summary score
   based on two of the questions, on a scale from 1 (dislike)
@@ -34,6 +34,7 @@ schools.
 National University
 }
 \examples{
+data(science)
 attach(science)
 classmeans <- aggregate(like, by=list(PrivPub, Class), mean)
 names(classmeans) <- c("PrivPub","Class","like")

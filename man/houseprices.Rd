@@ -2,7 +2,7 @@
 \alias{houseprices}
 \non_function{}
 \title{Aranda House Prices}
-\usage{houseprices}
+\usage{data(houseprices)}
 \description{
 The \code{houseprices} data frame consists of the floor
 area, price, and the number
@@ -22,6 +22,7 @@ in thousands of Australian dollars}
 J.H. Maindonald
 }
 \examples{
+data(houseprices)
 plot(sale.price~area, data=houseprices)
 pause()
 

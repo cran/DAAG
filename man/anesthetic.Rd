@@ -2,7 +2,7 @@
 \alias{anesthetic}
 \non_function{}
 \title{Anesthetic Effectiveness}
-\usage{anesthetic}
+\usage{data(anesthetic)}
 \description{
 Thirty patients were given an anesthetic agent maintained
 at a predetermined level (conc) for 15 minutes before making
@@ -30,6 +30,7 @@ unknown
 \examples{
 print("Logistic Regression - Example 8.1.4")
 
+data(anesthetic)
 z <- table(anesthetic$nomove, anesthetic$conc)
 tot <- apply(z, 2, sum)         # totals at each concentration
 prop <- z[2,  ]/(tot)           # proportions at each concentration

@@ -2,7 +2,7 @@
 \alias{wages1833}
 \non_function{}
 \title{Wages of Lancashire Cotton Factory Workers in 1833}
-\usage{wages1833}
+\usage{data(wages1833)}
 \description{
 The \code{wages1833} data frame gives the wages 
   of Lancashire cotton factory workers in 1833. 
@@ -22,6 +22,7 @@ Boot, H.M. 1995. How Skilled Were the Lancashire Cotton Factory
   Workers in 1833? Economic History Review 48: 283-303.
 }
 \examples{
+data(wages1833)
 attach(wages1833)
 plot(mwage~age,ylim=range(c(mwage,fwage[fwage>0])))
 points(fwage[fwage>0]~age[fwage>0],pch=15,col="red")

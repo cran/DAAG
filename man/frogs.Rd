@@ -2,7 +2,7 @@
 \alias{frogs}
 \non_function{}
 \title{Frogs Data}
-\usage{frogs}
+\usage{data(frogs)}
 \description{
 The \code{frogs} data frame has 212 rows and 11 columns.
 The data are on the distribution of the Southern Corroboree
@@ -31,6 +31,8 @@ the southern corroboree frog (Pseudophryne corroboree). M.Sc. thesis,
 University of Canberra, Canberra.
 }
 \examples{
+data(frogs)
+
 print("Multiple Logistic Regression - Example 8.2")
 
 plot(northing ~ easting, data=frogs, pch=c(1,16)[frogs$pres.abs+1],
@@ -38,9 +40,7 @@ plot(northing ~ easting, data=frogs, pch=c(1,16)[frogs$pres.abs+1],
 
 pause()
 
-oldpar <- par(oma=c(2,2,2,2), cex=0.5)
-pairs(frogs[,4:10])
-par(oldpar)
+pairs(frogs[,4:10], oma=c(2,2,2,2), cex=0.5)
 
 pause()
 

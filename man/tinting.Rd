@@ -2,7 +2,7 @@
 \alias{tinting}
 \non_function{}
 \title{Car Window Tinting Experiment Data}
-\usage{tinting}
+\usage{data(tinting)}
 \description{
 These data are from an experiment that aimed to model the
 effects of the tinting of car windows on visual
@@ -30,8 +30,8 @@ to perform a simple discrimination task (in milliseconds)}
     \item{csoa}{critical stimulus onset asynchrony, the time 
 to recognize an alphanumeric target (in milliseconds)}
     \item{agegp}{a factor with levels
-\code{younger}, 21-27, 
-\code{older}, 70-78 }
+\code{young}, 21-27, 
+\code{elderly}, 70-78 }
   }
 }
 \details{
@@ -43,11 +43,11 @@ the front side windows of cars are tinted to 35% VLT.
 \source{
  Burns, N.R., Nettlebeck, T., White, M. and Willson, J., 1999.
 Effects of car window tinting on visual performance: a comparison of
-younger and older drivers. Ergonomics 42: 428-443. 
+elderly and young drivers. Ergonomics 42: 428-443. 
 }
 \examples{
+data(tinting)
 require(lattice)
-levels(tinting$agegp) <- toupper.initial(levels(tinting$agegp))
 xyplot(csoa ~ it | sex * agegp, data=tinting) # Simple use of xyplot()
 pause()
 

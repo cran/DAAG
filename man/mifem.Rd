@@ -2,7 +2,7 @@
 \alias{mifem}
 \non_function{}
 \title{Mortality Outcomes for Females Suffering Myocardial Infarction}
-\usage{mifem}
+\usage{data(mifem)}
 \description{
 The \code{mifem} data frame has 1295 rows and 10 columns.
 }
@@ -34,6 +34,8 @@ known}
   project; see the web site http://www.ktl.fi/monicaindex.html
 }
 \examples{
+data(mifem)
+
 print("CART - Example 10.7")
 summary(mifem)
 pause()

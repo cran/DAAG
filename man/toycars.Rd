@@ -2,7 +2,7 @@
 \alias{toycars}
 \non_function{}
 \title{Toy Cars Data}
-\usage{toycars}
+\usage{data(toycars)}
 \description{
 The \code{toycars} data frame has 27 rows and 3 columns.
 Observations are on the
@@ -20,6 +20,7 @@ car)}
   }
 }
 \examples{
+data(toycars)
 toycars.lm <- lm(distance ~ angle + factor(car), data=toycars)
 summary(toycars.lm)
 }

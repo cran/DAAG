@@ -2,7 +2,7 @@
 \alias{allbacks}
 \non_function{}
 \title{Measurements on a Selection of Books}
-\usage{allbacks}
+\usage{data(allbacks)}
 \description{
 The \code{allbacks} data frame gives measurements
 on the volume and weight of 15 books, some of which
@@ -26,6 +26,7 @@ The bookshelf of J. H. Maindonald.
 }
 \examples{
 print("Multiple Regression - Example 6.1")
+data(allbacks)  
 attach(allbacks)
 volume.split <- split(volume, cover)
 weight.split <- split(weight, cover)

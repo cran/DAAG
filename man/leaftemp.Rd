@@ -2,7 +2,7 @@
 \alias{leaftemp}
 \non_function{}
 \title{Leaf and Air Temperature Data}
-\usage{leaftemp}
+\usage{data(leaftemp)}
 \description{
 These data consist of measurements of vapour pressure and of the 
 difference between leaf and air temperature.
@@ -21,6 +21,7 @@ difference between leaf and air temperature.
 Katharina Siebke and Susan von Cammerer, Australian National University.
 }
 \examples{
+data(leaftemp)
 print("Fitting Multiple Lines - Example 7.3")
 
 leaf.lm1 <- lm(tempDiff ~ 1 , data = leaftemp)

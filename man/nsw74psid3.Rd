@@ -2,7 +2,7 @@
 \alias{nsw74psid3}
 \non_function{}
 \title{Labour Training Evaluation Data}
-\usage{nsw74psid3}
+\usage{data(nsw74psid3)}
 \description{
 These data are pertinent to an investigation of the way that   
 earnings changed, between 1974-1975 and 1978, in the absence
@@ -44,6 +44,7 @@ training programs. American Economic Review 76: 604-620.
 }
 \examples{
 print("Contingency Tables - Example 4.4")
+data(nsw74psid3)
 table(nsw74psid3$trt, nsw74psid3$nodeg)
 chisq.test(table(nsw74psid3$trt,nsw74psid3$nodeg))
 }

@@ -24,6 +24,7 @@ Good, P. 2000. Permutation Tests. Springer, New York.
 }
 \author{J.H. Maindonald}
 \examples{
+data(pair65)
 onet.permutation()
 }
 \keyword{models}

@@ -2,7 +2,7 @@
 \alias{sugar}
 \non_function{}
 \title{Sugar Data}
-\usage{sugar}
+\usage{data(sugar)}
 \description{
 The \code{sugar} data frame has 12 rows and 2 columns.
 They are from an experiment that
@@ -26,6 +26,7 @@ cellulose.
 Anonymous
 }
 \examples{
+data(sugar)
 sugar.aov <- aov(weight ~ trt, data=sugar)
 fitted.values(sugar.aov)
 summary.lm(sugar.aov)

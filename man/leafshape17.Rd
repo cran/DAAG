@@ -2,7 +2,7 @@
 \alias{leafshape17}
 \non_function{}
 \title{Subset of Leaf Shape Data Set}
-\usage{leafshape17}
+\usage{data(leafshape17)}
 \description{
 The \code{leafshape17} data frame has 61 rows and 8 columns.
 These are leaf length, width and petiole measurements taken
@@ -15,7 +15,7 @@ at several sites in Australia.  This is a subset of the
     \item{bladelen}{leaf length (in mm)}
     \item{petiole}{a numeric vector}
     \item{bladewid}{leaf width (in mm)}
-    \item{latitude}{latitude}
+    \item{lattitude}{lattitude}
     \item{logwid}{natural logarithm of width}
     \item{logpet}{logarithm of petiole measurement}
     \item{loglen}{logarithm of length}
@@ -30,6 +30,7 @@ forests. Journal of Ecology 87: 1012-1024.
 \examples{
 print("Discriminant Analysis - Example 11.2")
 
+data(leafshape17)
 require(MASS)
 leaf17.lda <- lda(arch ~ logwid+loglen, data=leafshape17)
 leaf17.hat <- predict(leaf17.lda)

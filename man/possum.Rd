@@ -2,7 +2,7 @@
 \alias{possum}
 \non_function{}
 \title{Possum Measurements}
-\usage{possum}
+\usage{data(possum)}
 \description{
 The \code{possum} data frame consists of nine morphometric
 measurements on each of 104 mountain brushtail possums, trapped
@@ -41,12 +41,12 @@ mountain brushtail possum, Trichosurus caninus Ogilby
 449-458. 
 }
 \examples{
+data(possum)
 boxplot(earconch~sex, data=possum)
 pause()
 
 sex <- as.integer(possum$sex)
-oldpar <- par(oma=c(2,4,5,4))
-pairs(possum[, c(9:11)], pch=c(0,2:7), col=c("red","blue"),
+pairs(possum[, c(9:11)], oma=c(2,4,5,4), pch=c(0,2:7), col=c("red","blue"),
   labels=c("tail\nlength","foot\nlength","ear conch\nlength"))
 chh <- par()$cxy[2]; xleg <- 0.05; yleg <- 1.04
 oldpar <- par(xpd=TRUE)  
@@ -61,6 +61,7 @@ pause()
 sapply(possum[,6:14], function(x)max(x,na.rm=TRUE)/min(x,na.rm=TRUE))
 pause()
 
+require(mva)           # Load multivariate analysis library
 here <- na.omit(possum$footlgth)
 possum.prc <- princomp(possum[here, 6:14])
 pause()

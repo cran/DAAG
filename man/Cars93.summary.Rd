@@ -2,7 +2,7 @@
 \alias{Cars93.summary}
 \non_function{}
 \title{A Summary of the Cars93 Data set}
-\usage{Cars93.summary}
+\usage{data(Cars93.summary)}
 \description{
 The \code{Cars93.summary} data frame has 6 rows and 4 columns
 created from information in the \code{Cars93} data set in the Venables 
@@ -32,6 +32,7 @@ Lock, R. H. (1993) 1993 New Car Data. Journal of Statistics
 MASS library
 }
 \examples{
+data(Cars93.summary)
 type <- Cars93.summary$abbrev
 type <- Cars93.summary[,4]
 type <- Cars93.summary[,"abbrev"]

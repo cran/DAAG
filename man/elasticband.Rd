@@ -2,7 +2,7 @@
 \alias{elasticband}
 \non_function{}
 \title{Elastic Band Data}
-\usage{elasticband}
+\usage{data(elasticband)}
 \description{
 The \code{elasticband} data frame has 7 rows and 2 columns
 giving, for each amount by which an elastic band is stretched
@@ -21,6 +21,8 @@ elastic band was stretched}
  J. H. Maindonald
 }
 \examples{
+data(elasticband)
+
 print("Example 1.8.1")
 
 attach(elasticband)     # R now knows where to find stretch and distance

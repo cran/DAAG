@@ -2,7 +2,7 @@
 \alias{bomsoi}
 \non_function{}
 \title{Southern Oscillation Index Data}
-\usage{bomsoi}
+\usage{data(bomsoi)}
 \description{
 The Southern Oscillation Index (SOI) is the difference in barometric  
 pressure at sea level between Tahiti and Darwin.  Annual SOI and
@@ -47,6 +47,8 @@ southern oscillation and Australian rainfall and temperature.
 Geophysical Research Letters 23: 3357-3360.
 } 
   \examples{ 
+require(ts)
+data(bomsoi) 
 plot(ts(bomsoi[, 15:14], start=1900),
      panel=function(y,...)panel.smooth(1900:2001, y,...))
 
@@ -77,5 +79,49 @@ plot(detrain ~ detSOI, data = detsoi,
   xlab="Detrended SOI", ylab = "Detrended log(Rainfall-250)")
 lines(lowess(detsoi$detrain ~ detsoi$detSOI)) 
 par(mfrow = c(1,1))
+
+require(nlme)
+soi.gls <- gls(detrain ~ detSOI, data = detsoi, correlation = 
+corARMA(q=12))
+summary(soi.gls)
+
+soi1ML.gls <- update(soi.gls, method = "ML")
+soi0ML.gls <- update(soi.gls, detrain ~ 1, method = "ML")
+soi2ML.gls <- update(soi.gls, detrain ~ detSOI + detSOI^2, method = "ML")
+anova(soi2ML.gls, soi1ML.gls)
+
+# compare with MA(11) and MA(13)
+soi11.gls <- update(soi.gls, correlation=corARMA(q=11))
+soi13.gls <- update(soi.gls, correlation=corARMA(q=13))
+anova(soi11.gls, soi.gls, soi13.gls)
+
+# compare with the white noise model
+soi0.gls <- gls(detrain ~ detSOI, data=detsoi)
+anova(soi0.gls, soi.gls)
+
+# a Portmanteau test of whiteness for the white noise model residuals
+
+Box.test(resid(soi0.gls), lag=20, type="Ljung-Box")
+# check residual properties
+acf(resid(soi.gls))                     # (Correlated) residuals
+acf(resid(soi.gls, type="normalized"))  # Innovation estimates, uncorrelated
+qqnorm(resid(soi.gls, type="normalized"))  ## Examine  normality
+# Now extract the moving average parameters, and plot the
+# the theoretical autocorrelation function that they imply.
+beta <- summary(soi.gls$modelStruct)$corStruct
+plot(ARMAacf(ma=beta,lag.max=20), type="h")   
+# Next, plot several simulated autocorrelation functions
+# We can plot autocorrelation functions as though they were time series!
+
+plot.ts(ts(cbind(
+  "Series 1" = acf(arima.sim(list(ma=beta), n=83), plot=FALSE, 
+lag.max = 20)$acf,
+  "Series 2" = acf(arima.sim(list(ma=beta), n=83), plot=FALSE, 
+lag.max = 20)$acf,
+  "Series 3" = acf(arima.sim(list(ma=beta), n=83), plot=FALSE, 
+lag.max = 20)$acf), start=0), type="h", main = "", xlab = "Lag")
+# Show confidence bounds for the MA parameters
+intervals(soi.gls)
+
 } 
 \keyword{datasets}

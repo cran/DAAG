@@ -2,7 +2,7 @@
 \alias{austpop}
 \non_function{}
 \title{Population figures for Australian States and Territories}
-\usage{austpop}
+\usage{data(austpop)}
 \description{
 Population figures for Australian states and territories for 1917, 1927,
 ..., 1997.
@@ -29,6 +29,9 @@ the whole country}
 Australian Bureau of Statistics
 }
 \examples{
+data(austpop)
+
+pause()
 print("Looping - Example 1.7")
 
 growth.rates <- numeric(8)

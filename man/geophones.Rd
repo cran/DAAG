@@ -2,7 +2,7 @@
 \alias{geophones}
 \non_function{}
 \title{Seismic Timing Data}
-\usage{geophones}
+\usage{data(geophones)}
 \description{
 The \code{geophones} data frame has 56 rows and 2 columns.
 Thickness of a layer of Alberta substratum as measured by
@@ -16,6 +16,7 @@ a line of geophones.
   }
 }
 \examples{
+data(geophones) 
 plot(geophones)
 lines(lowess(geophones, f=.25))
 }

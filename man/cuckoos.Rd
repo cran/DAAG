@@ -2,7 +2,7 @@
 \alias{cuckoos}
 \non_function{}
 \title{Cuckoo Eggs Data}
-\usage{cuckoos}
+\usage{data(cuckoos)}
 \description{
 Length and breadth measurements of 120 eggs lain in the nests of six 
 different species of host bird.
@@ -10,19 +10,17 @@ different species of host bird.
 \format{
   This data frame contains the following columns:
   \describe{
-    \item{length}{the egg lengths in millimeters}
-    \item{breadth}{the egg breadths in millimeters}
-    \item{species}{a factor with levels
+    \item{length}{the egg lengths in tenths of millimeters}
+    \item{breadth}{the egg breadths in tenths of millimeters}
+    \item{species}{a factor with levels}
    \code{hedge.sparrow}, 
    \code{meadow.pipit}, 
    \code{pied.wagtail}, 
    \code{robin}, 
    \code{tree.pipit}, 
-   \code{wren} 
+   \code{wren} }
   } 
-   \item{id}{a numeric vector}
 } 
-}
   \source{ Latter, O.H. (1902). The eggs of Cuculus canorus. An
 Inquiry into the dimensions of the cuckoo's egg and the relation of the
 variations to the size of the eggs of the foster-parent, with notes on
@@ -32,7 +30,7 @@ coloration, &c. Biometrika i, 164.
  Tippett, L.H.C. 1931: "The Methods of Statistics". Williams & Norgate, 
 London.
 } 
-  \examples{ 
+  \examples{ data(cuckoos) 
 print("Strip and Boxplots - Example 2.1.2")
 
 attach(cuckoos)

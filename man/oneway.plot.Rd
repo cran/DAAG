@@ -5,9 +5,9 @@
 A line plot of means for unstructured comparison.
 }
 \usage{
-oneway.plot(obj = rice.aov, axisht = 6, xlim = NULL, xlab = NULL,
-    lsdht = 1.5, hsdht = 0.5, textht = axisht - 2.5, oma = rep(1,
-        4), angle = 80, alpha = 0.05)
+oneway.plot(obj = rice.aov, axisht = 6, xlim=NULL, xlab=NULL,
+               lsdht = 1.5, hsdht = 0.5, textht=axisht-3,
+               oma=rep(1,4), angle=80, alpha = 0.05)
 }
 \arguments{
   \item{obj}{One way analysis of variance object (from aov)}
@@ -28,6 +28,7 @@ A line plot
 \author{J.H. Maindonald}
 
 \examples{
+data(rice)
 rice.aov <- aov(ShootDryMass ~ trt, data=rice)
 oneway.plot(obj=rice.aov)
 }
