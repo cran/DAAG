@@ -2,7 +2,7 @@
 \alias{bomsoi}
 \non_function{}
 \title{Southern Oscillation Index Data}
-\usage{data(bomsoi)}
+\usage{bomsoi}
 \description{
 The Southern Oscillation Index (SOI) is the difference in barometric  
 pressure at sea level between Tahiti and Darwin.  Annual SOI and
@@ -48,7 +48,6 @@ Geophysical Research Letters 23: 3357-3360.
 } 
   \examples{ 
 require(ts)
-data(bomsoi) 
 plot(ts(bomsoi[, 15:14], start=1900),
      panel=function(y,...)panel.smooth(1900:2001, y,...))
 

@@ -2,7 +2,7 @@
 \alias{leafshape17}
 \non_function{}
 \title{Subset of Leaf Shape Data Set}
-\usage{data(leafshape17)}
+\usage{leafshape17}
 \description{
 The \code{leafshape17} data frame has 61 rows and 8 columns.
 These are leaf length, width and petiole measurements taken
@@ -30,7 +30,6 @@ forests. Journal of Ecology 87: 1012-1024.
 \examples{
 print("Discriminant Analysis - Example 11.2")
 
-data(leafshape17)
 require(MASS)
 leaf17.lda <- lda(arch ~ logwid+loglen, data=leafshape17)
 leaf17.hat <- predict(leaf17.lda)

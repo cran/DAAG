@@ -2,7 +2,7 @@
 \alias{two65}
 \non_function{}
 \title{Unpaired Heated Elastic Bands}
-\usage{data(pair65)}
+\usage{pair65}
 \description{
 Twenty-one elastic bands were divided into two groups.
 
@@ -24,7 +24,6 @@ the unheated bands}
 J.H. Maindonald
 }
 \examples{
-data(two65)
 twot.permutation(two65$ambient,two65$heated) # two sample permutation test
 }
 \keyword{datasets}

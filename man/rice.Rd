@@ -2,7 +2,7 @@
 \alias{rice}
 \non_function{}
 \title{Genetically Modified and Wild Type Rice Data}
-\usage{data(rice)}
+\usage{rice}
 \description{
 The \code{rice} data frame has 72 rows and 5 columns.
 The data are from an experiment that compared wild type (wt)
@@ -32,7 +32,6 @@ stimulation of rice growth and development.  Australian Journal of
 Plant Physiology 28: 923-927.
 }
 \examples{
-data(rice)
 print("One and Two-Way Comparisons - Example 4.5")
 attach(rice)
 oldpar <- par(las = 2)

@@ -18,7 +18,6 @@ panel.corr(data, ...)
 
 # correlation between body and brain weights for 20 mice:
 
-data(litters)
 weights <- litters[,-1]
 names(weights) <-  c("x","y")
 weights <- list(weights)

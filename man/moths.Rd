@@ -2,7 +2,7 @@
 \alias{moths}
 \non_function{}
 \title{Moths Data}
-\usage{data(moths)}
+\usage{moths}
 \description{
 The \code{moths} data frame has 41 rows and 4 columns.
 These data are from a study of the effect of habitat on the
@@ -32,7 +32,6 @@ Sharyn Wragg, formerly of Australian National University
 }
 \examples{
 print("Quasi Poisson Regression - Example 8.3")
-data(moths)
 rbind(table(moths[,4]), sapply(split(moths[,-4], moths$habitat), apply,2, 
 sum))
 A.glm <- glm(formula = A ~ log(meters) + factor(habitat), family = 

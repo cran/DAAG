@@ -2,7 +2,7 @@
 \alias{Manitoba.lakes}
 \non_function{}
 \title{The Nine Largest Lakes in Manitoba}
-\usage{data(Manitoba.lakes)}
+\usage{Manitoba.lakes}
 \description{
 The \code{Manitoba.lakes} data frame has 9 rows and 2 columns.
 The areas and elevations of the nine largest lakes in
@@ -28,7 +28,6 @@ the lakes (in square kilometers)}
 The CANSIM data base at Statistics Canada.
 }
 \examples{
-data(Manitoba.lakes)
 plot(Manitoba.lakes)
 plot(Manitoba.lakes[-1,])
 }

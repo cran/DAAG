@@ -37,7 +37,6 @@ ms = the overall mean square of prediction error
 \seealso{ \code{lm} }
 
 \examples{
-data(houseprices)
 cv.lm()
 }
 \keyword{models}

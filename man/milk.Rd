@@ -2,7 +2,7 @@
 \alias{milk}
 \non_function{}
 \title{Milk Sweetness Study}
-\usage{data(milk)}
+\usage{milk}
 \description{
 The \code{milk} data frame has 17 rows and 2 columns.
 Each of 17 panelists compared two milk samples
@@ -25,7 +25,6 @@ of additive}
 }
 \examples{
 print("Rug Plot - Example 1.8.1")
-data(milk)
 xyrange <- range(milk)
 plot(four ~ one, data = milk, xlim = xyrange, ylim = xyrange, pch = 16)
 rug(milk$one)

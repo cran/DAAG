@@ -19,23 +19,24 @@ dewpoint                Dewpoint Data
 elastic1                Elastic Band Data Replicated
 elastic2                Elastic Band Data Replicated Again
 elasticband             Elastic Band Data
+fossilfuel              Fossil Fuel Data
 frogs                   Frogs Data
 fruitohms               Electrical Resistance of Kiwi Fruit
 geophones               Seismic Timing Data
 head.injury             Minor Head Injury (Simulated) Data
-hills2000               Scottish Hill Races Data - 2000
 hills                   Scottish Hill Races Data
 houseprices             Aranda House Prices
 ironslag                Iron Content Measurements
 jobs                    Canadian Labour Force Summary Data (1995-96)
 kiwishade               Kiwi Shading Data
-leafshape17             Subset of Leaf Shape Data Set
 leafshape               Full Leaf Shape Data Set
-leaftemp.all            Full Leaf and Air Temperature Data Set
+leafshape17             Subset of Leaf Shape Data Set
 leaftemp                Leaf and Air Temperature Data
+leaftemp.all            Full Leaf and Air Temperature Data Set
 litters                 Mouse Litters
 Lottario                Ontario Lottery Data
 Manitoba.lakes          The Nine Largest Lakes in Manitoba
+measles                 Deaths in London from measles
 mifem                   Mortality Outcomes for Females Suffering
                         Myocardial Infarction
 mignonette              Darwin's Wild Mignonette Data
@@ -61,6 +62,7 @@ possumsites             Possum Sites
 powerplot               Plot of Power Functions
 primates                Primate Body and Brain Weights
 qreference              Normal QQ Reference Plot
+races2000               Scottish Hill Races Data - 2000
 rainforest              Rainforest Data
 rareplants              Rare and Endangered Plant Species
 rice                    Genetically Modified and Wild Type Rice Data
@@ -75,6 +77,8 @@ softbacks               Measurements on a Selection of Paperback Books
 spam7                   Spam E-mail Data
 sugar                   Sugar Data
 tinting                 Car Window Tinting Experiment Data
+toupper.initial         Converts initial character of a string to
+                        upper case
 toycars                 Toy Cars Data
 two65                   Unpaired Heated Elastic Bands
 twot.permutation        Two Sample Permutation Test

@@ -2,7 +2,7 @@
 \alias{roller}
 \non_function{}
 \title{Lawn Roller Data}
-\usage{data(roller)}
+\usage{roller}
 \description{
 The \code{roller} data frame has 10 rows and 2 columns.
 Different weights of roller were rolled over different parts
@@ -23,7 +23,6 @@ rollers of different design. N.Z. Journal of Experimental Agriculture
 16: 141-150.
 }
 \examples{
-data(roller)
 plot(roller)
 roller.lm <- lm(depression ~ weight, data = roller)
 plot(roller.lm, which = 4)

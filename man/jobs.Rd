@@ -2,7 +2,7 @@
 \alias{jobs}
 \non_function{}
 \title{Canadian Labour Force Summary Data (1995-96)}
-\usage{data(jobs)}
+\usage{jobs}
 \description{
 The number of workers in the Canadian
 labour force broken down by region (BC, Alberta, Prairies,
@@ -32,7 +32,6 @@ Statistics Canada
 }
 \examples{
 print("Multiple Variables and Times - Example 2.1.4")
-data(jobs)
 sapply(jobs, range)
 pause()
 

@@ -2,7 +2,7 @@
 \alias{ironslag}
 \non_function{}
 \title{Iron Content Measurements}
-\usage{data(ironslag)}
+\usage{ironslag}
 \description{
 The \code{ironslag} data frame has 53 rows and 2 columns.
 Two methods for measuring the iron content in samples of slag 
@@ -23,7 +23,6 @@ Hand, D.J., Daly, F., McConway, K., Lunn, D., and Ostrowski, E. eds (1993)
 A Handbook of Small Data Sets. London: Chapman & Hall. 
 }
 \examples{
-data(ironslag)
 iron.lm <- lm(chemical ~ magnetic, data = ironslag)
 oldpar <- par(mfrow = c(2,2))
 plot(iron.lm)

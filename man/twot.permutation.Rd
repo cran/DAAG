@@ -31,7 +31,6 @@ Good, P. 2000. Permutation Tests. Springer, New York.
 \author{J.H. Maindonald}
 
 \examples{
-data(two65)
 twot.permutation()
 }
 \keyword{models}

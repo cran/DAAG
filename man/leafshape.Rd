@@ -2,7 +2,7 @@
 \alias{leafshape}
 \non_function{}
 \title{Full Leaf Shape Data Set}
-\usage{data(leafshape)}
+\usage{leafshape}
 \description{
 Leaf length, width and petiole measurements taken at various
 sites in Australia.
@@ -28,8 +28,5 @@ sites in Australia.
   King, D.A. and Maindonald, J.H. 1999. Tree architecture in relation to
 leaf dimensions and tree stature in temperate and tropical rain
 forests. Journal of Ecology 87: 1012-1024.
-}
-\examples{
-data(leafshape)
 }
 \keyword{datasets}

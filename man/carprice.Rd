@@ -2,7 +2,7 @@
 \alias{carprice}
 \non_function{}
 \title{US Car Price Data}
-\usage{data(carprice)}
+\usage{carprice}
 \description{
 U.S. data extracted from \code{Cars93}, a data frame in the 
 MASS package.
@@ -33,7 +33,6 @@ available from \\ http://www.stats.ox.ac.uk/pub/MASS3/.
 } 
   \examples{ 
 print("Multicollinearity - Example 6.8")
-data(carprice) 
 pairs(carprice[,-c(1,8,9)])
 
 carprice1.lm <- lm(gpm100 ~ Type+Min.Price+Price+Max.Price+Range.Price,

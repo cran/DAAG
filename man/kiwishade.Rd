@@ -2,7 +2,7 @@
 \alias{kiwishade}
 \non_function{}
 \title{Kiwi Shading Data}
-\usage{data(kiwishade)}
+\usage{kiwishade}
 \description{
 The \code{kiwishade} data frame has 48 rows and 4 columns.
 The data are from a designed experiment that  
@@ -48,7 +48,6 @@ Horticultural Science 67: 481-487.
 issues. New Zealand Journal of Agricultural Research 35: 121-141.
 }
 \examples{
-data(kiwishade)
 print("Data Summary - Example 2.2.1")
 attach(kiwishade)
 kiwimeans <- aggregate(yield, by=list(block, shade), mean)

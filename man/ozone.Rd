@@ -2,7 +2,7 @@
 \alias{ozone}
 \non_function{}
 \title{Ozone Data}
-\usage{data(ozone)}
+\usage{ozone}
 \description{
 Monthly provisional mean total ozone (in Dobson units) at Halley Bay 
 (approximately corrected to Bass-Paur).
@@ -33,6 +33,7 @@ Christie, M. (2000) The Ozone Layer: a Philosophy of Science Perspective.
 Cambridge University Press.
 }
 \examples{
-data(ozone)
+AnnualOzone <- ts(ozone$Annual, start=1956)
+plot(AnnualOzone)
 }
 \keyword{datasets}

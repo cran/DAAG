@@ -2,7 +2,7 @@
 \alias{nsw74psidA}
 \non_function{}
 \title{A Subset of the nsw74psid1 Data Set}
-\usage{data(nsw74psidA)}
+\usage{nsw74psidA}
 \description{
 The \code{nsw74psidA} data frame has 252 rows and 10 columns.
 See \code{nsw74psid1} for more information.
@@ -29,9 +29,7 @@ This data set was obtained using:
 \code{nsw74psidA <- nsw74psid1[here, ]}
 }
 \examples{
-data(nsw74psidA)
 table(nsw74psidA$trt)
-
 
 A1.lm <- lm(re78 ~ trt + (age + educ + re74 + re75) + (black +
       hisp + marr + nodeg), data = nsw74psidA)

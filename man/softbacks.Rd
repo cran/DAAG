@@ -2,7 +2,7 @@
 \alias{softbacks}
 \non_function{}
 \title{Measurements on a Selection of Paperback Books}
-\usage{data(softbacks)}
+\usage{softbacks}
 \description{
 This is a subset of the \code{allbacks} data frame 
 which gives measurements
@@ -20,7 +20,6 @@ in cubic centimeters}
 The bookshelf of J. H. Maindonald.
 }
 \examples{
-data(softbacks)
 print("Outliers in Simple Regression - Example 5.2")
 paperback.lm <- lm(weight ~ volume, data=softbacks)
 summary(paperback.lm)

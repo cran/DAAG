@@ -20,11 +20,9 @@ the coefficient estimates given in the \code{lm} object.
 \seealso{\code{lm}}
 
 \examples{
-data(litters)
 litters.lm <- lm(brainwt ~ bodywt + lsize, data = litters)
 vif(litters.lm)
 
-data(carprice)
 carprice1.lm <- lm(gpm100 ~ Type+Min.Price+Price+Max.Price+Range.Price,
     data=carprice)
 vif(carprice1.lm)

@@ -2,7 +2,7 @@
 \alias{elastic2}
 \non_function{}
 \title{Elastic Band Data Replicated Again}
-\usage{data(elastic2)}
+\usage{elastic2}
 \description{
 The \code{elastic2} data frame has 9 rows and 2 columns
 giving, for each amount by which an elastic band is stretched
@@ -21,12 +21,10 @@ elastic band was stretched}
  J. H. Maindonald
 }
 \examples{
-data(elastic2)
 plot(elastic2)
 pause()
 
 print("Chapter 5 Exercise")
-data(elastic1)
 
 yrange <- range(c(elastic1$distance, elastic2$distance))
 xrange <- range(c(elastic1$stretch, elastic2$stretch))

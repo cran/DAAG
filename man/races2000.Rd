@@ -1,10 +1,13 @@
-\name{hills2000}
-\alias{hills2000}
+\name{races2000}
+\alias{races2000}
 \non_function{}
 \title{Scottish Hill Races Data - 2000}
-\usage{data(hills2000)}
+\usage{races2000}
 \description{
-The record times in 2000 for 77 Scottish hill races.
+The record times in 2000 for 77 Scottish hill races.  We
+believe the data are, for the most part, trustworthy.  However,
+the \code{dist} variable for Caerketton (record 58) seems
+to have been variously recorded as 1.5 mi and 2.5 mi.  
 }
 \format{
   This data frame contains the following columns:
@@ -27,6 +30,6 @@ i.e. hill, marathon, relay, uphill or other}
 The Scottish Running Resource, http://www.hillrunning.co.uk
 }
 \examples{
-data(hills2000)
+    pairs(races2000[,-11])
 }
 \keyword{datasets}

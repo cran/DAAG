@@ -2,7 +2,7 @@
 \alias{rainforest}
 \non_function{}
 \title{Rainforest Data}
-\usage{data(rainforest)}
+\usage{rainforest}
 \description{
 The \code{rainforest} data frame has 65 rows and 7 columns.
 }
@@ -26,7 +26,6 @@ The \code{rainforest} data frame has 65 rows and 7 columns.
 J. Ash, Australian National University
 }
 \examples{
-data(rainforest)
 table(rainforest$species)
 }
 \keyword{datasets}

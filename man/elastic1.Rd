@@ -2,7 +2,7 @@
 \alias{elastic1}
 \non_function{}
 \title{Elastic Band Data Replicated}
-\usage{data(elastic1)}
+\usage{elastic1}
 \description{
 The \code{elastic1} data frame has 7 rows and 2 columns
 giving, for each amount by which an elastic band is stretched
@@ -21,7 +21,6 @@ elastic band was stretched}
  J. H. Maindonald
 }
 \examples{
-data(elastic1)
 plot(elastic1)
 
 print("Inline Functions - Example 12.2.2")

@@ -2,7 +2,7 @@
 \alias{leaftemp.all}
 \non_function{}
 \title{Full Leaf and Air Temperature Data Set}
-\usage{data(leaftemp.all)}
+\usage{leaftemp.all}
 \description{
 The \code{leaftemp.all} data frame has 62 rows and 9 columns.
 }
@@ -28,8 +28,5 @@ The \code{leaftemp.all} data frame has 62 rows and 9 columns.
 }
 \source{
 J.H. Maindonald
-}
-\examples{
-data(leaftemp.all)
 }
 \keyword{datasets}

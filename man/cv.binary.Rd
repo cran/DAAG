@@ -29,7 +29,6 @@ the default) }
 \seealso{ \code{glm} }
 
 \examples{
-data(frogs)
 frogs.glm <- glm(pres.abs ~ log(distance) + log(NoOfPools), 
    family=binomial,data=frogs)
 cv.binary(frogs.glm)

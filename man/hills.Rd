@@ -2,7 +2,7 @@
 \alias{hills}
 \non_function{}
 \title{Scottish Hill Races Data}
-\usage{data(hills)}
+\usage{hills}
 \description{
 The record times in 1984 for 35 Scottish hill races.
 }
@@ -28,7 +28,6 @@ The record times in 1984 for 35 Scottish hill races.
 }
 \examples{
 print("Transformation - Example 6.4.3")
-data(hills)
 pairs(hills, labels=c("dist\n\n(miles)", "climb\n\n(feet)", 
 "time\n\n(hours)"))
 pause()

@@ -22,7 +22,6 @@ A scatterplot with a smooth curve overlaid.
 \seealso{\code{\link{lm}}}
 
 \examples{
-data(litters)
 mice12.lm <- lm(brainwt ~ bodywt + lsize, data=litters)
 oldpar <- par(mfrow = c(1,2))
 component.residual(mice12.lm, 1, xlab = "Body weight", ylab= "t(Body weight) + e")

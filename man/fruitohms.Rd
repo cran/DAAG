@@ -2,7 +2,7 @@
 \alias{fruitohms}
 \non_function{}
 \title{Electrical Resistance of Kiwi Fruit}
-\usage{data(fruitohms)}
+\usage{fruitohms}
 \description{
 Data are from a study that examined how the electrical
 resistance of a slab of kiwifruit changed with the apparent
@@ -20,7 +20,6 @@ Harker, F. R. and Maindonald J.H. 1994. Ripening of nectarine
 fruit. Plant Physiology 106: 165 - 171.
 }
 \examples{
-data(fruitohms)
 plot(ohms ~ juice, xlab="Apparent juice content (\%)",ylab="Resistance (ohms)", data=fruitohms)
 lines(lowess(fruitohms$juice, fruitohms$ohms), lwd=2)
 pause()

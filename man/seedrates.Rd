@@ -2,7 +2,7 @@
 \alias{seedrates}
 \non_function{}
 \title{Barley Seeding Rate Data}
-\usage{data(seedrates)}
+\usage{seedrates}
 \description{
 The \code{seedrates} data frame has 5 rows and 2 columns on 
 the effect of seeding rate of barley on yield.
@@ -23,7 +23,6 @@ Journal of Agriculture 10: 133-136.}
  Maindonald J H 1992. Statistical design, analysis and presentation
 issues. New Zealand Journal of Agricultural Research 35: 121-141.}
 \examples{
-data(seedrates)
 plot(grain~rate,data=seedrates,xlim=c(50,180),ylim=c(15.5,22),axes=FALSE)
 new.df<-data.frame(rate=(2:8)*25)
 seedrates.lm1<-lm(grain~rate,data=seedrates)

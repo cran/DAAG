@@ -28,7 +28,6 @@ A line plot
 \author{J.H. Maindonald}
 
 \examples{
-data(rice)
 rice.aov <- aov(ShootDryMass ~ trt, data=rice)
 oneway.plot(obj=rice.aov)
 }

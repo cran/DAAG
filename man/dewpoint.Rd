@@ -2,7 +2,7 @@
 \alias{dewpoint}
 \non_function{}
 \title{Dewpoint Data}
-\usage{data(dewpoint)}
+\usage{dewpoint}
 \description{
 The \code{dewpoint} data frame has 72 rows and 3 columns.
 Monthly data were obtained for a number of sites (in Australia)
@@ -13,8 +13,8 @@ and a number of months.
   \describe{
     \item{maxtemp}{monthly minimum temperatures}
     \item{mintemp}{monthly maximum temperatures}
-    \item{dewpoint}{monthly average dewpoint for each combination of
-minimum and maximum temperature readings}
+    \item{dewpt}{monthly average dewpoint for each combination of
+minimum and maximum temperature readings (formerly dewpoint)}
   }
 }
 \source{
@@ -24,10 +24,9 @@ of Geography.
 }
 \examples{
 print("Additive Model - Example 7.5")
-data(dewpoint)
 require(splines)
 attach(dewpoint)   
-ds.lm <- lm(dewpoint ~ bs(maxtemp,5) + bs(mintemp,5), data=dewpoint)
+ds.lm <- lm(dewpt ~ bs(maxtemp,5) + bs(mintemp,5), data=dewpoint)
 ds.fit <-predict(ds.lm, type="terms", se=TRUE)
 oldpar <- par(mfrow=c(1,2))
 plot(maxtemp, ds.fit$fit[,1], xlab="Maximum temperature",

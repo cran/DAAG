@@ -2,7 +2,7 @@
 \alias{primates}
 \non_function{}
 \title{Primate Body and Brain Weights}
-\usage{data(primates)}
+\usage{primates}
 \description{
 A subset of \code{Animals} data frame from the MASS library.
 It contains the average body and brain measurements of five
@@ -22,7 +22,6 @@ P. J. Rousseeuw  and A. M. Leroy (1987) Robust Regression and
      Outlier Detection. Wiley, p. 57.
 }
 \examples{
-data(primates)
 attach(primates)
 plot(x=Bodywt, y=Brainwt, pch=16,
        xlab="Body weight (kg)", ylab="Brain weight (g)",

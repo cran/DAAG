@@ -2,7 +2,7 @@
 \alias{socsupport}
 \non_function{}
 \title{Social Support Data}
-\usage{data(socsupport)}
+\usage{socsupport}
 \description{
 Data from a survey on social and other kinds of support.
 }
@@ -39,7 +39,8 @@ Data from a survey on social and other kinds of support.
 interaction}
     \item{esupport}{summary of 4 questions on extent of emotional support sources}
     \item{psupport}{summary of 4 questions on extent of practical support sources}
-    \item{socsupport}{summary of 4 questions on extent of social support sources}
+    \item{supsources}{summary of 4 questions on extent of social support 
+sources (formerly, socsupport)}
     \item{BDI}{Score on the Beck depression index (summary of 21 questions)}
   }
 }
@@ -47,9 +48,8 @@ interaction}
 Melissa Manning, Psychology, Australian National University
 }
 \examples{
-data(socsupport)
 attach(socsupport)
-require(mva)
+
 not.na <- apply(socsupport[,9:19], 1, function(x)!any(is.na(x)))
 ss.pr1 <- princomp(as.matrix(socsupport[not.na, 9:19]), cor=TRUE)  
 pairs(ss.pr1$scores[,1:3])

@@ -2,7 +2,7 @@
 \alias{science}
 \non_function{}
 \title{School Science Survey Data}
-\usage{data(science)}
+\usage{science}
 \description{
 The \code{science} data frame has 1385 rows and 7 columns.
 
@@ -34,7 +34,6 @@ schools.
 National University
 }
 \examples{
-data(science)
 attach(science)
 classmeans <- aggregate(like, by=list(PrivPub, Class), mean)
 names(classmeans) <- c("PrivPub","Class","like")

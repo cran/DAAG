@@ -2,7 +2,7 @@
 \alias{rareplants}
 \non_function{}
 \title{Rare and Endangered Plant Species}
-\usage{data(rareplants)}
+\usage{rareplants}
 \description{
 These data were taken from species lists for South Australia, Victoria and 
 Tasmania.  Species were classified as CC, CR, RC and RR, with C denoting
@@ -20,7 +20,6 @@ Jasmyn Lynch, Department of Botany and Zoology at Australian National
 University
 }
 \examples{
-data(rareplants)
 chisq.test(rareplants)
 }
 \keyword{datasets}

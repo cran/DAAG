@@ -2,7 +2,7 @@
 \alias{spam7}
 \non_function{}
 \title{Spam E-mail Data}
-\usage{data(spam7)}
+\usage{spam7}
 \description{
 The data consist of 4601 email items, of which 1813 items were identified
 as spam.
@@ -29,7 +29,6 @@ of California at Irvine Repository of Machine Learning Databases
 and Domain Theories. The address is:  http://www.ics.uci.edu/~Here
 }
 \examples{
-data(spam7)
 require(rpart)
 spam.rpart <- rpart(formula = yesno ~ crl.tot + dollar + bang +
    money + n000 + make, data=spam7)
