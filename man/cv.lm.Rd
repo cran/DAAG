@@ -9,15 +9,17 @@ Each fold is removed, in turn, while the remaining data is used
 to re-fit the regression model and to predict at the deleted observations.
 }
 \usage{
-cv.lm(df = houseprices, m = 3, form.lm = formula(sale.price ~ area), dots = FALSE,
- seed = 29)
+cv.lm(df = houseprices, form.lm = formula(sale.price ~ area), m=3, dots = 
+FALSE, seed=29, plotit=TRUE, printit=TRUE)
 }
 \arguments{
   \item{df}{a data frame}
-  \item{m}{the number of folds}
   \item{form.lm}{a formula object}
+  \item{m}{the number of folds}
   \item{dots}{uses pch=16 for the plotting character}
   \item{seed}{random number generator seed}
+  \item{plotit}{if TRUE, a plot is constructed on the active device}
+  \item{printit}{if TRUE, output is printed to the screen}
 }
 \value{
 For each fold, a table listing

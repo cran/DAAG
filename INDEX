@@ -1,7 +1,4 @@
 ACF1                    Aberrant Crypt Foci in Rat Colons
-Cars93.summary          A Summary of the Cars93 Data set
-Lottario                Ontario Lottery Data
-Manitoba.lakes          The Nine Largest Lakes in Manitoba
 allbacks                Measurements on a Selection of Books
 anesthetic              Anesthetic Effectiveness
 austpop                 Population figures for Australian States and
@@ -10,6 +7,7 @@ bestset.noise           Best Subset Selection Applied to Noise
 bomsoi                  Southern Oscillation Index Data
 bounce                  Bounce
 carprice                US Car Price Data
+Cars93.summary          A Summary of the Cars93 Data set
 cfseal                  Cape Fur Seal Data
 cities                  Populations of Major Canadian Cities (1992-96)
 component.residual      Component + Residual Plot
@@ -25,17 +23,19 @@ frogs                   Frogs Data
 fruitohms               Electrical Resistance of Kiwi Fruit
 geophones               Seismic Timing Data
 head.injury             Minor Head Injury (Simulated) Data
-hills                   Scottish Hill Races Data
 hills2000               Scottish Hill Races Data - 2000
+hills                   Scottish Hill Races Data
 houseprices             Aranda House Prices
 ironslag                Iron Content Measurements
 jobs                    Canadian Labour Force Summary Data (1995-96)
 kiwishade               Kiwi Shading Data
-leafshape               Full Leaf Shape Data Set
 leafshape17             Subset of Leaf Shape Data Set
-leaftemp                Leaf and Air Temperature Data
+leafshape               Full Leaf Shape Data Set
 leaftemp.all            Full Leaf and Air Temperature Data Set
+leaftemp                Leaf and Air Temperature Data
 litters                 Mouse Litters
+Lottario                Ontario Lottery Data
+Manitoba.lakes          The Nine Largest Lakes in Manitoba
 mifem                   Mortality Outcomes for Females Suffering
                         Myocardial Infarction
 mignonette              Darwin's Wild Mignonette Data
@@ -46,7 +46,7 @@ moths                   Moths Data
 nsw74psid1              Labour Training Evaluation Data
 nsw74psid3              Labour Training Evaluation Data
 nsw74psidA              A Subset of the nsw74psid1 Data Set
-onesamp                 Paired Sample t-test 
+onesamp                 Paired Sample t-test
 onet.permutation        One Sample Permutation t-test
 oneway.plot             Display of One Way Analysis Results
 orings                  Challenger O-rings Data
@@ -55,7 +55,7 @@ ozone                   Ozone Data
 pair65                  Heated Elastic Bands
 panel.corr              Scatterplot Panel
 panelplot               Panel Plot
-pause                   Pause before continuing execution 
+pause                   Pause before continuing execution
 possum                  Possum Measurements
 possumsites             Possum Sites
 powerplot               Plot of Power Functions

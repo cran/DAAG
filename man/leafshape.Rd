@@ -13,7 +13,7 @@ sites in Australia.
     \item{bladelen}{leaf length (in mm)}
     \item{petiole}{a numeric vector}
     \item{bladewid}{leaf width (in mm)}
-    \item{lattitude}{lattitude}
+    \item{latitude}{latitude}
     \item{logwid}{natural logarithm of width}
     \item{logpet}{logarithm of petiole}
     \item{loglen}{logarithm of length}

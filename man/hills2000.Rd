@@ -16,7 +16,7 @@ The record times in 2000 for 77 Scottish hill races.
     \item{m0}{a numeric vector}
     \item{s0}{a numeric vector}
     \item{dist}{distance, in miles (on the map)}
-    \item{climb}{total height gained during the route, in feet}
+    \item{ht}{total height gained during the route, in feet}
     \item{time}{record time in hours}
     \item{timef}{record time in hours for females}
     \item{type}{a factor, with levels indicating type of race}

@@ -12,15 +12,17 @@ different species of host bird.
   \describe{
     \item{length}{the egg lengths in tenths of millimeters}
     \item{breadth}{the egg breadths in tenths of millimeters}
-    \item{species}{a factor with levels}
+    \item{species}{a factor with levels
    \code{hedge.sparrow}, 
    \code{meadow.pipit}, 
    \code{pied.wagtail}, 
    \code{robin}, 
    \code{tree.pipit}, 
-   \code{wren} }
+   \code{wren} 
   } 
+   \item{id}{a numeric vector}
 } 
+}
   \source{ Latter, O.H. (1902). The eggs of Cuculus canorus. An
 Inquiry into the dimensions of the cuckoo's egg and the relation of the
 variations to the size of the eggs of the foster-parent, with notes on

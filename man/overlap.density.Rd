@@ -5,13 +5,16 @@
 Densities for two independent samples are estimated and plotted.  
 }
 \usage{
-overlap.density(x0, x1, frac=c(0.05, 20), plotit=TRUE)
+overlap.density(x0, x1, ratio=c(0.05, 20), plotit=TRUE)
 }
 \arguments{
   \item{x0}{control group measurements}
   \item{x1}{treatment group measurements}
-  \item{frac}{}
-  \item{plotit}{If true, a plot is produced}
+  \item{ratio}{the range within which the relative numbers of
+           observations from the two groups are
+           required to lie.  [The relative numbers at
+           any point are estimated from (density1*n1)/(density0*x0)]}
+  \item{plotit}{If TRUE, a plot is produced}
 }
 \author{J.H. Maindonald}
 \seealso{ \code{t.test} }

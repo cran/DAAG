@@ -11,7 +11,8 @@ primates.
 \format{
   This data frame contains the following columns:
   \describe{
-    \item{Bodywt}{a numeric vector consisting of the body weights (in kg} of five
+    \item{Bodywt}{a numeric vector consisting of the body weights (in kg) 
+of five
     different primates}
     \item{Brainwt}{a numeric vector consisting of the corresponding brain weights (in g) }
   }

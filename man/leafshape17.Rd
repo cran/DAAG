@@ -15,7 +15,7 @@ at several sites in Australia.  This is a subset of the
     \item{bladelen}{leaf length (in mm)}
     \item{petiole}{a numeric vector}
     \item{bladewid}{leaf width (in mm)}
-    \item{lattitude}{lattitude}
+    \item{latitude}{latitude}
     \item{logwid}{natural logarithm of width}
     \item{logpet}{logarithm of petiole measurement}
     \item{loglen}{logarithm of length}

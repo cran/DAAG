@@ -16,9 +16,9 @@ as spam.
     \item{money}{number of occurrences of the word `money'}
     \item{n000}{number of occurrences of the string `000'}
     \item{make}{number of occurrences of the word `make'}
-    \item{yesno}{outcome variable}
-    \item{yesno}{\code{n} not spam}
-    \item{yesno}{\code{y} spam}
+    \item{yesno}{outcome variable, a factor with levels
+    \code{n} not spam,
+    \code{y} spam}
   }
 }
 \source{

@@ -15,7 +15,7 @@ MASS package.
     \item{Price}{Price for a mid-range model}
     \item{Max.Price}{Price for a `premium' model}
     \item{Range.Price}{Difference between Max.Price and Min.Price}
-    \item{Rough.Range}{Rough.Range plus some N(0,.0001) noise}
+    \item{RoughRange}{Rough.Range plus some N(0,.0001) noise}
     \item{gpm100}{The number of gallons required to travel 100 miles}
     \item{MPG.city}{Average number of miles per gallon for city driving}
     \item{MPG.highway}{Average number of miles per gallon for highway 
