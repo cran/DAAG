@@ -45,7 +45,8 @@ boxplot(earconch~sex, data=possum)
 pause()
 
 sex <- as.integer(possum$sex)
-pairs(possum[, c(9:11)], oma=c(2,4,5,4), pch=c(0,2:7), col=c("red","blue"),
+oldpar <- par(oma=c(2,4,5,4))
+pairs(possum[, c(9:11)], pch=c(0,2:7), col=c("red","blue"),
   labels=c("tail\nlength","foot\nlength","ear conch\nlength"))
 chh <- par()$cxy[2]; xleg <- 0.05; yleg <- 1.04
 oldpar <- par(xpd=TRUE)  

@@ -32,7 +32,7 @@ must be installed in order for this function to work.)
 \seealso{ \code{\link{lm}}}
 
 \examples{
-leaps.out <- try(require(leaps, silent=TRUE))
+leaps.out <- try(require(leaps, quietly=TRUE))
 leaps.out.log <- is.logical(leaps.out)
 if ((leaps.out.log==TRUE)&(leaps.out==TRUE))
 bestset.noise(20,6) # `best' 3-variable regression for 20 simulated observations 

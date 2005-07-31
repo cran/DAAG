@@ -1,8 +1,8 @@
 "qreference" <-
-function (test = NULL, m = 50, nrep = 6,
-              distribution=function(x)qnorm(x, mean=0, sd=1),
-              seed = NULL, nrows = NULL, cex.points = 0.65,
-              cex.strip = 0.75, xlab=NULL, ylab=NULL, refline=FALSE)
+function (test = NULL, m = 50, nrep = 6, distribution = function(x) qnorm(x, 
+    mean = ifelse(is.null(test), 0, mean(test)), sd = ifelse(is.null(test), 
+    1, sd(test))), seed = NULL, nrows = NULL, cex.strip = 0.75, 
+    xlab = NULL, ylab = NULL) 
 {
     library(lattice)
     if (!is.null(seed)) 
@@ -12,29 +12,22 @@ function (test = NULL, m = 50, nrep = 6,
         m <- length(test)
         av <- mean(test)
         sdev <- sd(test)
-        fac <- factor(c(rep(testnam, m),
-                        paste("reference", rep(1:(nrep - 1),
-                                               rep(m, (nrep - 1))))))
+        fac <- factor(c(rep(testnam, m), paste("reference", rep(1:(nrep - 
+            1), rep(m, (nrep - 1))))))
         fac <- relevel(fac, ref = testnam)
     }
     if (is.null(nrows)) 
         nrows <- floor(sqrt(nrep))
     ncols <- ceiling(nrep/nrows)
     if (is.null(test)) {
-        xy <- data.frame(y = distribution(runif(m * nrep)),
-                         fac = factor(rep(1:nrep, rep(m, nrep))),
-                         id=factor(rep(1,m*nrep)))
+        xy <- data.frame(y = distribution(runif(m * nrep)), 
+            fac = factor(rep(1:nrep, rep(m, nrep))), 
+            id = factor(rep(1, m * nrep)))
         colpch <- c("black")
-        qq <- qqmath(~y | fac, data = xy, par.strip.text = list(cex = 0),
-                     distribution=distribution,
-                     layout = c(ncols, nrows), xlab = "", ylab = "",
-                     aspect = 1, prepanel = prepanel.qqmathline,
-                     panel = function(x, y) {
-                         if (refline) {
-                             panel.qqmathline(y, distribution = distribution)
-                         }
-                         panel.qqmath(x, y, cex=cex.points, col=colpch, pch=16)
-                     })
+        qq <- qqmath(~y | fac, data = xy, par.strip.text = list(cex = 0), 
+            distribution = distribution, layout = c(ncols, nrows), 
+            xlab = "", ylab = "", aspect = 1, pch=16
+            )
     }
     else {
         if (length(test) > 0) {
@@ -42,23 +35,17 @@ function (test = NULL, m = 50, nrep = 6,
             xx <- distribution(c(0.25, 0.75))
             r <- diff(yy)/diff(xx)
         }
-        xy <- data.frame(y = c(test, distribution(runif(m * (nrep - 1)))),
-                         fac = fac, id=factor(rep(1:2, c(m, m * (nrep - 1)))))
+        xy <- data.frame(y = c(test, distribution(runif(m * (nrep - 1)))), 
+            fac = fac, id = factor(rep(1:2, c(m, m * (nrep - 1)))))
         colpch <- c("black")
-        if(is.null(xlab))
-        xlab <- paste("Quantiles of", deparse(substitute(distribution)))
-        if(is.null(ylab))ylab <- ""
-        qq <- qqmath(~y | fac, data = xy, layout = c(ncols, nrows),
-                     groups=id, aspect = 1, xlab = xlab, ylab = "", 
-#                     prepanel = prepanel.qqmathline, 
-                     panel = function(x, y) {
-                         if (refline) {
-                              panel.abline(c(yy[1] - xx[1] * r, r))
-                         }
-                         panel.qqmath(x, y, cex=cex.points, col=colpch, pch=16)
-                     }, distribution=distribution,
-                     par.strip.text = list(cex = cex.strip))
-        }
+        if (is.null(xlab)) 
+            xlab <- paste("Quantiles of", deparse(substitute(distribution)))
+        if (is.null(ylab)) 
+            ylab <- ""
+        qq <- qqmath(~y | fac, data = xy, layout = c(ncols, nrows), 
+            groups = id, aspect = 1, xlab = xlab, ylab = "", pch=16, 
+           distribution = distribution, par.strip.text = list(cex = cex.strip))
+    }
     print(qq)
 }
 

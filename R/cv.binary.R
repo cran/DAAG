@@ -30,8 +30,8 @@
          hat <- lev[round(hat)+1]
          cvhat <- lev[round(cvhat)+1]
      }
-     acc.internal <- sum(obs == hat)/m
-     acc.cv <- sum(obs == cvhat)/m
+     acc.internal <- sum(obs == round(hat))/m
+     acc.cv <- sum(obs == round(cvhat))/m
      if (print.details) {
          cat("\nInternal estimate of accuracy =", round(acc.internal,
                                                         3))

@@ -4,7 +4,7 @@
 \title{Genetically Modified and Wild Type Rice Data}
 \usage{rice}
 \description{
-The \code{rice} data frame has 72 rows and 5 columns.
+The \code{rice} data frame has 72 rows and 7 columns.
 The data are from an experiment that compared wild type (wt)
 and genetically modified rice plants (ANU843), each
 with three different chemical treatments (F10, NH4Cl, and NH4NO3).   
@@ -23,6 +23,13 @@ with three different chemical treatments (F10, NH4Cl, and NH4NO3).
 \code{F10 +ANU843},
 \code{NH4Cl +ANU843},
 \code{NH4NO3 +ANU843}}
+    \item{fert}{a factor with levels
+\code{F10}
+\code{NH4Cl}
+\code{NH4NO3}}
+    \item{variety}{a factor with levels
+\code{wt}
+\code{ANU843}}
   }
 }
 \source{

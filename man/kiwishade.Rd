@@ -8,7 +8,8 @@ The \code{kiwishade} data frame has 48 rows and 4 columns.
 The data are from a designed experiment that  
 compared different kiwifruit shading treatments.
 There are four vines in each plot, and four plots (one for each of four 
-treatments) in each the three blocks. Each 
+treatments: none, Aug2Dec, Dec2Feb, and Feb2May) in each of three blocks
+(locations: west, north, east). Each 
 plot has the same number of vines, each block has the same number of 
 plots, with each treatment occurring the same number of times.
 }
@@ -23,7 +24,7 @@ plots, with each treatment occurring the same number of times.
     \code{north.none},    \code{west.Aug2Dec},
     \code{west.Dec2Feb},    \code{west.Feb2May},
     \code{west.none} }
-    \item{block}{a factor indicating the location of  with levels
+    \item{block}{a factor indicating the location of the plot with levels
 \code{east}, \code{north}, \code{west} }
 \item{shade}{a factor representing the period for which
 the experimenter placed shading over the vines; with levels:

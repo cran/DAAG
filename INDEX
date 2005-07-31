@@ -1,6 +1,11 @@
 ACF1                    Aberrant Crypt Foci in Rat Colons
+ais                     Australian athletes data set
 allbacks                Measurements on a Selection of Books
 anesthetic              Anesthetic Effectiveness
+ant111b                 Averages by block of corn yields, for
+                        treatment 111 only
+appletaste              Tasting experiment that compared four apple
+                        varieties
 austpop                 Population figures for Australian States and
                         Territories
 bestset.noise           Best Subset Selection Applied to Noise
@@ -26,6 +31,8 @@ geophones               Seismic Timing Data
 head.injury             Minor Head Injury (Simulated) Data
 hills                   Scottish Hill Races Data
 houseprices             Aranda House Prices
+humanpower1             Oxygen uptake versus mechanical power, for
+                        humans
 ironslag                Iron Content Measurements
 jobs                    Canadian Labour Force Summary Data (1995-96)
 kiwishade               Kiwi Shading Data
@@ -34,6 +41,7 @@ leafshape17             Subset of Leaf Shape Data Set
 leaftemp                Leaf and Air Temperature Data
 leaftemp.all            Full Leaf and Air Temperature Data Set
 litters                 Mouse Litters
+logisticsim             Simple Logistic Regression Data Simulator
 Lottario                Ontario Lottery Data
 Manitoba.lakes          The Nine Largest Lakes in Manitoba
 measles                 Deaths in London from measles
@@ -57,6 +65,7 @@ pair65                  Heated Elastic Bands
 panel.corr              Scatterplot Panel
 panelplot               Panel Plot
 pause                   Pause before continuing execution
+poissonsim              Simple Poisson Regression Data Simulator
 possum                  Possum Measurements
 possumsites             Possum Sites
 powerplot               Plot of Power Functions
@@ -83,5 +92,8 @@ toycars                 Toy Cars Data
 two65                   Unpaired Heated Elastic Bands
 twot.permutation        Two Sample Permutation Test
 vif                     Variance Inflation Factors
+vince111b               Averages by block of corn yields, for
+                        treatment 111 only
+vlt                     Video Lottery Terminal Data
 wages1833               Wages of Lancashire Cotton Factory Workers in
                         1833

@@ -3,7 +3,7 @@ function(type=c("singles", "shades", "grayshades"), order.cols=TRUE){
 type <- type[1]
 oldpar <- par(mar=c(.75, .75,1.5, .75))
 on.exit(par(oldpar))
-order.cols <- order.cols & require(mva)
+order.cols <- order.cols & require(stats)
 unique.colors <- function(){
     colnam <- colors()
     vector.code <- apply(col2rgb(colnam),2,function(x)x[1]+x[2]*1000+x[3]*10000)
@@ -71,7 +71,6 @@ heading <- switch(type, singles="Colors that do not have shades",
 mtext(side=3, line=-0.25, heading, at=1, adj=0)
 
 # arrange <- function(colvec){
-#    require(mva)
 #    xyz <- t(sweep(col2rgb(colvec),1,c(.2126, .7152, .0722),"*"))
 #    red <- xyz[,1]
 #    green <- xyz[,2]

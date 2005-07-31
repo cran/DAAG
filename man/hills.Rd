@@ -63,7 +63,6 @@ par(oldpar)
 pause()
 
 print("Nonlinear - Example 6.9.4")
-require(nls)
 hills.nls0 <- nls(time ~ (dist^alpha)*(climb^beta), start =
    c(alpha = .909, beta = .260), data = hills[-18,])
 summary(hills.nls0)

@@ -38,7 +38,9 @@ plot(northing ~ easting, data=frogs, pch=c(1,16)[frogs$pres.abs+1],
 
 pause()
 
-pairs(frogs[,4:10], oma=c(2,2,2,2), cex=0.5)
+oldpar <- par(oma=c(2,2,2,2), cex=0.5)
+pairs(frogs[,4:10])
+par(oldpar)
 
 pause()
 
