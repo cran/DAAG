@@ -1,4 +1,4 @@
-"simulate.linear" <-
+"simulatelinear" <-
 function(sd = 2, npoints=5, nrep=4, nsets=200, type="xy", seed=21)
 {
     if(!is.null(seed))set.seed(seed)

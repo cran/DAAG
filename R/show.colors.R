@@ -1,5 +1,5 @@
 "show.colors" <-
-function(type=c("singles", "shades", "grayshades"), order.cols=TRUE){
+function(type=c("singles", "shades", "gray"), order.cols=TRUE){
 type <- type[1]
 oldpar <- par(mar=c(.75, .75,1.5, .75))
 on.exit(par(oldpar))

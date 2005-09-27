@@ -19,7 +19,7 @@ function(dset = corn, x = "unsprayed", y = "sprayed", xlab = NULL, ylab = NULL,
 		omit[dubious] <- TRUE
 	ylim <- range(c(xv[!omit], yv[!omit]))
 	xlim <- ylim
-	plot(dset[!omit, xname], dset[!omit, yname], pch = 1, lwd = 2, xlab = 
+	plot(dset[!omit, xname], dset[!omit, yname], pch = 1, lwd = 1, xlab = 
 		xlabel, ylab = ylabel, xlim = xlim, ylim = ylim)
 	if(sum(omit) != 0) {
 		points(dset[omit, xname], dset[omit, yname], pch = 4)

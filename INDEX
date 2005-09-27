@@ -2,8 +2,8 @@ ACF1                    Aberrant Crypt Foci in Rat Colons
 ais                     Australian athletes data set
 allbacks                Measurements on a Selection of Books
 anesthetic              Anesthetic Effectiveness
-ant111b                 Averages by block of corn yields, for
-                        treatment 111 only
+ant111b                 Averages by block of corn yields, for treatment
+                        111 only
 appletaste              Tasting experiment that compared four apple
                         varieties
 austpop                 Population figures for Australian States and
@@ -28,6 +28,7 @@ fossilfuel              Fossil Fuel Data
 frogs                   Frogs Data
 fruitohms               Electrical Resistance of Kiwi Fruit
 geophones               Seismic Timing Data
+hardcopy                Graphical Output for Hardcopy
 head.injury             Minor Head Injury (Simulated) Data
 hills                   Scottish Hill Races Data
 houseprices             Aranda House Prices
@@ -79,21 +80,21 @@ roller                  Lawn Roller Data
 science                 School Science Survey Data
 seedrates               Barley Seeding Rate Data
 show.colors             Show R's Colors
-simulate.linear         Simulation of Linear Models for ANOVA vs.
+simulatelinear          Simulation of Linear Models for ANOVA vs.
                         Regression Comparison
 socsupport              Social Support Data
 softbacks               Measurements on a Selection of Paperback Books
 spam7                   Spam E-mail Data
 sugar                   Sugar Data
 tinting                 Car Window Tinting Experiment Data
-toupper.initial         Converts initial character of a string to
-                        upper case
+toupper.initial         Converts initial character of a string to upper
+                        case
 toycars                 Toy Cars Data
 two65                   Unpaired Heated Elastic Bands
 twot.permutation        Two Sample Permutation Test
 vif                     Variance Inflation Factors
-vince111b               Averages by block of corn yields, for
-                        treatment 111 only
+vince111b               Averages by block of corn yields, for treatment
+                        111 only
 vlt                     Video Lottery Terminal Data
 wages1833               Wages of Lancashire Cotton Factory Workers in
                         1833

@@ -5,7 +5,7 @@
 This function displays the built-in colors.
 }
 \usage{
-show.colors(type=c("singles", "shades", "grayshades"), order.cols=TRUE)
+show.colors(type=c("singles", "shades", "gray"), order.cols=TRUE)
 }
 \arguments{
   \item{type}{type of display - single, multiple or gray shades}
