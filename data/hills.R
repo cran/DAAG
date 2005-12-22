@@ -13,8 +13,12 @@ structure(list(dist = c(2.4, 6, 6, 7.5, 8, 8, 16, 6, 5, 6, 28,
 0.794166666666667, 0.298888888888889, 0.311388888888889, 0.436944444444444, 
 0.573888888888889, 0.476111111111111, 0.841666666666667, 0.349166666666667, 
 1.42638888888889, 0.539722222222222, 2.8375, 0.468333333333333, 
-2.66388888888889)), .Names = c("dist", "climb", "time"), row.names = c("1", 
-"2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", 
-"14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", 
-"25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35"
+2.66388888888889)), .Names = c("dist", "climb", "time"), row.names = c("Greenmantle", 
+"Carnethy", "Craig Dunain", "Ben Rha", "Ben Lomond", "Goatfell", 
+"Bens of Jura", "Cairnpapple", "Scolty", "Traprain", "Lairig Ghru", 
+"Dollar", "Lomonds", "Cairn Table", "Eildon Two", "Cairngorm", 
+"Seven Hills", "Knock Hill", "Black Hill", "Creag Beag", "Kildcon Hill", 
+"Meall Ant-Suidhe", "Half Ben Nevis", "Cow Hill", "N Berwick Law", 
+"Creag Dubh", "Burnswark", "Largo Law", "Criffel", "Acmony", 
+"Ben Nevis", "Knockfarrel", "Two Breweries", "Cockleroi", "Moffat Chase"
 ), class = "data.frame")

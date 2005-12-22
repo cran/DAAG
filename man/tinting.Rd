@@ -47,7 +47,7 @@ younger and older drivers. Ergonomics 42: 428-443.
 }
 \examples{
 require(lattice)
-levels(tinting$agegp) <- toupper.initial(levels(tinting$agegp))
+levels(tinting$agegp) <- capstring(levels(tinting$agegp))
 xyplot(csoa ~ it | sex * agegp, data=tinting) # Simple use of xyplot()
 pause()
 

@@ -1,12 +1,12 @@
-\name{toupper.initial}
-\alias{toupper.initial}
+\name{capstring}
+\alias{capstring}
 \title{Converts initial character of a string to upper case}
 \description{This function is useful for use before
 plotting, if one wants capitalized axis labels or factor
 levels.
 }
 \usage{
-toupper.initial(names)
+capstring(names)
 
 }
 %- maybe also `usage' for other objects documented here.
@@ -19,10 +19,10 @@ toupper.initial(names)
 \author{W.J. Braun}
 
 \examples{
-toupper.initial(names(tinting)[c(3,4)])
+capstring(names(tinting)[c(3,4)])
 
 library(lattice)
-levels(tinting$agegp) <- toupper.initial(levels(tinting$agegp))
+levels(tinting$agegp) <- capstring(levels(tinting$agegp))
 xyplot(csoa ~ it | sex * agegp, data=tinting) 
 }
 \keyword{models}

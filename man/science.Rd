@@ -19,8 +19,8 @@ schools.
     \item{PrivPub}{a factor with levels
         \code{private} school, 
         \code{public} school}
-    \item{school}{a numeric code identifying the school}
-    \item{class}{a numeric vector identifying the class}
+    \item{school}{a factor, coded to identify the school}
+    \item{class}{a factor, coded to identify the class}
     \item{sex}{a factor with levels
     \code{f}, \code{m} }
     \item{like}{ a summary score
