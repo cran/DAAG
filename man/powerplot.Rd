@@ -16,7 +16,7 @@ powerplot(expr="x^2", xlab="x", ylab="y")
 A plot of the given expression on the interval [0,10]. 
 }
 \author{J.H. Maindonald}
-\notes{Other expressions such as "sin(x)" and "cos(x)", etc.
+\details{Other expressions such as "sin(x)" and "cos(x)", etc.
 could also be plotted with this function, but results are
 not guaranteed.
 }

@@ -1,13 +1,13 @@
-\name{twot.permutation}
-\alias{twot.permutation}
-\title{Two Sample Permutation Test - Obsolete}
+\name{twotPermutation}
+\alias{twotPermutation}
+\title{Two Sample Permutation Test}
 \description{
 This function computes the p-value for the two sample
 t-test using a permutation test.  The permutation density
 can  also be plotted.
 }
 \usage{
-twot.permutation(x1=two65$ambient, x2=two65$heated, nsim=2000, plotit=TRUE)
+twotPermutation(x1=two65$ambient, x2=two65$heated, nsim=2000, plotit=TRUE)
 }
 \arguments{
   \item{x1}{Sample 1}
@@ -31,6 +31,6 @@ Good, P. 2000. Permutation Tests. Springer, New York.
 \author{J.H. Maindonald}
 
 \examples{
-twot.permutation()
+twotPermutation()
 }
 \keyword{models}

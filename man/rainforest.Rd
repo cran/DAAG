@@ -25,7 +25,7 @@ The \code{rainforest} data frame has 65 rows and 7 columns.
 \source{
 J. Ash, Australian National University
 }
-\reference{
+\references{
 Ash, J. and Helman, C. (1990) Floristics and vegetation
 biomass of a forest catchment, Kioloa, south coastal N.S.W.
 Cunninghamia, 2: 167-182.

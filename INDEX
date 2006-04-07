@@ -73,6 +73,7 @@ nsw74psid1              Labour Training Evaluation Data
 nsw74psid3              Labour Training Evaluation Data
 nsw74psidA              A Subset of the nsw74psid1 Data Set
 obounce                 Bounce - obsolete
+oddbooks                Measurements on 12 books
 onesamp                 Paired Sample t-test
 onet.permutation        One Sample Permutation t-test
 onetPermutation         One Sample Permutation t-test
@@ -115,7 +116,8 @@ sugar                   Sugar Data
 tinting                 Car Window Tinting Experiment Data
 toycars                 Toy Cars Data
 two65                   Unpaired Heated Elastic Bands
-twot.permutation        Two Sample Permutation Test
+twot.permutation        Two Sample Permutation Test - Obsolete
+twotPermutation         Two Sample Permutation Test
 vif                     Variance Inflation Factors
 vince111b               Averages by block of corn yields, for treatment
                         111 only

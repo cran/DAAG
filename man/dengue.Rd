@@ -43,7 +43,7 @@ Hales, S., de Wet, N., Maindonald, J. and Woodward, A.
   distribution of dengue fever: an empirical model.  The Lancet 2002;
   360: 830-34. 
 }
-\Examples{
+\examples{
 str(dengue)
 glm(NoYes ~ humid, data=dengue, family=binomial)
 glm(NoYes ~ humid90, data=dengue, family=binomial)
