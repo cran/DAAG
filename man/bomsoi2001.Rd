@@ -1,8 +1,8 @@
-\name{bomsoi}
-\alias{bomsoi}
+\name{bomsoi2001}
+\alias{bomsoi2001}
 \non_function{}
 \title{Southern Oscillation Index Data}
-\usage{bomsoi}
+\usage{bomsoi2001}
 \description{
 The Southern Oscillation Index (SOI) is the difference in barometric  
 pressure at sea level between Tahiti and Darwin.  Annual SOI and
@@ -32,12 +32,6 @@ around the country.
 values}
 \item{avrain}{a numeric vector consisting of a weighted average annual
 rainfall at a large number of Australian sites}
-\item{NTrain}{Northern Territory rain}
-\item{northRain}{north rain}
-\item{seRain}{southeast rain}
-\item{eastRain}{east rain}
-\item{southRain}{south rain}
-\item{swRain}{southwest rain}
   } 
 } 
   \source{ 
@@ -52,9 +46,11 @@ Recent apparent changes in relationships between the El Nino --
 southern oscillation and Australian rainfall and temperature.
 Geophysical Research Letters 23: 3357-3360.
 } 
+\seealso{\code{bomsoi}}
   \examples{ 
+bomsoi <- bomsoi2001
 plot(ts(bomsoi[, 15:14], start=1900),
-     panel=function(y,...)panel.smooth(1900:2005, y,...))
+     panel=function(y,...)panel.smooth(1900:2001, y,...))
 pause()
 
 # Check for skewness by comparing the normal probability plots for 
