@@ -12,7 +12,6 @@ cost 25 cents (Canadian).  The game played was `Double Diamond'.
 \format{
   This data frame contains the following columns:
   \describe{
-"window1" "window2" "window3" "prize"   "night"
     \item{window1}{object appearing in the first window.}
     \item{window2}{object appearing in the second window.}
     \item{window3}{object appearing in the third window.}

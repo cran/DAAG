@@ -21,6 +21,7 @@ capstring               Converts initial character of a string to upper
                         case
 carprice                US Car Price Data
 Cars93.summary          A Summary of the Cars93 Data set
+cerealsugar             Percentage of Sugar in Breakfast Cereal
 cfseal                  Cape Fur Seal Data
 cities                  Populations of Major Canadian Cities (1992-96)
 codling                 Dose-mortality data, for fumigation of codling
@@ -41,10 +42,12 @@ CVlm                    Cross-Validation for Linear Regression
 datafile                Create an ASCII data file
 dengue                  Dengue prevalence, by administrative region
 dewpoint                Dewpoint Data
+droughts                Periods Between Rain Events
 elastic1                Elastic Band Data Replicated
 elastic2                Elastic Band Data Replicated Again
 elasticband             Elastic Band Data
 fossilfuel              Fossil Fuel Data
+fossum                  Female Possum Measurements
 frogs                   Frogs Data
 frostedflakes           Frosted Flakes data
 fruitohms               Electrical Resistance of Kiwi Fruit
@@ -69,6 +72,7 @@ logisticsim             Simple Logistic Regression Data Simulator
 Lottario                Ontario Lottery Data
 Manitoba.lakes          The Nine Largest Lakes in Manitoba
 measles                 Deaths in London from measles
+medExpenses             Family Medical Expenses
 mifem                   Mortality Outcomes for Females Suffering
                         Myocardial Infarction
 mignonette              Darwin's Wild Mignonette Data
@@ -119,6 +123,9 @@ simulateLinear          Simulation of Linear Models for ANOVA vs.
 socsupport              Social Support Data
 softbacks               Measurements on a Selection of Paperback Books
 sorption                sorption data set
+SP500close              Closing Numbers for S and P 500 Index
+SP500W90                Closing Numbers for S and P 500 Index - First
+                        100 Days of 1990
 spam7                   Spam E-mail Data
 stVincent               Averages by block of yields for the St. Vincent
                         Corn data
