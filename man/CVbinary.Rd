@@ -32,5 +32,7 @@ the default) }
 frogs.glm <- glm(pres.abs ~ log(distance) + log(NoOfPools), 
    family=binomial,data=frogs)
 CVbinary(frogs.glm)
+mifem.glm <- glm(outcome ~ ., family=binomial, data=mifem)
+CVbinary(mifem.glm)
 }
 \keyword{models}
