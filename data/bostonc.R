@@ -1,8 +1,8 @@
 "bostonc" <-
 c("This file contains the Harrison and Rubinfeld (1978) data corrected for a few minor errors and augmented with the latitude and longitude of the observations. This file appears under boston in the statlib index. One can obtain matlab and spreadsheet versions of the information below from www.finance.lsu/re under spatial statistics links.", 
-"", "Harrison, David, and Daniel L. Rubinfeld, “Hedonic Housing Prices and the Demand for Clean Air,” Journal of Environmental Economics and Management, Volume 5, (1978), 81-102. Original data.", 
-"", "Gilley, O.W., and R. Kelley Pace, “On the Harrison and Rubinfeld Data,” Journal of Environmental Economics and Management, 31 (1996), 403-405. Provided corrections and examined censoring.", 
-"", "Pace, R. Kelley, and O.W. Gilley, “Using the Spatial Configuration of the Data to Improve Estimation,”  Journal of the Real Estate Finance and Economics 14 (1997), 333-340. Added georeferencing and spatial estimation.", 
+"", "Harrison, David, and Daniel L. Rubinfeld, Hedonic Housing Prices and the Demand for Clean Air, Journal of Environmental Economics and Management, Volume 5, (1978), 81-102. Original data.", 
+"", "Gilley, O.W., and R. Kelley Pace, On the Harrison and Rubinfeld Data, Journal of Environmental Economics and Management, 31 (1996), 403-405. Provided corrections and examined censoring.", 
+"", "Pace, R. Kelley, and O.W. Gilley, Using the Spatial Configuration of the Data to Improve Estimation,  Journal of the Real Estate Finance and Economics 14 (1997), 333-340. Added georeferencing and spatial estimation.", 
 "", "", "OBS.\tTOWN\tTOWN#\tTRACT\tLON\tLAT\tMEDV\tCMEDV\tCRIM\tZN\tINDUS\tCHAS\tNOX\tRM\tAGE\tDIS\tRAD\tTAX\tPTRATIO\tB\tLSTAT", 
 "1\tNahant\t0\t2011\t-70.955000\t42.255000\t24.0\t24.0\t0.00632\t18.0\t2.31\t0\t0.538\t6.575\t65.2\t4.0900\t1\t296\t15.3\t396.90\t4.98", 
 "2\tSwampscott\t1\t2021\t-70.950000\t42.287500\t21.6\t21.6\t0.02731\t0.0\t7.07\t0\t0.469\t6.421\t78.9\t4.9671\t2\t242\t17.8\t396.90\t9.14", 

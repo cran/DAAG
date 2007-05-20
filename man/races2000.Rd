@@ -4,7 +4,8 @@
 \title{Scottish Hill Races Data - 2000}
 \usage{races2000}
 \description{
-The record times in 2000 for 77 Scottish hill races.  We
+The record times in 2000 for 77 Scottish long distance
+races.  We
 believe the data are, for the most part, trustworthy.  However,
 the \code{dist} variable for Caerketton (record 58) seems
 to have been variously recorded as 1.5 mi and 2.5 mi.  

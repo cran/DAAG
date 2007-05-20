@@ -4,10 +4,10 @@
 \title{Scottish Hill Races Data - 2000}
 \usage{hills2000}
 \description{
-The record times in 2000 for 77 Scottish hill races.  We
-believe the data are, for the most part, trustworthy.  However,
-the \code{dist} variable for Caerketton (record 58) seems
-to have been variously recorded as 1.5 mi and 2.5 mi.  
+The record times in 2000 for 56 Scottish hill races.  We
+believe the data are, for the most part, trustworthy.  
+This is the subset of \code{races2000} for which \code{type}
+is \code{hill}.
 }
 \format{
   This data frame contains the following columns:
