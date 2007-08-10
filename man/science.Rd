@@ -58,10 +58,10 @@ intervals(science1.lme, which="var-cov")[[1]]$Class^2
 intervals(science1.lme, which="var-cov")[[2]]^2 
 
 science.lme <- lme(fixed = like ~ sex + PrivPub,
-  data = science, random =  ~ 1 | Class/school, na.action=na.exclude)
+  data = science, random =  ~ 1 | Class/school, na.action=na.omit)
 res <- residuals(science.lme)
 hat <- fitted(science.lme)
-coplot(res ~ hat|science$PrivPub[is.na(science$sex)!=TRUE],
+coplot(res ~ hat|science$PrivPub[!is.na(science$sex)],
   xlab="Fitted values", ylab="Residuals")
 detach(science)
 }

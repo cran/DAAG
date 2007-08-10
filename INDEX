@@ -10,7 +10,7 @@ appletaste              Tasting experiment that compared four apple
                         varieties
 austpop                 Population figures for Australian States and
                         Territories
-bestset.noise           Best Subset Selection Applied to Noise
+bestsetNoise            Best Subset Selection Applied to Noise
 biomass                 Biomass Data
 bomsoi                  Southern Oscillation Index Data
 bomsoi2001              Southern Oscillation Index Data

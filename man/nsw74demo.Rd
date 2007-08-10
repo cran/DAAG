@@ -4,12 +4,12 @@
 \title{Labour Training Evaluation Data}
 \usage{nsw74demo}
 \description{
-This data frame contains 445 rows and 10 columns.
-These data are pertinent to an investigation of the way that   
-earnings changed, between 1974-1975 and 1978, in the absence
-of training.  Data for the experimental treatment 
-group (NSW) were combined with control data results from the 
-Panel Study of Income Dynamics (PSID) study.  
+  This data frame contains 445 rows and 10 columns. These
+  data are from an investigation of the effect of training
+  on changes, between 1974-1975 and 1978, in the earnings
+  of individuals who had experienced employment difficulties
+  Data are for the male experimental control and treatment
+  groups.
 }
 \format{
   This data frame contains the following columns:
