@@ -1,6 +1,5 @@
 \name{nsw74psidA}
 \alias{nsw74psidA}
-\non_function{}
 \title{A Subset of the nsw74psid1 Data Set}
 \usage{nsw74psidA}
 \description{

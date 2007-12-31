@@ -1,6 +1,5 @@
 \name{milk}
 \alias{milk}
-\non_function{}
 \title{Milk Sweetness Study}
 \usage{milk}
 \description{

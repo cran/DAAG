@@ -1,6 +1,5 @@
 \name{kiwishade}
 \alias{kiwishade}
-\non_function{}
 \title{Kiwi Shading Data}
 \usage{kiwishade}
 \description{

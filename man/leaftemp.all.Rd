@@ -1,6 +1,5 @@
 \name{leaftemp.all}
 \alias{leaftemp.all}
-\non_function{}
 \title{Full Leaf and Air Temperature Data Set}
 \usage{leaftemp.all}
 \description{

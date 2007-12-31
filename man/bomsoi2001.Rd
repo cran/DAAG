@@ -1,6 +1,5 @@
 \name{bomsoi2001}
 \alias{bomsoi2001}
-\non_function{}
 \title{Southern Oscillation Index Data}
 \usage{bomsoi2001}
 \description{

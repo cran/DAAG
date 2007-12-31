@@ -39,7 +39,10 @@ CVbinary                Cross-Validation for Regression with a Binary
                         Response
 cv.lm                   Cross-Validation for Linear Regression
 CVlm                    Cross-Validation for Linear Regression
-datafile                Create an ASCII data file
+DAAGxdb                 List, each of whose elements hold rows of a
+                        file, in character format
+datafile                Write an ASCII data file to the working
+                        directory.
 dengue                  Dengue prevalence, by administrative region
 dewpoint                Dewpoint Data
 droughts                Periods Between Rain Events
@@ -143,3 +146,5 @@ vlt                     Video Lottery Terminal Data
 wages1833               Wages of Lancashire Cotton Factory Workers in
                         1833
 whoops                  Deaths from whooping cough, in London
+zzDAAGxdb               List, each of whose elements hold rows of a
+                        file, in character format

@@ -1,6 +1,5 @@
 \name{toycars}
 \alias{toycars}
-\non_function{}
 \title{Toy Cars Data}
 \usage{toycars}
 \description{

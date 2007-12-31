@@ -1,6 +1,5 @@
 \name{seedrates}
 \alias{seedrates}
-\non_function{}
 \title{Barley Seeding Rate Data}
 \usage{seedrates}
 \description{

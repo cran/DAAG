@@ -1,6 +1,5 @@
 \name{mignonette}
 \alias{mignonette}
-\non_function{}
 \title{Darwin's Wild Mignonette Data}
 \usage{mignonette}
 \description{

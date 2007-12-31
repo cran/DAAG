@@ -1,6 +1,5 @@
 \name{rareplants}
 \alias{rareplants}
-\non_function{}
 \title{Rare and Endangered Plant Species}
 \usage{rareplants}
 \description{

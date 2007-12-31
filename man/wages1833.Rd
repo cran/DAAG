@@ -1,6 +1,5 @@
 \name{wages1833}
 \alias{wages1833}
-\non_function{}
 \title{Wages of Lancashire Cotton Factory Workers in 1833}
 \usage{wages1833}
 \description{

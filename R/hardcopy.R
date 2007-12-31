@@ -1,41 +1,54 @@
-"hardcopy" <-
-function(width=3.75, height=3.75, color=F, trellis=F,
-             device=c("","pdf","ps"), path="", pointsize=c(8,4), horiz=F){
+`hardcopy` <-
+function(width=3.75, height=3.75, color=FALSE, trellis=FALSE,
+           device=c("","pdf","ps"), path=getwd(), file=NULL,
+           format=c("nn-nn", "name"), split="\\.", pointsize=c(8,4),
+           fonts=NULL,
+           horiz=FALSE, ...){
+    if(!trellis)pointsize <- pointsize[1]
+    funtxt <- sys.call(1)
+    nam <- strsplit(as.character(funtxt), "(", fixed=TRUE)[[1]][1]
+    suffix <- switch(device, ps=".eps", pdf=".pdf")
+    if(is.character(path) & nchar(path)>1 & substring(path, nchar(path))!="/")
+      path <- paste(path, "/", sep="")
+    if(is.null(file)) if(format[1]=="nn-nn"){
+      if(!is.null(split))dotsplit <- strsplit(nam, split)[[1]] else
+      dotsplit <- nam
+      if(length(dotsplit)==1)dotsplit <- c("", dotsplit)
+      nn2 <- paste(if(nchar(dotsplit[2])==1)"0" else "", dotsplit[2],
+                   sep="")
+      if(nchar(dotsplit[1])>0){
+        numstart <- which(unlist(strsplit(dotsplit[1], "")) %in% paste(0:9))[1]
+        nn1 <- substring(dotsplit[1], numstart)
+        nn1 <- paste(if(nchar(nn1) == 1) "0" else "", nn1, "-", sep="")
+      } else nn1 <- ""
+      file <- paste(nn1, nn2, sep="")
+    } else file <- nam
+    if(nchar(file)>4 & substring(file, nchar(file)-nchar(suffix)+1)==suffix)
+      suffix <- ""
+    file <- paste(path, file, suffix, sep="")
+    print(paste("Output will be directed to file:", file))
+    dev.out <- device[1]
+    dev.fun <- switch(dev.out, pdf=pdf, ps=postscript)
+    if(trellis){
+      library(lattice)
+      if(device=="ps")
+        trellis.device(file=file, device=dev.fun,
+                       color = color, horiz=horiz, fonts=fonts,
+                       width=width, height=height, ...) else
+      trellis.device(file=file, device=dev.fun, fonts=fonts,
+                     color = color, width=width, height=height, ...)
 
-        ## 1 x 1: 2.25" x 2.25"
-        ## 2 x 2: 2.75" x 2.75"
-        ## 3 x 3: 3.75" x 3.75" or 3.25" x 3.25" for simple scatterplots
-        ## 1 x 2: 4" x 2.25"
-        ## 2 x 3: 4" x 2.8"
-        ## 3 x 4: 4.5" x 3.25
-        if(!trellis)pointsize <- pointsize[1]
-        funtxt <- sys.call(1)
-        fnam <- strsplit(as.character(funtxt), "(", fixed=T)[[1]][1]
-        dotsplit <- strsplit(fnam, "\\.")[[1]]
-        dotsplit[1] <- substring(dotsplit[1], 2)
-        prefix1 <- paste(if(nchar(dotsplit[1])==1)"0" else "", dotsplit[1],
-                         sep="")
-        prefix2 <- paste(if(nchar(dotsplit[2])==1)"0" else "", dotsplit[2],
-                         sep="")
-        suffix <- switch(device, ps=".eps", pdf=".pdf")
-        fnam <- paste("~/r-book/second/Art/",prefix1,"-",prefix2,
-                      suffix, sep="")
-        print(fnam)
-        dev.out <- device[1]
-        dev.fun <- switch(dev.out, pdf=pdf, ps=postscript)
-        if(trellis){
-            library(lattice)
-            trellis.device(file=fnam, device=dev.fun,
-                           bg="white", color = color,
-                           width=width, height=height, horiz=horiz)
-            lset(list(fontsize=list(text=pointsize[1], points=pointsize[2])))
-        }
-        else 
-            if (dev.out!=""){
-                print(c(width, height))
-                dev.fun(file=fnam, paper="special",
-                        enc="MacRoman", horiz=horiz,
-                        width=width, height=height, pointsize=pointsize[1])
-            }
+      trellis.par.set(list(fontsize=list(text=pointsize[1], points=pointsize[2])))
+    } else
+    if (dev.out!=""){
+      print(c(width, height))
+      if(device=="ps")
+        dev.fun(file=file, paper="special",  horiz=horiz, fonts=fonts,
+                width=width, height=height, pointsize=pointsize[1], ...) else
+      dev.fun(file=file, paper="special", fonts=fonts,
+              width=width, height=height, pointsize=pointsize[1], ...)      
     }
+    if(trellis)trellis.par.set(list(fontsize=list(text=pointsize[1],
+                                      points=pointsize[2])))
+  }
 

@@ -1,6 +1,5 @@
 \name{headInjury}
 \alias{headInjury}
-\non_function{}
 \title{Minor Head Injury (Simulated) Data}
 \usage{headInjury}
 \description{

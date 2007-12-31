@@ -1,6 +1,5 @@
 \name{tinting}
 \alias{tinting}
-\non_function{}
 \title{Car Window Tinting Experiment Data}
 \usage{tinting}
 \description{

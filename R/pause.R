@@ -1,4 +1,4 @@
-"pause" <-
+`pause` <-
 function () 
 {
     cat("Pause. Press <Enter> to continue...")

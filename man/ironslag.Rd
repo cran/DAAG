@@ -1,6 +1,5 @@
 \name{ironslag}
 \alias{ironslag}
-\non_function{}
 \title{Iron Content Measurements}
 \usage{ironslag}
 \description{

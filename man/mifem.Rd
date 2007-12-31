@@ -1,6 +1,5 @@
 \name{mifem}
 \alias{mifem}
-\non_function{}
 \title{Mortality Outcomes for Females Suffering Myocardial Infarction}
 \usage{mifem}
 \description{

@@ -1,6 +1,5 @@
 \name{elastic1}
 \alias{elastic1}
-\non_function{}
 \title{Elastic Band Data Replicated}
 \usage{elastic1}
 \description{

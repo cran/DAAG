@@ -1,6 +1,5 @@
 \name{science}
 \alias{science}
-\non_function{}
 \title{School Science Survey Data}
 \usage{science}
 \description{

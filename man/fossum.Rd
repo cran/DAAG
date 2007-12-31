@@ -1,6 +1,5 @@
 \name{fossum}
 \alias{fossum}
-\non_function{}
 \title{Female Possum Measurements}
 \usage{fossum}
 \description{

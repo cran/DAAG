@@ -1,6 +1,5 @@
 \name{Manitoba.lakes}
 \alias{Manitoba.lakes}
-\non_function{}
 \title{The Nine Largest Lakes in Manitoba}
 \usage{Manitoba.lakes}
 \description{

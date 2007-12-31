@@ -1,6 +1,5 @@
 \name{possum}
 \alias{possum}
-\non_function{}
 \title{Possum Measurements}
 \usage{possum}
 \description{

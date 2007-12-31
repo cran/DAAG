@@ -1,6 +1,5 @@
 \name{monica}
 \alias{monica}
-\non_function{}
 \title{WHO Monica Data}
 \usage{monica}
 \description{

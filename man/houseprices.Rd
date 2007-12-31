@@ -1,6 +1,6 @@
 \name{houseprices}
 \alias{houseprices}
-\non_function{}
+\docType{data}
 \title{Aranda House Prices}
 \usage{houseprices}
 \description{
@@ -34,7 +34,7 @@ houseprices.lm <- lm(sale.price ~ area, data=houseprices)
 summary(houseprices.lm)$sigma^2
 pause()
 
-cv.lm()
+CVlm()
 pause()
 
 print("Bootstrapping - Example 5.5.3")

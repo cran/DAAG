@@ -1,6 +1,5 @@
 \name{sugar}
 \alias{sugar}
-\non_function{}
 \title{Sugar Data}
 \usage{sugar}
 \description{

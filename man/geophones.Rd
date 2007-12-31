@@ -1,6 +1,5 @@
 \name{geophones}
 \alias{geophones}
-\non_function{}
 \title{Seismic Timing Data}
 \usage{geophones}
 \description{

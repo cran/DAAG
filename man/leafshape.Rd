@@ -1,6 +1,5 @@
 \name{leafshape}
 \alias{leafshape}
-\non_function{}
 \title{Full Leaf Shape Data Set}
 \usage{leafshape}
 \description{

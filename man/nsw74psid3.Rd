@@ -1,6 +1,5 @@
 \name{nsw74psid3}
 \alias{nsw74psid3}
-\non_function{}
 \title{Labour Training Evaluation Data}
 \usage{nsw74psid3}
 \description{

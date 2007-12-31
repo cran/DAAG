@@ -1,6 +1,5 @@
 \name{primates}
 \alias{primates}
-\non_function{}
 \title{Primate Body and Brain Weights}
 \usage{primates}
 \description{

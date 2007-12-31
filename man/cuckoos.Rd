@@ -1,6 +1,5 @@
 \name{cuckoos}
 \alias{cuckoos}
-\non_function{}
 \title{Cuckoo Eggs Data}
 \usage{cuckoos}
 \description{

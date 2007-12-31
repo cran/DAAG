@@ -1,6 +1,5 @@
 \name{softbacks}
 \alias{softbacks}
-\non_function{}
 \title{Measurements on a Selection of Paperback Books}
 \usage{softbacks}
 \description{

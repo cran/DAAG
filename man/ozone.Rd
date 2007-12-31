@@ -1,6 +1,5 @@
 \name{ozone}
 \alias{ozone}
-\non_function{}
 \title{Ozone Data}
 \usage{ozone}
 \description{

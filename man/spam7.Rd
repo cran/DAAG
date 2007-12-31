@@ -1,6 +1,5 @@
 \name{spam7}
 \alias{spam7}
-\non_function{}
 \title{Spam E-mail Data}
 \usage{spam7}
 \description{

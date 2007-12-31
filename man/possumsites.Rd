@@ -1,6 +1,5 @@
 \name{possumsites}
 \alias{possumsites}
-\non_function{}
 \title{Possum Sites}
 \usage{possumsites}
 \description{

@@ -1,6 +1,5 @@
 \name{allbacks}
 \alias{allbacks}
-\non_function{}
 \title{Measurements on a Selection of Books}
 \usage{allbacks}
 \description{

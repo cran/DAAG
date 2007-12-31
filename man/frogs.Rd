@@ -1,6 +1,5 @@
 \name{frogs}
 \alias{frogs}
-\non_function{}
 \title{Frogs Data}
 \usage{frogs}
 \description{

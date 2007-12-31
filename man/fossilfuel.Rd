@@ -1,6 +1,5 @@
 \name{fossilfuel}
 \alias{fossilfuel}
-\non_function{}
 \title{Fossil Fuel Data}
 \usage{fossilfuel}
 \description{

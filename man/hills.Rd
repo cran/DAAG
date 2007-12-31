@@ -1,6 +1,5 @@
 \name{hills}
 \alias{hills}
-\non_function{}
 \title{Scottish Hill Races Data}
 \usage{hills}
 \description{

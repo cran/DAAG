@@ -1,6 +1,5 @@
 \name{two65}
 \alias{two65}
-\non_function{}
 \title{Unpaired Heated Elastic Bands}
 \usage{pair65}
 \description{

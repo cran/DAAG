@@ -13,12 +13,6 @@ to have been variously recorded as 1.5 mi and 2.5 mi.
 \format{
   This data frame contains the following columns:
   \describe{
-    \item{h}{male record time in hours}
-    \item{m}{plus minutes}
-    \item{s}{plus seconds}
-    \item{h0}{female record time in hours}
-    \item{m0}{plus minutes}
-    \item{s0}{plus seconds}
     \item{dist}{distance, in miles (on the map)}
     \item{climb}{total height gained during the route, in feet}
     \item{time}{record time in hours}
@@ -31,6 +25,6 @@ i.e. hill, marathon, relay, uphill or other}
 The Scottish Running Resource, http://www.hillrunning.co.uk
 }
 \examples{
-    pairs(races2000[,-11])
+    pairs(races2000[,-5])
 }
 \keyword{datasets}

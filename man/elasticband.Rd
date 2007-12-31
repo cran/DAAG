@@ -1,6 +1,5 @@
 \name{elasticband}
 \alias{elasticband}
-\non_function{}
 \title{Elastic Band Data}
 \usage{elasticband}
 \description{

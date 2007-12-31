@@ -1,6 +1,5 @@
 \name{moths}
 \alias{moths}
-\non_function{}
 \title{Moths Data}
 \usage{moths}
 \description{

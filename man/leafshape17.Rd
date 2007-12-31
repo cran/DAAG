@@ -1,6 +1,5 @@
 \name{leafshape17}
 \alias{leafshape17}
-\non_function{}
 \title{Subset of Leaf Shape Data Set}
 \usage{leafshape17}
 \description{

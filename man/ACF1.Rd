@@ -1,6 +1,5 @@
 \name{ACF1}
 \alias{ACF1}
-\non_function{}
 \title{Aberrant Crypt Foci in Rat Colons}
 \usage{ACF1}
 \description{

@@ -1,6 +1,5 @@
 \name{Cars93.summary}
 \alias{Cars93.summary}
-\non_function{}
 \title{A Summary of the Cars93 Data set}
 \usage{Cars93.summary}
 \description{

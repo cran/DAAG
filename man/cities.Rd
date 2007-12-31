@@ -1,6 +1,5 @@
 \name{cities}
 \alias{cities}
-\non_function{}
 \title{Populations of Major Canadian Cities (1992-96)}
 \usage{cities}
 \description{

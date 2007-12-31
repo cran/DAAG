@@ -1,6 +1,5 @@
 \name{lung}
 \alias{lung}
-\non_function{}
 \title{Cape Fur Seal Lung Measurements}
 \usage{lung}
 \description{

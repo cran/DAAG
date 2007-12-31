@@ -1,6 +1,5 @@
 \name{nsw74demo}
 \alias{nsw74demo}
-\non_function{}
 \title{Labour Training Evaluation Data}
 \usage{nsw74demo}
 \description{

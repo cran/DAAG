@@ -1,6 +1,5 @@
 \name{anesthetic}
 \alias{anesthetic}
-\non_function{}
 \title{Anesthetic Effectiveness}
 \usage{anesthetic}
 \description{

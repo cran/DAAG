@@ -1,36 +1,58 @@
-"datafile" <-
-function (file = "fuel") 
+`datafile` <-
+function (file = c("fuel", "travelbooks"), datastore = DAAGxdb, 
+    altstore = zzDAAGxdb, showNames = FALSE) 
 {
-    if (file == "fuel") {
-        cat("year  carbon", "1800   8", "1850   54", "1900   534", 
-            "1950   1630", "2000   6611", file = "fuel.txt", 
-            sep = "\n")
-        print(paste("File fuel.txt is now in directory", getwd()))
+    if (!is.null(file)) 
+        if (file[1] == "") 
+            file <- NULL
+    storenames <- names(datastore)
+    altnames <- names(altstore)
+    check <- file %in% c(storenames, altnames)
+    if (showNames) {
+        cat("\nAvailable filenames (omitting final '.txt') are:", 
+            "\n")
+        cat(storenames, "\n")
+        cat(altnames, "\n")
     }
-    if (file == "fuel.csv") {
-        cat("year,carbon", "1800,8", "1850,54", "1900,534", "1950,1630", 
-            "2000,6611", file = "fuel.csv", sep = "\n")
-        print(paste("File fuel.csv is now in directory", getwd()))
+    if (is.null(file)) 
+        return(c(storenames, altnames))
+    for (nam in file) {
+        fnam <- nam
+        nameparts <- strsplit(nam, split = ".", fixed = TRUE)[[1]]
+        n <- length(nameparts)
+        if (nameparts[n] %in% c("csv", "txt")) {
+            stem <- nameparts[-n]
+            extension <- nameparts[n]
+        }
+        else {
+            stem <- fnam
+            fnam <- paste(nam, ".", "txt", sep = "")
+            extension <- "txt"
+        }
+        if (extension == "csv") 
+            elname <- paste(stem, ".csv", sep = "")
+        else elname <- stem
+        if (stem %in% altnames) {
+            if (stem == "bostonc") {
+                cat(altstore[[stem]][1:9], file = "bostonc.txt", 
+                  sep = "\t", fill = TRUE)
+                cat("\n", file = "bostonc.txt", sep = "\t", append = TRUE)
+                cat(altstore[[stem]][-c(1:9)], file = "bostonc.txt", 
+                  sep = "\t", fill = TRUE, append = TRUE)
+            }
+            else {
+                records <- altstore[[stem]]
+                cat(records, sep = "\n", file = fnam)
+            }
+            cat("\nData written to file:", fnam, "\n")
+        }
+        else if (elname %in% names(datastore)) {
+            records <- datastore[[elname]]
+            cat(records, sep = "\n", file = fnam)
+            cat("\nData written to file:", fnam, "\n")
+        }
+        else cat("\nDataset", elname, "is not in any of the available databases", 
+            "\n")
     }
-    if (file == "oneBadRow") {
-        cat("10 9 17  # First of 7 lines", "11 13 1 6", "9 14 16", 
-            "12 15 14", "8 15 15", "9 13 12", "7 14 18", file = "oneBadRow.txt", 
-            sep = "\n")
-        print(paste("File oneBadRow.txt is now in directory", 
-            getwd()))
-    }
-    if (file == "scan-demo") {
-        cat("First of 4 lines", "a 2 3", "b 11 13", "c 9 7", 
-            file = "scan-demo.txt", sep = "\n")
-        print(paste("File scan-demo.txt is now in directory", 
-            getwd()))
-    }
-    if (file == "bostonc") {
-         cat(bostonc[1:9], file="bostonc.txt", sep="\t", fill=TRUE) 
-         cat("\n", file="bostonc.txt", sep="\t", append=TRUE) 
-         cat(bostonc[-c(1:9)], file="bostonc.txt", sep="\t",fill=TRUE,append=TRUE) 
-        print(paste("File bostonc.txt is now in directory", getwd()))
-    }
-    invisible()
+    invisible(c(storenames, altnames))
 }
-

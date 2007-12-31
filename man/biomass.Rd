@@ -1,6 +1,5 @@
 \name{biomass}
 \alias{biomass}
-\non_function{}
 \title{Biomass Data}
 \usage{biomass}
 \description{

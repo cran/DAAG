@@ -1,6 +1,5 @@
 \name{roller}
 \alias{roller}
-\non_function{}
 \title{Lawn Roller Data}
 \usage{roller}
 \description{

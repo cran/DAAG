@@ -1,6 +1,5 @@
 \name{Lottario} 
 \alias{Lottario} 
-\non_function{} 
 \title{Ontario Lottery Data} 
 \usage{Lottario} 
 \description{ The data frame \verb!Lottario!

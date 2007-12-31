@@ -1,6 +1,5 @@
 \name{dewpoint}
 \alias{dewpoint}
-\non_function{}
 \title{Dewpoint Data}
 \usage{dewpoint}
 \description{

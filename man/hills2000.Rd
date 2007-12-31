@@ -12,12 +12,6 @@ is \code{hill}.
 \format{
   This data frame contains the following columns:
   \describe{
-    \item{h}{male record time in hours}
-    \item{m}{plus minutes}
-    \item{s}{plus seconds}
-    \item{h0}{female record time in hours}
-    \item{m0}{plus minutes}
-    \item{s0}{plus seconds}
     \item{dist}{distance, in miles (on the map)}
     \item{climb}{total height gained during the route, in feet}
     \item{time}{record time in hours}

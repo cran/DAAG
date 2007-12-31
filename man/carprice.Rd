@@ -1,6 +1,5 @@
 \name{carprice}
 \alias{carprice}
-\non_function{}
 \title{US Car Price Data}
 \usage{carprice}
 \description{

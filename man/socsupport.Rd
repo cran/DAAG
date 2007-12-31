@@ -1,6 +1,5 @@
 \name{socsupport}
 \alias{socsupport}
-\non_function{}
 \title{Social Support Data}
 \usage{socsupport}
 \description{

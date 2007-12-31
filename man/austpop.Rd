@@ -1,6 +1,5 @@
 \name{austpop}
 \alias{austpop}
-\non_function{}
 \title{Population figures for Australian States and Territories}
 \usage{austpop}
 \description{

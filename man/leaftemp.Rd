@@ -1,6 +1,5 @@
 \name{leaftemp}
 \alias{leaftemp}
-\non_function{}
 \title{Leaf and Air Temperature Data}
 \usage{leaftemp}
 \description{

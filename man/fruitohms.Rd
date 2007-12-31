@@ -1,6 +1,5 @@
 \name{fruitohms}
 \alias{fruitohms}
-\non_function{}
 \title{Electrical Resistance of Kiwi Fruit}
 \usage{fruitohms}
 \description{

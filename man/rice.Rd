@@ -1,6 +1,5 @@
 \name{rice}
 \alias{rice}
-\non_function{}
 \title{Genetically Modified and Wild Type Rice Data}
 \usage{rice}
 \description{

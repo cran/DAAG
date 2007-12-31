@@ -1,6 +1,5 @@
 \name{rainforest}
 \alias{rainforest}
-\non_function{}
 \title{Rainforest Data}
 \usage{rainforest}
 \description{

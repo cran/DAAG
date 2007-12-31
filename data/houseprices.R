@@ -1,4 +1,4 @@
-"houseprices" <-
+`houseprices` <-
 structure(list(area = c(694, 905, 802, 1366, 716, 963, 821, 714, 
 1018, 887, 790, 696, 771, 1006, 1191), bedrooms = c(4, 4, 4, 
 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 6), sale.price = c(192, 215, 
