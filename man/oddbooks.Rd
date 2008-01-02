@@ -17,8 +17,6 @@ decreased as page area increased
     \item{weight}{a numeric vector}
   }
 }
-\details{
-}
 \source{
 JM took books from his library.
 }

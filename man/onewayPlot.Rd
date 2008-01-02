@@ -24,7 +24,6 @@ onewayPlot(obj = rice.aov, trtnam = "trt", axisht = 6, xlim = NULL,
 }
 \value{
 Estimates, labeled with level names, are set out along a line} 
-}
 \author{J.H. Maindonald}
 
 \examples{

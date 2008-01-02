@@ -16,7 +16,7 @@ in cubic centimeters}
     \item{area}{hard board cover
 areas in square centimeters}
     \item{weight}{book weights in grams}
-    \item{cover}{a factor with levels}
+    \item{cover}{a factor with levels
    \code{hb} hardback,   \code{pb} paperback}
   }
 }
@@ -45,7 +45,7 @@ model.matrix(allbacks.lm)
 pause()
 
 print("Example 6.1.1")
-allbacks.lm0 <- lm(weight ~ -1+volume+area, data=allbacks);
+allbacks.lm0 <- lm(weight ~ -1+volume+area, data=allbacks)
 summary(allbacks.lm0)
 pause()
 
@@ -60,6 +60,5 @@ pause()
 print("Example 6.1.3")
 round(coef(allbacks.lm0),2)  # Baseline for changes
 round(lm.influence(allbacks.lm0)$coef,2)
-
 }
 \keyword{datasets}

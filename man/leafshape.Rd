@@ -17,7 +17,7 @@ sites in Australia.
     \item{logpet}{logarithm of petiole}
     \item{loglen}{logarithm of length}
     \item{arch}{leaf architecture (0 = plagiotropic, 1 = orthotropic}
-    \item{location}{a factor with levels}
+    \item{location}{a factor with levels
 \code{Sabah}, \code{Panama}, \code{Costa Rica},
 \code{N Queensland}, \code{S Queensland}, 
 \code{Tasmania} }

@@ -2,7 +2,8 @@
 \alias{fossilfuel}
 \title{Fossil Fuel Data}
 \usage{fossilfuel}
-\description{
+\description{Estimates of total worldwide carbon emissions from
+fossil fuel use.
 }
 \format{
   This data frame contains the following columns:

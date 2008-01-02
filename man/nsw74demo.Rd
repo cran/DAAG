@@ -40,5 +40,4 @@ programs. Journal of the American Statistical Association 94:
 training programs. American Economic Review 76: 604-620.
 }
 
-}
 \keyword{datasets}

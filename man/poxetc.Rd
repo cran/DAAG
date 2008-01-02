@@ -10,8 +10,6 @@
 \format{This is a multiple time series consisting of 5 series:
 \code{fpox}, \code{measles}, \code{all}, \code{fpox2all}, \code{measles2all}.
 }
-\details{
-}
 \source{
   Guy, W. A. 1882. Two hundred and fifty years of small pox in London.
   Journal of the Royal Statistical Society 399-443.

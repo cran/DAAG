@@ -1,6 +1,5 @@
 \name{races2000}
 \alias{races2000}
-\non_function{}
 \title{Scottish Hill Races Data - 2000}
 \usage{races2000}
 \description{
