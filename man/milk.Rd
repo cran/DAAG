@@ -17,10 +17,7 @@ of additive}
   }
 }
 \source{
- ??
-}
-\references{
-??
+ J.H. Maindonald
 }
 \examples{
 print("Rug Plot - Example 1.8.1")

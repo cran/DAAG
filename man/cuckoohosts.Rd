@@ -33,10 +33,10 @@
 }
 \source{
 Latter, O.H., 1902.
-The egg of {\it cuculus canorus}. an inquiry into the dimensions of
+The egg of \emph{cuculus canorus}. an inquiry into the dimensions of
   the cuckoo's egg and the relation of the variations to the size of the eggs
   of the foster-parent, with notes on coloration, &c.
-{\em Biometrika}, 1:164--176.
+\emph{Biometrika}, 1:164--176.
 }
 \examples{
 cuckoohosts

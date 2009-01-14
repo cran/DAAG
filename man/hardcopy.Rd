@@ -11,12 +11,12 @@ automatically from function names of the form \code{g3.2} or
 \usage{
 hardcopy(width = 3.75, height = 3.75, color = FALSE, trellis = FALSE,
                  device = c("", "pdf", "ps"), path = getwd(), file =
-                 NULL, format = c("nn-nn", "name"), split = "\\.",
+                 NULL, format = c("nn-nn", "name"), split = "\\\\.",
                  pointsize = c(8, 4), fonts=NULL, horiz = FALSE, ...)
 }
 \arguments{
-  \item{width}{ }
-  \item{height}{ }
+  \item{width}{width of plot in inches (sic!)}
+  \item{height}{height of plot in inches (sic!)}
   \item{color}{(lattice plots only) TRUE if plot is not black on white only}
   \item{trellis}{TRUE if plot uses trellis graphics}
   \item{device}{screen "", pdf or ps}
@@ -47,6 +47,6 @@ hardcopy(width = 3.75, height = 3.75, color = FALSE, trellis = FALSE,
   Graphical output to screen, pdf or ps file. 
 }
 \author{J.H. Maindonald}
-\seealso{\code{postscript}}
+\seealso{\code{\link{postscript}}}
 
 \keyword{IO}

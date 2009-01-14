@@ -22,20 +22,11 @@ FALSE, seed=29, plotit=TRUE, printit=TRUE)
   \item{printit}{if TRUE, output is printed to the screen}
 }
 \value{
-For each fold, a table listing
-
-\item{ } the explanatory variable values
-\item{ } the predicted values
-\item{ } the observed values
-\item{ } the residuals
-
-ms = the overall mean square of prediction error 
-
+\item{ss}{the cross-validation residual sum of squares}
+\item{df}{degrees of freedom}
 }
 \author{J.H. Maindonald}
-
-\seealso{ \code{lm} }
-
+\seealso{\code{\link{lm}}}
 \examples{
 CVlm()
 }

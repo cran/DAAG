@@ -13,24 +13,23 @@ CVbinary(obj=frogs.glm, rand=NULL, nfolds=10, print.details=TRUE)
 }
 %- maybe also `usage' for other objects documented here.
 \arguments{
-  \item{obj}{ a \code{glm} object}
-  \item{rand}{ a vector which assigns each observation to a fold }
+  \item{obj}{a \code{glm} object}
+  \item{rand}{a vector which assigns each observation to a fold}
   \item{nfolds}{ the number of folds}
   \item{print.details}{ logical variable (TRUE = print detailed output, 
-the default) }
+the default)}
 }
 \value{
-  \item{the order in which folds were deleted}
-  \item{internal estimate of accuracy}
-  \item{cross-validation estimate of accuracy}
+  \item{cv}{predicted values from cross-validation}
+  \item{internal}{internal predicted values}  
+  \item{cv}{cross-validation estimate of accuracy}
+  \item{internal}{internal estimate of accuracy}  
 }
 \author{J.H. Maindonald}
-
-\seealso{ \code{glm} }
-
+\seealso{\code{\link{glm}}}
 \examples{
 frogs.glm <- glm(pres.abs ~ log(distance) + log(NoOfPools), 
-   family=binomial,data=frogs)
+                 family=binomial,data=frogs)
 CVbinary(frogs.glm)
 mifem.glm <- glm(outcome ~ ., family=binomial, data=mifem)
 CVbinary(mifem.glm)

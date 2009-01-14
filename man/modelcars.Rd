@@ -20,7 +20,7 @@ the ramp (in cm)}
   }
 }
 \source{
-J.H. Maindonald
+W.J. Braun
 }
 \examples{
 plot(modelcars)

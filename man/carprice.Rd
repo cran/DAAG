@@ -21,14 +21,16 @@ MASS package.
 driving}
   } 
 } 
-  \source{ 
+  \source{
 MASS package
 } 
   \references{
- Venables, W.N.\ and Ripley, B.D., 3$^{rd}$ edn 1999. Modern
-Applied Statistics with S-Plus. Springer, New York.\\ See also
+ Venables, W.N.\ and Ripley, B.D., 4th edn 2002. Modern
+ Applied Statistics with S. Springer, New York.
+
+ See also
 `R' Complements to Modern Applied Statistics with S-Plus,
-available from \\ http://www.stats.ox.ac.uk/pub/MASS3/.
+available from \url{http://www.stats.ox.ac.uk/pub/MASS3/}
 } 
   \examples{ 
 print("Multicollinearity - Example 6.8")

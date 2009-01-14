@@ -16,7 +16,7 @@ juice content.
 }
 \source{
 Harker, F. R. and Maindonald J.H. 1994. Ripening of nectarine
-fruit. Plant Physiology 106: 165 - 171.
+fruit. \emph{Plant Physiology} 106: 165 - 171.
 }
 \examples{
 plot(ohms ~ juice, xlab="Apparent juice content (\%)",ylab="Resistance (ohms)", data=fruitohms)

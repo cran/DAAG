@@ -26,7 +26,7 @@ Data from a survey on social and other kinds of support.
     \item{firstyr}{a factor with levels \code{first year}, 
 \code{other} }
     \item{enrolment}{a factor with levels
-\code{}, \code{full-time}, \code{part-time}}
+\code{full-time}, \code{part-time}, \code{<NA>}}
     \item{emotional}{summary of 5 questions on emotional support availability}
     \item{emotionalsat}{summary of 5 questions on emotional support satisfaction}
     \item{tangible}{summary of 4 questions on availability of tangible support}

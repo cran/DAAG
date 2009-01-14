@@ -41,9 +41,11 @@
   Publication.
 }
 \references{
-  Boot and Maindonald. New estimates of age- and sex-specific earnings,
-  and the male-female earnings gap in the British cotton industry,
-  1833-1906.  Unpublished manuscript.
+  Boot, H. M. and Maindonald, J. H. 2007. New estimates of age- and sex-
+  specific earnings and the male-female earnings gap in the British
+  cotton industry, 1833-1906. \emph{Economic History Review}. Published
+  online 28-Aug-2007 doi: 10.1111/j.1468-0289.2007.00398.x
+  
 }
 \examples{
 data(cottonworkers)

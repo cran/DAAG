@@ -2,7 +2,7 @@
 \alias{Lottario} 
 \title{Ontario Lottery Data} 
 \usage{Lottario} 
-\description{ The data frame \verb!Lottario!
+\description{The data frame \code{Lottario}
 is a summary of 122 weekly draws of an Ontario lottery, beginning in
 November, 1978.  Each draw consists of 7 numbered balls, drawn without
 replacement from an urn consisting of balls numbered from 1 through 39.
