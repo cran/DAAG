@@ -33,7 +33,7 @@ known}
 }
 \source{
  Newcastle (Australia) centre of the Monica
-  project; see the web site http://www.ktl.fi
+  project; see the web site http://www.ktl.fi/monica
 }
 \examples{
 print("CART - Example 10.7")
