@@ -33,12 +33,13 @@ compareTreecalcs        Error rate comparisons for tree-based
 component.residual      Component + Residual Plot
 cottonworkers           Occupation and wage profiles of British cotton
                         workers
+cps1                    Labour Training Evaluation Data
+cps2                    Labour Training Evaluation Data
+cps3                    Labour Training Evaluation Data
 cricketer               Lifespans of UK 1st class cricketers born
                         1840-1960
 cuckoohosts             Comparison of cuckoo eggs with host eggs
 cuckoos                 Cuckoo Eggs Data
-cv.binary               Cross-Validation for Regression with a Binary
-                        Response
 cv.lm                   Cross-Validation for Linear Regression
 CVbinary                Cross-Validation for Regression with a Binary
                         Response

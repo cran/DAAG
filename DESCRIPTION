@@ -1,6 +1,6 @@
 Package: DAAG
-Version: 0.99-1
-Date: 2009-May-14
+Version: 0.99-2
+Date: 2009-May-24
 Title: Data Analysis And Graphics
 Author: John Maindonald and W. John Braun
 Maintainer: W. John Braun <braun@stats.uwo.ca>
@@ -14,6 +14,6 @@ Suggests: lattice, leaps, oz
 ZipData: no
 License: Unlimited
 URL: http://www.stats.uwo.ca/DAAG
-Packaged: 2009-05-14 11:31:49 UTC; johnm
+Packaged: 2009-05-24 12:31:03 UTC; johnm
 Repository: CRAN
-Date/Publication: 2009-05-14 12:18:07
+Date/Publication: 2009-05-24 18:43:30

@@ -34,24 +34,7 @@ print("Multiple Logistic Regression - Example 8.2")
 
 plot(northing ~ easting, data=frogs, pch=c(1,16)[frogs$pres.abs+1],
   xlab="Meters east of reference point", ylab="Meters north")
-
-pause()
-
-oldpar <- par(oma=c(2,2,2,2), cex=0.5)
 pairs(frogs[,4:10])
-par(oldpar)
-
-pause()
-
-oldpar <- par(mfrow=c(1,3))
-for(nam in c("distance","NoOfPools","NoOfSites")){
-  y <- frogs[,nam]
-  plot(density(y),main="",xlab=nam)
-par(oldpar)
-}
-
-pause()
-
 attach(frogs)
 pairs(cbind(altitude,log(distance),log(NoOfPools),NoOfSites),
   panel=panel.smooth, labels=c("altitude","log(distance)",
@@ -62,15 +45,12 @@ frogs.glm0 <- glm(formula = pres.abs ~ altitude + log(distance) +
   log(NoOfPools) + NoOfSites + avrain + meanmin + meanmax,
   family = binomial, data = frogs)
 summary(frogs.glm0)
-pause()
 
 frogs.glm <- glm(formula = pres.abs ~ log(distance) + log(NoOfPools) + 
 meanmin +
   meanmax, family = binomial, data = frogs)
 oldpar <- par(mfrow=c(2,2))
 termplot(frogs.glm, data=frogs)
-par(oldpar)
-pause()
 
 termplot(frogs.glm, data=frogs, partial.resid=TRUE)
 
@@ -78,8 +58,6 @@ cv.binary(frogs.glm0)   # All explanatory variables
 pause()
 
 cv.binary(frogs.glm)    # Reduced set of explanatory variables
-
-pause()
 
 for (j in 1:4){
  rand <- sample(1:10, 212, replace=TRUE)
