@@ -1,4 +1,4 @@
-bestsetNoise <-
+bestset.noise <-
 function (m = 100, n = 40, method = "exhaustive", nvmax = 3, print.summary=TRUE) 
 {
   leaps.out <- try(require(leaps), silent = TRUE)

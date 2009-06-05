@@ -63,6 +63,8 @@ errorsINseveral         Simulation of classical errors in x model, with
                         multiple explanatory variables.
 errorsINx               Simulate data for straight line regression,
                         with "errors in x".
+excessRisk              Create and analyze multiway frequency or
+                        weighted frequency table
 fossilfuel              Fossil Fuel Data
 fossum                  Female Possum Measurements
 frogs                   Frogs Data
@@ -119,6 +121,7 @@ nsw74psid1              Labour Training Evaluation Data
 nsw74psid3              Labour Training Evaluation Data
 nsw74psidA              A Subset of the nsw74psid1 Data Set
 nswdemo                 Labour Training Evaluation Data
+nswpsid1                Labour Training Evaluation Data
 obounce                 Bounce - obsolete
 oddbooks                Measurements on 12 books
 onesamp                 Paired Sample t-test
@@ -155,6 +158,8 @@ rareplants              Rare and Endangered Plant Species
 rice                    Genetically Modified and Wild Type Rice Data
 rockArt                 Pacific Rock Art features
 roller                  Lawn Roller Data
+sampdist                Plot sampling distribution of mean or other
+                        sample statistic.
 science                 School Science Survey Data
 seedrates               Barley Seeding Rate Data
 show.colors             Show R's Colors
