@@ -5,7 +5,7 @@
 A line plot of estimates for unstructured comparison of factor levels
 }
 \usage{
-onewayPlot(obj = rice.aov, trtnam = "trt", axisht = 6, xlim = NULL, 
+onewayPlot(obj, trtnam = "trt", axisht = 6, xlim = NULL, 
     xlab = NULL, lsdht = 1.5, hsdht = 0.5, textht = axisht - 
         2.5, oma = rep(1, 4), angle = 80, alpha = 0.05)
 }

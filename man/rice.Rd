@@ -55,8 +55,8 @@ pause()
 rice$trt <- relevel(rice$trt, ref="NH4Cl")
   # Set NH4Cl as the baseline
 
-fac1 <- factor(sapply(strsplit(as.character(rice$trt)," \\\+"), function(x)x[1]))
-anu843 <- sapply(strsplit(as.character(rice$trt), "\\\+"), 
+fac1 <- factor(sapply(strsplit(as.character(rice$trt)," \\\\+"), function(x)x[1]))
+anu843 <- sapply(strsplit(as.character(rice$trt), "\\\\+"), 
 function(x)c("wt","ANU843")[length(x)])
 anu843 <- factor(anu843, levels=c("wt", "ANU843"))
 attach(rice)

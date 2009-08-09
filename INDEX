@@ -40,9 +40,9 @@ cricketer               Lifespans of UK 1st class cricketers born
                         1840-1960
 cuckoohosts             Comparison of cuckoo eggs with host eggs
 cuckoos                 Cuckoo Eggs Data
-cv.lm                   Cross-Validation for Linear Regression
 CVbinary                Cross-Validation for Regression with a Binary
                         Response
+cv.lm                   Cross-Validation for Linear Regression
 CVlm                    Cross-Validation for Linear Regression
 DAAG-package            The R DAAG Package
 DAAGxdb                 List, each of whose elements hold rows of a

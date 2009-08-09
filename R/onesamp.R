@@ -1,5 +1,5 @@
 "onesamp" <-
-function(dset = corn, x = "unsprayed", y = "sprayed", xlab = NULL, ylab = NULL, 
+function(dset, x = "unsprayed", y = "sprayed", xlab = NULL, ylab = NULL, 
 	dubious = NULL, conv = NULL, dig = 2)
 {
 	if(!is.null(conv))

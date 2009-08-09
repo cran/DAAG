@@ -11,11 +11,10 @@
   regression model and to predict at the omitted observations.
 }
 \usage{
-CVbinary(obj=frogs.glm, rand=NULL, nfolds=10, print.details=TRUE)
+CVbinary(obj, rand=NULL, nfolds=10, print.details=TRUE)
 
-cv.binary(obj=frogs.glm, rand=NULL, nfolds=10, print.details=TRUE)
+cv.binary(obj, rand=NULL, nfolds=10, print.details=TRUE)
 }
-%- maybe also `usage' for other objects documented here.
 \arguments{
   \item{obj}{a \code{glm} object}
   \item{rand}{a vector which assigns each observation to a fold}

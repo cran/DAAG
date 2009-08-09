@@ -8,7 +8,7 @@ and produces a scatterplot of one column against the other column, showing
 whether there was any benefit to using the paired design.
 }
 \usage{
-onesamp(dset=corn, x="unsprayed", y="sprayed", xlab=NULL, ylab=NULL, dubious=NULL, conv=NULL, dig=2)
+onesamp(dset, x="unsprayed", y="sprayed", xlab=NULL, ylab=NULL, dubious=NULL, conv=NULL, dig=2)
 }
 \arguments{
   \item{dset}{a matrix or dataframe having two columns}

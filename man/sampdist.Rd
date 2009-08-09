@@ -51,9 +51,6 @@ Function that calculates the sample statistic.
 \value{
 Data frame 
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 John Maindonald.
 }

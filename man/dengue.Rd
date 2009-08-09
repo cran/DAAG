@@ -14,10 +14,10 @@ whether or not dengue was recorded at any time between 1961 and 1990.
     \item{humid90}{90th percentile of \code{humid}}
     \item{temp}{Average temperature: 1961-1990}
     \item{temp90}{90th percentile of \code{temp}}
-    \item{h10pix}{maximum of \texttt{humid}, within a 10 pixel radius}
-    \item{h10pix90}{maximum of \texttt{humid90}, within a 10 pixel radius}
+    \item{h10pix}{maximum of \code{humid}, within a 10 pixel radius}
+    \item{h10pix90}{maximum of \code{humid90}, within a 10 pixel radius}
     \item{trees}{Percent tree cover, from satellite data}
-    \item{trees90}{90th percentile of \texttt{trees}}
+    \item{trees90}{90th percentile of \code{trees}}
     \item{NoYes}{Was dengue observed? (1=yes)}
     \item{Xmin}{minimum longitude}
     \item{Xmax}{maximum longitude}

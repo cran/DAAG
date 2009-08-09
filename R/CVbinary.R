@@ -1,5 +1,5 @@
 CVbinary <-
-function (obj = frogs.glm, rand = NULL, nfolds = 10, print.details = TRUE) 
+function (obj, rand = NULL, nfolds = 10, print.details = TRUE) 
 {
     data <- obj$data
     m <- dim(data)[1]

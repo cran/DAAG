@@ -1,5 +1,5 @@
 "onewayPlot" <-
-function (obj = rice.aov, trtnam="trt", axisht = 6, xlim = NULL, xlab = NULL, 
+function (obj, trtnam="trt", axisht = 6, xlim = NULL, xlab = NULL, 
             lsdht = 1.5, hsdht = 0.5, textht = axisht - 2.5, oma = rep(1, 
                                                                4),
             angle = 80, alpha = 0.05) 

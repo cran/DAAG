@@ -8,6 +8,7 @@ function (x = yesno ~ ., data = spam7, cp = 0.00025, fun = c("rpart",
   dftrain <- data[train, ]
   dftest <- data[-train, ]
   if ("rpart" %in% fun) {
+    require(rpart)
     df.rpart <- rpart(x, data = dftrain, cp = cp)
     cptable <- df.rpart$cptable
     err.root <- df.rpart$frame$dev[1]/df.rpart$frame$n[1]
@@ -61,6 +62,7 @@ function (x = yesno ~ ., data = spam7, cp = 0.00025, fun = c("rpart",
     nREmin <- NULL
   }
   if ("randomForest" %in% fun) {
+    require(randomForest)
     y <- dftrain[, yvar]
     ynum <- match(yvar, names(dftrain))
     df.rf <- randomForest(x = dftrain[, -ynum], y = y)

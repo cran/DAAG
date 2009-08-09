@@ -1,5 +1,5 @@
 "component.residual" <-
-function (lm.obj = mice12.lm, which = 1, xlab = "Component", ylab = "C+R") 
+function (lm.obj, which = 1, xlab = "Component", ylab = "C+R") 
 {
 res <- residuals(lm.obj)
 data <- model.matrix(lm.obj)
