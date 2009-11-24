@@ -1,7 +1,6 @@
 `pause` <-
 function () 
 {
-    cat("Pause. Press <Enter> to continue...")
-    readline()
+    if(interactive()) readline("Pause. Press <Enter> to continue...")
     invisible()
 }
