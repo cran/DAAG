@@ -12,13 +12,14 @@ onesamp(dset, x="unsprayed", y="sprayed", xlab=NULL, ylab=NULL, dubious=NULL, co
 }
 \arguments{
   \item{dset}{a matrix or dataframe having two columns}
-  \item{x}{ name of column to play the role of the `predictor' }
-  \item{y}{ name of column to play the role of the `response' }
+  \item{x}{name of column to play the role of the `predictor' }
+  \item{y}{name of column to play the role of the `response' }
   \item{xlab}{ horizontal axis label }
-  \item{ylab}{ vertical axis label }
-  \item{dubious}{ }
-  \item{conv}{ }
-  \item{dig}{ }
+  \item{ylab}{vertical axis label }
+  \item{dubious}{vector of logical (\code{FALSE}/\code{TRUE}) values,
+    specifying points that are to be omitted}
+  \item{conv}{scaling factor that should be applied to data}
+  \item{dig}{round SE to this number of digits for dispplay on graph }
 }
 \value{
 

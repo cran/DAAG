@@ -3,7 +3,8 @@
 \title{Mortality Outcomes for Females Suffering Myocardial Infarction}
 \usage{mifem}
 \description{
-The \code{mifem} data frame has 1295 rows and 10 columns.
+  The \code{mifem} data frame has 1295 rows and 10 columns.  This is the
+  female subset of the 'monica' data frame
 }
 \format{
   This data frame contains the following columns:
@@ -30,7 +31,7 @@ known}
 }
 \source{
  Newcastle (Australia) centre of the Monica
-  project; see the web site http://www.ktl.fi/monicaindex.html
+  project; see the web site http://www.ktl.fi/monica
 }
 \examples{
 print("CART - Example 10.7")

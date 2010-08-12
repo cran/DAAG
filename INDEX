@@ -42,8 +42,8 @@ cuckoohosts             Comparison of cuckoo eggs with host eggs
 cuckoos                 Cuckoo Eggs Data
 CVbinary                Cross-Validation for Regression with a Binary
                         Response
-CVlm                    Cross-Validation for Linear Regression
 cv.lm                   Cross-Validation for Linear Regression
+CVlm                    Cross-Validation for Linear Regression
 DAAG-package            The R DAAG Package
 DAAGxdb                 List, each of whose elements hold rows of a
                         file, in character format
@@ -76,8 +76,8 @@ geophones               Seismic Timing Data
 grog                    Alcohol consumption in Australia and New
                         Zealand
 hardcopy                Graphical Output for Hardcopy
-headInjury              Minor Head Injury (Simulated) Data
 head.injury             Minor Head Injury (Simulated) Data
+headInjury              Minor Head Injury (Simulated) Data
 hills                   Scottish Hill Races Data
 hills2000               Scottish Hill Races Data - 2000
 hotspots                Hawaian island chain hotspot Potassium-Argon
@@ -125,17 +125,17 @@ nswpsid1                Labour Training Evaluation Data
 obounce                 Bounce - obsolete
 oddbooks                Measurements on 12 books
 onesamp                 Paired Sample t-test
-onetPermutation         One Sample Permutation t-test
 onet.permutation        One Sample Permutation t-test
-onewayPlot              Display of One Way Analysis Results
+onetPermutation         One Sample Permutation t-test
 oneway.plot             Display of One Way Analysis Results
+onewayPlot              Display of One Way Analysis Results
 orings                  Challenger O-rings Data
-overlapDensity          Overlapping Density Plots
 overlap.density         Overlapping Density Plots - obsolete
+overlapDensity          Overlapping Density Plots
 ozone                   Ozone Data
 pair65                  Heated Elastic Bands
-panelCorr               Scatterplot Panel
 panel.corr              Scatterplot Panel
+panelCorr               Scatterplot Panel
 panelplot               Panel Plot
 pause                   Pause before continuing execution
 poissonsim              Simple Poisson Regression Data Simulator
@@ -178,8 +178,8 @@ sugar                   Sugar Data
 tinting                 Car Window Tinting Experiment Data
 toycars                 Toy Cars Data
 two65                   Unpaired Heated Elastic Bands
-twotPermutation         Two Sample Permutation Test
 twot.permutation        Two Sample Permutation Test - Obsolete
+twotPermutation         Two Sample Permutation Test
 vif                     Variance Inflation Factors
 vince111b               Averages by block of corn yields, for treatment
                         111 only
