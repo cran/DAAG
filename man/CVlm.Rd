@@ -3,7 +3,8 @@
 \title{Cross-Validation for Linear Regression}
 \description{
 This function gives internal and cross-validation measures of predictive
-accuracy for ordinary linear regression.  The data are 
+accuracy for multiple linear regression. (For binary logistic
+regression, use the \code{CVbinary} function.) The data are 
 randomly assigned to a number of `folds'.  
 Each fold is removed, in turn, while the remaining data is used
 to re-fit the regression model and to predict at the deleted observations.
@@ -26,7 +27,7 @@ FALSE, seed=29, plotit=TRUE, printit=TRUE)
 \item{df}{degrees of freedom}
 }
 \author{J.H. Maindonald}
-\seealso{\code{\link{lm}}}
+\seealso{\code{\link{lm}}, \code{\link{CVbinary}}}
 \examples{
 CVlm()
 }

@@ -3,7 +3,8 @@
 \title{Cross-Validation for Linear Regression}
 \description{
 This function gives internal and cross-validation measures of predictive
-accuracy for ordinary linear regression.  The data are 
+accuracy for simple linear regression. (For multiple linear
+regression, \code{CVlm} should be used).  The data are 
 randomly assigned to a number of `folds'.  
 Each fold is removed, in turn, while the remaining data is used
 to re-fit the regression model and to predict at the deleted observations.
@@ -13,7 +14,8 @@ cv.lm(df = houseprices, form.lm = formula(sale.price ~ area), m=3, dots =
       FALSE, seed=29, plotit=TRUE, printit=TRUE)
 }
 \arguments{
-  \item{df}{a data frame}
+  \item{df}{a data frame in which the first column holds the response
+variable and the second column holds the predictor}
   \item{form.lm}{a formula object}
   \item{m}{the number of folds}
   \item{dots}{uses pch=16 for the plotting character}
@@ -26,7 +28,7 @@ cv.lm(df = houseprices, form.lm = formula(sale.price ~ area), m=3, dots =
 \item{df}{degrees of freedom}
 }
 \author{J.H. Maindonald}
-\seealso{ \code{lm} }
+\seealso{ \code{CVlm} }
 \examples{
 cv.lm()
 }
