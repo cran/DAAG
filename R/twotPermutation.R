@@ -1,4 +1,4 @@
-"twotPermutation" <-
+twotPermutation <-
 function(x1=two65$ambient, x2=two65$heated, nsim=2000, plotit=TRUE){
 # oldpar<-par(mar=par()$mar-c(1,0,1,0))
 # on.exit(par(oldpar))
@@ -19,6 +19,6 @@ abline(v=dbar)
 abline(v=-dbar, lty=2)
 mtext(side=3,line=0.5, text=expression(bar(x[2])-bar(x[1])), at=dbar)
 mtext(side=3,line=0.5, text=expression(-(bar(x[2])-bar(x[1]))), at=-dbar)}
-print(signif(pval,3))
-invisible()
+c("p-value:" = signif(pval,3))
 }
+
