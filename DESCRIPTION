@@ -1,5 +1,5 @@
 Package: DAAG
-Version: 1.07
+Version: 1.08
 Title: Data Analysis And Graphics data and functions
 Author: John Maindonald and W. John Braun
 Maintainer: W. John Braun <braun@stats.uwo.ca>
@@ -8,11 +8,11 @@ Description: various data sets used in examples and exercises in the
         Analysis and Graphics Using R".
 LazyLoad: true
 LazyData: true
-Depends: R (>= 2.0.1), MASS, rpart, randomForest
+Depends: R (>= 2.0.1), MASS, rpart, randomForest, boot, nlme, survival
 Suggests: lattice, leaps, oz
 ZipData: no
 License: Unlimited
 URL: http://www.stats.uwo.ca/DAAG
-Packaged: 2011-07-19 18:41:46 UTC; braun
+Packaged: 2011-08-02 02:35:33 UTC; braun
 Repository: CRAN
-Date/Publication: 2011-07-22 21:48:13
+Date/Publication: 2011-08-02 06:12:08
