@@ -1,0 +1,11 @@
+## Export almost all
+
+export(bestset.noise, bestsetNoise, bounce, bsnCV, bsnVaryNvar,
+       capstring, compareTreecalcs, component.residual, confusion,
+       cv.binary, cv.lm, CVbinary, CVlm, datafile, errorsINseveral,
+       errorsINx, excessRisk, hardcopy, logisticsim, multilap,
+       onesamp, onet.permutation, onetPermutation, oneway.plot,
+       onewayPlot, overlap.density, overlapDensity, panel.corr,
+       panelCorr, panelplot, pause, poissonsim, powerplot, press,
+       qreference, sampdist, show.colors, simulateLinear,
+       twot.permutation, twotPermutation, vif)

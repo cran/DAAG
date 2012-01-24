@@ -26,7 +26,7 @@ are restricted in other ways also.}
     \item{\code{sex}}{a factor with levels \code{f} \code{m}}
     \item{\code{ageOFocc}}{age of occupant in years}
     \item{\code{yearacc}}{year of accident}
-     \item{\code{yearVeh}}{Year of model of vehicle; a numeric vector} 
+     \item{\code{yearVeh}}{Year of model of vehicle; a numeric vector}
      \item{\code{abcat}}{Did one or more (driver or passenger) airbag(s)
        deploy? This factor has levels \code{deploy} \code{nodeploy}
        \code{unavail}}
@@ -34,7 +34,7 @@ are restricted in other ways also.}
     \item{\code{deploy}}{a numeric vector: 0 if an airbag was
       unavailable or did not deploy; 1 if one or more bags deployed.}
     \item{\code{injSeverity}}{a numeric vector; 0:none, 1:possible injury,
-      2:no incapacity, 3:incapacity, 4:killed; 5:unknown, 6:prior death}   
+      2:no incapacity, 3:incapacity, 4:killed; 5:unknown, 6:prior death}
   }
   }
 \details{
@@ -44,19 +44,32 @@ are restricted in other ways also.}
   (\code{national}) in the original data from NASS.  These data include
   a subset of the variables from the nass9702cor dataset.  Variables
   that are coded here as factors are coded as numeric values in that
-  dataset. 
+  dataset.
 }
 
 \source{
   \url{http://www.stat.uga.edu/~mmeyer/airbags.htm}
-  
+
   \url{ftp://ftp.nhtsa.dot.gov/nass/}
-  
+
 See also
 \url{http://www.maths.anu.edu.au/~johnm/datasets/airbags}
+
+\url{http://www-fars.nhtsa.dot.gov/Main/index.aspx} gives a menu-based
+interface into the FARS (Fatality Analysis Recording System) data that aims
+to include every accident in which there was at least one fatality.
+
+  Cummings, P; McKnight, B, 2010. Accounting for vehicle, crash, and
+occupant characteristics in traffic crash studies. Injury Prevention 16:
+363-366.
+
+  Olson CM, Cummings P, Rivara FP. 2006. Association of first- and
+  second-generation air bags with front occupant death in car crashes: a
+  matched cohort study. Am J Epidemiol 164:161-169;
+  doi:10.1093/aje/kwj164
 }
 \references{
-  Meyer, M.C. and Finney, T. (2005): \emph{Who wants airbags?}. Chance 
+  Meyer, M.C. and Finney, T. (2005): \emph{Who wants airbags?}. Chance
   18:3-16.
 
   Farmer, C.H. 2006. \emph{Another look at Meyer and Finney's \sQuote{Who wants
