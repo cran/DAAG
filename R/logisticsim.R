@@ -5,7 +5,7 @@ if (!missing(seed)) set.seed(seed)
 n <- length(x)
 logit <- a + b*x
 p <- exp(logit)/(1+exp(logit))
-y <- rbinom(n, p=p, size=1)
+y <- rbinom(n, size=1, prob=p)
 data.frame(x=x, y=y)
 }
 

@@ -13,10 +13,10 @@ schools.
   This data frame contains the following columns:
   \describe{
     \item{State}{a factor with levels
-   \code{ACT} Australian Capital Territory, 
+   \code{ACT} Australian Capital Territory,
    \code{NSW} New South Wales}
     \item{PrivPub}{a factor with levels
-        \code{private} school, 
+        \code{private} school,
         \code{public} school}
     \item{school}{a factor, coded to identify the school}
     \item{class}{a factor, coded to identify the class}
@@ -33,8 +33,7 @@ schools.
 National University
 }
 \examples{
-attach(science)
-classmeans <- aggregate(like, by=list(PrivPub, Class), mean)
+classmeans <- with(science, aggregate(like, by=list(PrivPub, Class), mean))
 names(classmeans) <- c("PrivPub","Class","like")
 dim(classmeans)
 
@@ -43,25 +42,26 @@ boxplot(split(like, PrivPub), ylab = "Class average of attitude to science score
 rug(like[PrivPub == "private"], side = 2)
 rug(like[PrivPub == "public"], side = 4)
 detach(classmeans)
-
-require(nlme)
-science.lme <- lme(fixed = like ~ sex + PrivPub,
-  data = science, random = ~ 1 | school/Class, na.action=na.omit)
-summary(science.lme)$tTable # Print coefficients.
-
-science1.lme <- lme(fixed = like ~ sex + PrivPub, data = science,
-random = ~ 1 | Class, na.action=na.exclude)
-summary(science1.lme)$tTable # Table of coefficients
-
-intervals(science1.lme, which="var-cov")[[1]]$Class^2
-intervals(science1.lme, which="var-cov")[[2]]^2 
-
-science.lme <- lme(fixed = like ~ sex + PrivPub,
-  data = science, random =  ~ 1 | Class/school, na.action=na.omit)
-res <- residuals(science.lme)
-hat <- fitted(science.lme)
-coplot(res ~ hat|science$PrivPub[!is.na(science$sex)],
-  xlab="Fitted values", ylab="Residuals")
-detach(science)
+library(lme4)
+science.lmer <- lmer(like ~ sex + PrivPub + (1 | school) +
+                     (1 | school:class), data = science,
+                     na.action=na.exclude)
+summary(science.lmer)
+science1.lmer <- lmer(like ~ sex + PrivPub + (1 | school:class),
+                      data = science, na.action=na.exclude)
+summary(science1.lmer)
+ranf <- ranef(obj = science1.lmer, drop=TRUE)[["school:class"]]
+flist <- science1.lmer@flist[["school:class"]]
+privpub <- science[match(names(ranf), flist), "PrivPub"]
+num <- unclass(table(flist)); numlabs <- pretty(num)
+## Plot effect estimates vs numbers
+plot(sqrt(num), ranf, xaxt="n", pch=c(1,3)[as.numeric(privpub)],
+     xlab="# in class (square root scale)",
+     ylab="Estimate of class effect")
+lines(lowess(sqrt(num[privpub=="private"]),
+             ranf[privpub=="private"], f=1.1), lty=2)
+lines(lowess(sqrt(num[privpub=="public"]),
+             ranf[privpub=="public"], f=1.1), lty=3)
+axis(1, at=sqrt(numlabs), labels=paste(numlabs))
 }
 \keyword{datasets}

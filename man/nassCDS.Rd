@@ -10,15 +10,14 @@ occupants, include only a subset of the variables recorded, and
 are restricted in other ways also.}
 \usage{nassCDS}
 \format{
-  A data frame with 26217 observations on the following 14 variables.
+  A data frame with 26217 observations on the following 15 variables.
   \describe{
     \item{\code{dvcat}}{ordered factor with levels (estimated impact
       speeds) \code{1-9km/h}, \code{10-24}, \code{25-39}, \code{40-54},
       \code{55+}
     }
-    \item{\code{weight}}{Weight that should be attached to observation,
-    in order to account for sampling probability in a probabilistic
-    sampling scheme}
+    \item{\code{weight}}{Observation weights, albeit of uncertain
+      accuracy, designed to account for varying sampling probabilities.}
     \item{\code{dead}}{factor with levels \code{alive} \code{dead}}
     \item{\code{airbag}}{a factor with levels \code{none} \code{airbag}}
     \item{\code{seatbelt}}{a factor with levels \code{none} \code{belted}}
@@ -35,14 +34,19 @@ are restricted in other ways also.}
       unavailable or did not deploy; 1 if one or more bags deployed.}
     \item{\code{injSeverity}}{a numeric vector; 0:none, 1:possible injury,
       2:no incapacity, 3:incapacity, 4:killed; 5:unknown, 6:prior death}
+    \item{\code{caseid}}{character, created by pasting together the
+      populations sampling unit, the case number, and the vehicle
+      number.  Within each year, use this to uniquely identify the
+      vehicle.
+      }
   }
   }
 \details{
-  Data were collected according to a multi-stage sampling scheme.
-  Hence the need to weight observations by the inverse of the
-  selection probability, called the national inflation factor
-  (\code{national}) in the original data from NASS.  These data include
-  a subset of the variables from the nass9702cor dataset.  Variables
+  Data collection used a multi-stage probabilistic sampling scheme.
+  The observation weight, called national inflation factor
+  (\code{national}) in the data from NASS, is the inverse
+  of an estimate of the selection probability.  These data
+  include a subset of the variables from the NASS dataset.  Variables
   that are coded here as factors are coded as numeric values in that
   dataset.
 }
@@ -54,19 +58,6 @@ are restricted in other ways also.}
 
 See also
 \url{http://www.maths.anu.edu.au/~johnm/datasets/airbags}
-
-\url{http://www-fars.nhtsa.dot.gov/Main/index.aspx} gives a menu-based
-interface into the FARS (Fatality Analysis Recording System) data that aims
-to include every accident in which there was at least one fatality.
-
-  Cummings, P; McKnight, B, 2010. Accounting for vehicle, crash, and
-occupant characteristics in traffic crash studies. Injury Prevention 16:
-363-366.
-
-  Olson CM, Cummings P, Rivara FP. 2006. Association of first- and
-  second-generation air bags with front occupant death in car crashes: a
-  matched cohort study. Am J Epidemiol 164:161-169;
-  doi:10.1093/aje/kwj164
 }
 \references{
   Meyer, M.C. and Finney, T. (2005): \emph{Who wants airbags?}. Chance
@@ -76,7 +67,30 @@ occupant characteristics in traffic crash studies. Injury Prevention 16:
     airbags?}}. Chance 19:15-22.
 
   Meyer, M.C. 2006.  \emph{Commentary on "Another look at Meyer and
-    Finney's 'Who wants airbags?'"}. Chance 19:23-24.
+    Finney's \sQuote{Who wants airbags?}}. Chance 19:23-24.
+
+  For analyses based on the alternative FARS (Fatal Accident Recording
+  System) data, and associated commentary, see:
+
+  Cummings, P; McKnight, B, 2010. \emph{Accounting for vehicle, crash, and
+occupant characteristics in traffic crash studies.} Injury Prevention 16:
+363-366. [The relatively definitive analyses in this paper use a matched
+cohort design,
+
+  Olson, CM; Cummings, P, Rivara, FP, 2006. \emph{Association of first- and
+  second-generation air bags with front occupant death in car crashes: a
+  matched cohort study.} Am J Epidemiol 164:161-169. [The relatively
+definitive analyses in this paper use a matched cohort design, using
+data taken from the FARS (Fatal Accident Recording System) database.]
+
+Braver, ER; Shardell, M; Teoh, ER, 2010. \emph{How have changes in air
+bag designs affected frontal crash mortality?} Ann Epidemiol 20:499-510.
+
+
+The web page \url{http://www-fars.nhtsa.dot.gov/Main/index.aspx} has a
+    menu-based interface into the FARS (Fatality Analysis Recording
+    System) data. The FARS database aims to include every accident in
+    which there was at least one fatality.
 }
 \examples{
 data(nassCDS)

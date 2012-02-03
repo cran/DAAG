@@ -1,5 +1,5 @@
-453b32ae82ed6aa1db02dfa06085bf60 *DESCRIPTION
-0c5e9eaa535c0d2a7f35aae76b774594 *NAMESPACE
+25fd23e6ab0c2d178d692e3de649aa31 *DESCRIPTION
+3433237c1d134dd798f1a6eeed26b52d *NAMESPACE
 3179b8bec0973a5af678280a317f8c5a *R/CVbinary.R
 85e3f61e69f0b0dae4c4ef52a3ad4132 *R/CVlm.R
 2389b02b96e3c5cc923b99a4eb04ec38 *R/bestset.noise.R
@@ -18,7 +18,7 @@ a332db140a52983cc5736c5ca8ece896 *R/datafile.R
 dcfd350d14cd9451588f8e3481bc7f36 *R/errorsINx.R
 7e71e89ccb124be659be01960884f1e8 *R/excessRisk.R
 c4dfe3c709d57e43d24506cc56c7825d *R/hardcopy.R
-b63e5dbec5306d163ba6063c32256613 *R/logisticsim.R
+1e4101d916284a93c64a982c1dbf15f7 *R/logisticsim.R
 63e4d8e4e00beb61cf0378f1fa5df79a *R/multilap.R
 1b17538e07193d9c8b159f3b83aabff1 *R/obounce.R
 f9ff8cd0215912e1253e19db8d58e6cf *R/onesamp.R
@@ -32,6 +32,7 @@ e74361a30d9b330a2a2d4039c00017fc *R/panel.corr.R
 db7dd541436efb1cc201bb43e90d3d97 *R/panelCorr.R
 e2175fb48b33f3c12d7090005f797791 *R/panelplot.R
 f9fd5a14b15ba5ef7072f4fc28c122d5 *R/pause.R
+1aba850bd1e97f5fb2ef32db3e3702d8 *R/plotSampDist.R
 0eed3e88e33e646958e5455b0d93d0c4 *R/poissonsim.R
 b6123dcb96fd0ed913289d35dad0fc85 *R/powerplot.R
 6f8e7e3554970d07ae4b94df0a95e446 *R/press.R
@@ -39,6 +40,7 @@ b6123dcb96fd0ed913289d35dad0fc85 *R/powerplot.R
 07f51d39dcbd7bdebd997450c0734f02 *R/sampdist.R
 172c0420a64cd80364f302e4ac07005e *R/show.colors.R
 f2aaf8c7ba3ae48179d6904bc9939ca2 *R/simulateLinear.R
+b1f9683b7ff55698b542090dac97e397 *R/simulateSampDist.R
 dfb7ffa74663712c2cad20162eb202dd *R/twot.R
 ff50dcc312c6778e57e8954f981aaa57 *R/twotPermutation.R
 da7cdfc9ebe32d9d709edfd0b23f01bd *R/vif.R
@@ -122,7 +124,7 @@ ff334824276803f962dfa73fe8121f8d *data/milk.rda
 62717ac40ea91ca60f12f1180c235feb *data/modelcars.rda
 42030d0b8ceb062d28113621b1086bc8 *data/monica.rda
 214f3372b78083a6c5c65e308260d67f *data/moths.rda
-7c90986a5e74eaf7612b4555cec1a4f0 *data/nassCDS.RData
+8c51159f89a4e49777bf8a71a5f7c986 *data/nassCDS.RData
 c9562b25e021c645e3cc6546d1c65799 *data/nasshead.RData
 22a68daa95bc98a43488571083a4ad02 *data/nihills.RData
 21e4f048cee00ba52d2b2fe5828095f0 *data/nsw74demo.rda
@@ -247,7 +249,7 @@ fcf4f79961daee229b66196750b8333f *man/humanpower.Rd
 7defe0b1dbf8449a082c866c6cb80107 *man/intersalt.Rd
 4c2e5045d2e3cce5da45ada079adb3df *man/ironslag.Rd
 56a474dec134dab4c57a33ad847b4746 *man/jobs.Rd
-2e4e9d4e19f0c0e993ded28a7d306aca *man/kiwishade.Rd
+bc2516c91ec8f3f5e0f41576f19910f6 *man/kiwishade.Rd
 8ae3f9910a44e1707fbe1c89b90f455f *man/leafshape.Rd
 22c99ef4448b3098a7659a337f70748d *man/leafshape17.Rd
 9b00f485e7ead05c7eaf4ff105167d34 *man/leaftemp.Rd
@@ -264,7 +266,7 @@ fb42f5515fa95a934b2a36b17b80f50a *man/measles.Rd
 7e75b32d72afb31c50bb499c27a56e74 *man/monica.Rd
 c177bce7e184fbb9d57f877a6272f269 *man/moths.Rd
 4b7ce62b1fe1f2c9b5210ffcc5b89a52 *man/multilap.Rd
-4c44d5f0972df7128c3ae779e5294005 *man/nassCDS.Rd
+8b727292d83e3bc472d7d0825227af89 *man/nassCDS.Rd
 83ed59e9622deb0dafea31e904c11ee1 *man/nasshead.Rd
 b0cf9fe2307cbce2c53bd0de654195b3 *man/nihills.Rd
 b27755fd29818217e3d02e2e5fe75674 *man/nsw74demo.Rd
@@ -289,6 +291,7 @@ fc7d3ae33cdbd3c74ba9120a3c5a244c *man/pair65.Rd
 54a5cb998976bc648ee1f4ce59b76abf *man/panelCorr.Rd
 eb0982b79daa8865fc9ebcd99e0971f6 *man/panelplot.Rd
 dd5cf763e28a3961f72d3202d092391a *man/pause.Rd
+f930c1ea042da7e5ab7741315ed1608a *man/plotSampDist.Rd
 191b0dba6cfaf54c464ba9388f1485a4 *man/poissonsim.Rd
 da59cfc3e422c13dd65bb70a44bba878 *man/possum.Rd
 807ac9cbed38d0f2bda4663a7746cdda *man/possumsites.Rd
@@ -309,10 +312,11 @@ d8623bc345bbe3ddc8048012e231196e *man/rice.Rd
 0fb1fa4d06ccac88ebcad1f4df633dc6 *man/rockArt.Rd
 886f8b4c6f718816cb2a3d05e6b87f44 *man/roller.Rd
 0d5f06c68f70868949e6d0bcb06986b0 *man/sampdist.Rd
-54094e7904eb0b2e37d48d0bb90a037b *man/science.Rd
+917ebdc1140e411fd932a6474c5edfef *man/science.Rd
 0de5d8525552ad9e7e0b3d53235167f4 *man/seedrates.Rd
 1934d1852dc19c3202449e0c80280bdf *man/show.colors.Rd
 624fa2b4062f17093a2761070a7acc42 *man/simulateLinear.Rd
+7d5505badd28b61e3c535407a70c1456 *man/simulateSampDist.Rd
 59ce10f5ed8afb9248e31e6c2e17d10d *man/socsupport.Rd
 c29b9e39a64a39a91f2d9be382372062 *man/softbacks.Rd
 bc66d08037f822fef983485ee90f1157 *man/sorption.Rd
