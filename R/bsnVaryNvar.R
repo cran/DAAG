@@ -1,10 +1,10 @@
 bsnVaryNvar <-
 function (m = 100, nvar = nvmax:50, nvmax = 3, method = "exhaustive",
-          plotit = TRUE,
-          xlab="# of variables from which to select",
-          ylab="p-values for t-statistics",
-          main=paste("Select 'best'", nvmax, "variables"),
-              details = FALSE, really.big = TRUE, smooth = TRUE)
+              intercept=TRUE,
+              plotit = TRUE, xlab = "# of variables from which to select",
+              ylab = "p-values for t-statistics", main = paste("Select 'best'",
+                                                  nvmax, "variables"), details = FALSE, really.big = TRUE,
+              smooth = TRUE)
 {
     if (nvar[1] < nvmax)
         stop(paste("Initial value of 'num' must be at least",
@@ -23,9 +23,11 @@ function (m = 100, nvar = nvmax:50, nvmax = 3, method = "exhaustive",
     for (i in nvar) {
         k <- k + 1
         obj <- bestsetNoise(m = 100, n = i, nvmax = nvmax,
-                            print.summary = FALSE, method = method,
-                            really.big = really.big)
-        bmat <- summary(obj)$coef[2:(nvmax + 1), ]
+                            intercept=intercept, print.summary = FALSE,
+                            method = method, really.big = really.big)
+        if(intercept)
+        bmat <- coef(summary(obj$best))[2:(nvmax + 1), ] else
+        bmat <- coef(summary(obj$best))[1:nvmax, ]
         best[k, ] <- bmat[, 4]
         if (details) {
             bestCoef[k, ] <- bmat[, 1]
@@ -58,7 +60,7 @@ function (m = 100, nvar = nvmax:50, nvmax = 3, method = "exhaustive",
         par(mgp = c(3.2, 0.75, 0), mar = c(4.4, 4.1, 2.1, 1.1),
             las = 1)
         axis(2, at = g, labels = paste(pval), pos = 0, tck = -0.02)
-        title(main=main, cex.main=1.2)
+        title(main = main, cex.main = 1.2)
         par(opar)
     }
     if (details)

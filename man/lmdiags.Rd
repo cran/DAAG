@@ -1,0 +1,60 @@
+\name{lmdiags}
+\alias{lmdiags}
+\title{
+Return data required for diagnostic plots
+}
+\description{
+  This extracts the code that provides the major part of the
+  statistical information used by plot.lm, leaving out the
+  code used to provide the graphs
+}
+\usage{
+lmdiags(x, which = c(1L:3L, 5L), cook.levels = c(0.5, 1))
+}
+\arguments{
+  \item{x}{
+    This must be an  object of class \code{lm} object, or that inherits from
+    an object of class  \code{lm}.
+}
+\item{which}{a subset of the numbers '1:6', indicating the plots for
+  which statistical information is required
+}
+  \item{cook.levels}{
+Levels for contours of \code{cook.levels}, by default \code{c(0.5,1)}
+}
+}
+\details{
+See \code{\link{plot.lm}} for additional information.
+}
+\value{
+  \item{yh}{fitted values}
+  \item{rs}{standardized residuals (for \code{glm} models standardized
+  deviance residuals)}
+  \item{yhn0}{As \code{yh}, but omitting observations with zero weight}
+  \item{cook}{Cook's statistics}
+  \item{hii}{Diagonal elements of the hat matrix}
+  \item{rsp}{standardized residuals (for \code{glm} models standardized
+  Pearson residuals)}
+}
+\references{
+See references for \code{\link{plot.lm}}
+}
+\author{
+John Maindonald, using code that John Maindonald, Martin Maechler and
+others had contributed to \code{\link{plot.lm}}
+}
+\note{
+  This function is designed, in the first place, for use in connection
+  with \code{\link{plotSimDiags.lm}}, which is the
+  \code{\link{plotSimDiags}}
+  method for \code{lm} objects.
+}
+\seealso{
+\code{\link{plotSimDiags.lm}}, \code{\link{plot.lm}}
+}
+\examples{
+women.lm <- lm(weight ~ height, data=women)
+veclist <- lmdiags(x=women.lm)
+## Returns the statistics that are required for graphs 1, 2, 3, and 5
+}
+\keyword{regression}

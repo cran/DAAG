@@ -3,15 +3,15 @@
 \title{Possum Sites}
 \usage{possumsites}
 \description{
-The \code{possumsites} data frame consists of latitudes, longitudes,
+The \code{possumsites} data frame consists of Longitudes, Latitudes,
 and altitudes for the seven sites from Southern Victoria to central Queensland
 where the \code{possum} observations were made.
 }
 \format{
   This data frame contains the following columns:
   \describe{
-    \item{latitude}{a numeric vector}
-    \item{longitude}{a numeric vector}
+    \item{Longitude}{a numeric vector}
+    \item{Latitude}{a numeric vector}
     \item{altitude}{in meters}
   }
 }
@@ -26,10 +26,10 @@ mountain brushtail possum, Trichosurus caninus Ogilby
 require(oz)
 oz(sections=c(3:5, 11:16))
 attach(possumsites)
-points(latitude, longitude, pch=16, col=2)
+points(Longitude, Latitude, pch=16, col=2)
 chw <- par()$cxy[1]
 chh <- par()$cxy[2]
 posval <- c(2,4,2,2,4,2,2)
-text(latitude+(3-posval)*chw/4, longitude, row.names(possumsites), pos=posval)
+text(Longitude+(3-posval)*chw/4, Latitude, row.names(possumsites), pos=posval)
 }
 \keyword{datasets}
