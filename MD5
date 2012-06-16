@@ -1,8 +1,8 @@
-f3a02717d7e45d2b13df666846b8918d *DESCRIPTION
+e6821ddce194cc81343b6d363e360f87 *DESCRIPTION
 d28a2ece36d91505923c73d82c03c56b *NAMESPACE
-167ac970bbd5e1ba7d786213cb0c6574 *NEWS
+d674553368cebc49a5429062b8e7aff5 *NEWS
 3179b8bec0973a5af678280a317f8c5a *R/CVbinary.R
-85e3f61e69f0b0dae4c4ef52a3ad4132 *R/CVlm.R
+fb002059768b7a015ce45971efc41925 *R/CVlm.R
 4aea3d2dbfa3e9773d80d20fbcbccb91 *R/bestset.noise.R
 501f77567a6513338af23d71c81dd567 *R/bestsetNoise.R
 113a00315c5e20389cbb91f08124bdb5 *R/bounce.R
@@ -14,7 +14,7 @@ d198640b6f0dab4d4b675074f062c83f *R/capstring.R
 6d5b004c39b034b264a879d11fef7e7c *R/component.residual.R
 4ec859432fda465d995ca2519ac8f969 *R/confusion.R
 8630f9c82057b3e3bb2bed2dcd6b8406 *R/cv.binary.R
-e3e8364fd3c0068e9909395052d4c116 *R/cv.lm.R
+ec42f93eb644dcbfd77ddfd1478caa7f *R/cv.lm.R
 a332db140a52983cc5736c5ca8ece896 *R/datafile.R
 21d8f71c137f80daae83ecabbaa0ca16 *R/errorsINseveral.R
 dcfd350d14cd9451588f8e3481bc7f36 *R/errorsINx.R
@@ -178,7 +178,7 @@ f0a1acf740f8aca562c2cae0a4c4ee02 *data/zzDAAGxdb.rda
 9ff636c14da87d776b93de9481366af9 *inst/seedrates.txt
 27192c738ed2a576fd1cf1735d327c8b *man/ACF1.Rd
 174f071c73f192fe9b42f2052225fb42 *man/CVbinary.Rd
-ab866d2331015c15ecd6c561c107528d *man/CVlm.Rd
+857325f2fe7a19096c4adb6ebdaedec7 *man/CVlm.Rd
 adeb58cd2e31640d65b38a66077a291a *man/Cars93.summary.Rd
 4fda8aa61fa3b1a76f27aef292680ed7 *man/DAAG-package.Rd
 9925a1b911d8a770aa3ac555596495e3 *man/DAAGxdb.Rd
@@ -219,7 +219,6 @@ fbcf1757ebf8fac5cbea4f9d48b38329 *man/cps2.Rd
 dba977ea9e587df5fbf88929c0d17141 *man/cricketer.Rd
 6128e78ec5e82e0c33916ae8ca13fac5 *man/cuckoohosts.Rd
 42871adf5facc2cdd87bc0a3193ba7a5 *man/cuckoos.Rd
-6513c6e343ff5b58f86b79847d2d2e39 *man/cv.lm.Rd
 90d3648b8544d14af9f99742cce657de *man/datafile.Rd
 d4b474a022e35ff2e7835a6999dfb48f *man/dengue.Rd
 e597ed669a510ce50be7eb43e3e9959b *man/dewpoint.Rd

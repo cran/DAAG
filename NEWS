@@ -1,3 +1,15 @@
+                  Changes in DAAG version 1.14
+
+NEW FEATURES
+
+    o The function CVlm (alias cv.lm) has been modified to allow
+      multiple explanatory variables.  Predicted values can be
+      subtracted off from the points that are shown.  If there is
+      more than one explanatory variable, the lines that are shown
+      for individual folds are approximations to the small points
+      that show the fitted values for the respective fold.
+      Arguments main (main title) and legend.pos have been added.
+
                   Changes in DAAG version 1.13
 
 NEW FUNCTIONS
