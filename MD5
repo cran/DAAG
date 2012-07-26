@@ -1,7 +1,7 @@
-e6821ddce194cc81343b6d363e360f87 *DESCRIPTION
+7620fa6d1a860e1ad2b9fd49519c72e5 *DESCRIPTION
 d28a2ece36d91505923c73d82c03c56b *NAMESPACE
 d674553368cebc49a5429062b8e7aff5 *NEWS
-3179b8bec0973a5af678280a317f8c5a *R/CVbinary.R
+1bb15956a43ffbeffcfd7d9822af6378 *R/CVbinary.R
 fb002059768b7a015ce45971efc41925 *R/CVlm.R
 4aea3d2dbfa3e9773d80d20fbcbccb91 *R/bestset.noise.R
 501f77567a6513338af23d71c81dd567 *R/bestsetNoise.R
@@ -13,7 +13,7 @@ d198640b6f0dab4d4b675074f062c83f *R/capstring.R
 1d77f09861cc52bea3cff84e176d0ac3 *R/compareTreecalcs.R
 6d5b004c39b034b264a879d11fef7e7c *R/component.residual.R
 4ec859432fda465d995ca2519ac8f969 *R/confusion.R
-8630f9c82057b3e3bb2bed2dcd6b8406 *R/cv.binary.R
+08202c8439c07c2c058de2b7b06bbcc9 *R/cv.binary.R
 ec42f93eb644dcbfd77ddfd1478caa7f *R/cv.lm.R
 a332db140a52983cc5736c5ca8ece896 *R/datafile.R
 21d8f71c137f80daae83ecabbaa0ca16 *R/errorsINseveral.R
@@ -37,7 +37,7 @@ e2175fb48b33f3c12d7090005f797791 *R/panelplot.R
 f9fd5a14b15ba5ef7072f4fc28c122d5 *R/pause.R
 1aba850bd1e97f5fb2ef32db3e3702d8 *R/plotSampDist.R
 d1c7d796b0f8ddd0f9b784d9966e0caf *R/plotSimDiags.R
-605089e48c66603d7e8dc3ba667c13b7 *R/plotSimDiags.lm.R
+0af0da35862c8452e24224e613b49096 *R/plotSimDiags.lm.R
 0eed3e88e33e646958e5455b0d93d0c4 *R/poissonsim.R
 b6123dcb96fd0ed913289d35dad0fc85 *R/powerplot.R
 6f8e7e3554970d07ae4b94df0a95e446 *R/press.R
@@ -177,7 +177,7 @@ f0a1acf740f8aca562c2cae0a4c4ee02 *data/zzDAAGxdb.rda
 94a82aa3e0010db76bf2b6a1d3ba3794 *inst/misc/viewtemps.RData
 9ff636c14da87d776b93de9481366af9 *inst/seedrates.txt
 27192c738ed2a576fd1cf1735d327c8b *man/ACF1.Rd
-174f071c73f192fe9b42f2052225fb42 *man/CVbinary.Rd
+f448084908f14a77d60a4185bdf0a009 *man/CVbinary.Rd
 857325f2fe7a19096c4adb6ebdaedec7 *man/CVlm.Rd
 adeb58cd2e31640d65b38a66077a291a *man/Cars93.summary.Rd
 4fda8aa61fa3b1a76f27aef292680ed7 *man/DAAG-package.Rd

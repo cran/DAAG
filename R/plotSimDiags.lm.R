@@ -68,7 +68,7 @@ function(obj, simvalues=NULL, seed=NULL, types=NULL, which=c(1:3,5),
             gphlist[[1]] <- gph
         }
         if(show[2]){
-            gph <- qqmath(~ rs | gp, aspect = "xy", data = objdf,
+            gph <- qqmath(~ rs | gp, data = objdf,
                           prepanel = prepanel.qqmathline,
                           panel = function(x, ...) {
                               panel.qqmathline(x, lty=2, ...)
@@ -220,5 +220,7 @@ function(obj, simvalues=NULL, seed=NULL, types=NULL, which=c(1:3,5),
                           panel=panel6)
             gphlist[[6]] <- gph
         }
+        gphlist <- gphlist[!sapply(gphlist, is.null)]
+        if(length(gphlist)==1)gphlist <- gphlist[[1]]
         gphlist
     }
