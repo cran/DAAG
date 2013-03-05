@@ -1,3 +1,28 @@
+                  Changes in DAAG version 1.16
+
+NEW FEATURES
+
+    o The function plotSimScat was added.  This plots either residuals
+      or y-variable simulated values, against the x-variable from a
+      straight line regression.
+    o The datasets tomato and bomregions2013 were added.
+    o A pdf file simulate-reg.pdf has been placed in the subdirectory
+      inst/doc.  This demonstrates the use of the functions
+      plotSimDiags, plotSimScat and bsnVaryNvar.
+
+BUG FIX
+
+    o The NAMESPACE file has been edited to ensure that the function
+      layer, used in plotSimDiags and plotSimScat, is taken from the
+      latticeExtra package.
+
+                  Changes in DAAG version 1.15
+
+NEW FEATURES
+
+    o The function plotSimDiags was added.  This returns diagnostics
+      for multiple sets of simulated data.
+
                   Changes in DAAG version 1.14
 
 NEW FEATURES

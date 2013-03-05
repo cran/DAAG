@@ -1,12 +1,13 @@
 % --- Source file: bomregions2011.Rd ---
 \name{bomregions2011}
 \alias{bomregions2011}
+\alias{bomregions2012}
 \title{Australian and Related Historical Annual Climate Data, by region}
-\usage{bomregions2011}
+\usage{bomregions2012}
 \description{
   Australian regional temperature data, Australian regional rainfall data,
 Annual SOI, and average sunspot counts, are given for the years
-1900-2011.
+1900-2011 or 1900-2011..
 The regional rainfall and temperature data are area-weighted averages
 for the respective regions.  The Southern Oscillation Index (SOI) is the
 difference in barometric pressure at sea level between Tahiti and

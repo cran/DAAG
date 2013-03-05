@@ -1,6 +1,6 @@
-7620fa6d1a860e1ad2b9fd49519c72e5 *DESCRIPTION
-d28a2ece36d91505923c73d82c03c56b *NAMESPACE
-d674553368cebc49a5429062b8e7aff5 *NEWS
+589f70648f45ea5a1d6d4ddc74b065ed *DESCRIPTION
+fab65ecba94a791a0cc3249622bcb381 *NAMESPACE
+d8fadec43656760b7d2ccae392700de8 *NEWS
 1bb15956a43ffbeffcfd7d9822af6378 *R/CVbinary.R
 fb002059768b7a015ce45971efc41925 *R/CVlm.R
 4aea3d2dbfa3e9773d80d20fbcbccb91 *R/bestset.noise.R
@@ -38,6 +38,7 @@ f9fd5a14b15ba5ef7072f4fc28c122d5 *R/pause.R
 1aba850bd1e97f5fb2ef32db3e3702d8 *R/plotSampDist.R
 d1c7d796b0f8ddd0f9b784d9966e0caf *R/plotSimDiags.R
 0af0da35862c8452e24224e613b49096 *R/plotSimDiags.lm.R
+feb315f03174de25a3092f3d41901422 *R/plotSimScat.R
 0eed3e88e33e646958e5455b0d93d0c4 *R/poissonsim.R
 b6123dcb96fd0ed913289d35dad0fc85 *R/powerplot.R
 6f8e7e3554970d07ae4b94df0a95e446 *R/press.R
@@ -164,6 +165,7 @@ d1963707a7a0f7547a82eed51b5cbf7f *data/science.rda
 8f4a462403b388ce2a1eaeb00539e9a6 *data/stVincent.rda
 c53e41a6c16516a4ff2ba6e8acbd740c *data/sugar.rda
 c55d2ecca934568781b1af1c6d0ee970 *data/tinting.rda
+8b90bf248f14317d78e70b5de7c26154 *data/tomato.rda
 ea0f92fb95c2820da50ea487c16f6d82 *data/toycars.rda
 9e047250f4251018ec3ebe249fbdc131 *data/two65.rda
 62858e2a28e6334697bb8b8a61fce248 *data/vince111b.rda
@@ -173,6 +175,7 @@ d2a207c6bf92be1dd380692353d6a2a9 *data/vlt.rda
 ccb33894bfbd9fcd44ba976b43eedee2 *data/worldRecords.RData
 f0a1acf740f8aca562c2cae0a4c4ee02 *data/zzDAAGxdb.rda
 78a47bd88a6b1948b088231c158d50e2 *inst/doc/rockArt.pdf
+06b515b12a92ddefb7cd91b99731761d *inst/doc/simulate-reg.pdf
 9ff636c14da87d776b93de9481366af9 *inst/misc/seedrates.txt
 94a82aa3e0010db76bf2b6a1d3ba3794 *inst/misc/viewtemps.RData
 9ff636c14da87d776b93de9481366af9 *inst/seedrates.txt
@@ -198,7 +201,7 @@ f99b1f026e79e751f7911493e6380353 *man/antigua.Rd
 59be236925b06fc559df712cc35c5244 *man/bestsetNoise.Rd
 cc3d18ebae037083b4be057b2f7d7bc8 *man/biomass.Rd
 1716fabea5eeefe8768e0b67af5fb1d8 *man/bomregions.Rd
-ef9207a29617b724ac58b54480e19292 *man/bomregions2011.Rd
+daf08cc01893bad2950759e82e4f1cb2 *man/bomregions2011.Rd
 b5e2a6063432f4cc19f0994ebda0f04e *man/bomsoi.Rd
 c51df84613d505a1725733519609bbea *man/bomsoi2001.Rd
 39145970129777b17123d78b053c56bd *man/bostonc.Rd
@@ -296,7 +299,7 @@ fc7d3ae33cdbd3c74ba9120a3c5a244c *man/pair65.Rd
 eb0982b79daa8865fc9ebcd99e0971f6 *man/panelplot.Rd
 dd5cf763e28a3961f72d3202d092391a *man/pause.Rd
 f930c1ea042da7e5ab7741315ed1608a *man/plotSampDist.Rd
-692ceb9bce4a720b248b0e7f21a7be27 *man/plotSimDiags.Rd
+2f42f854a5202435c125dd44007896c8 *man/plotSimDiags.Rd
 a5d7b332ccfec0511ac27c2616555dd6 *man/plotSimDiags.lm.Rd
 191b0dba6cfaf54c464ba9388f1485a4 *man/poissonsim.Rd
 da59cfc3e422c13dd65bb70a44bba878 *man/possum.Rd
@@ -330,6 +333,7 @@ c3147dd3263eaac0bf3c32079286a66e *man/spam7.Rd
 cf5c2aa1b30299bb8d9e84c279c7a8f1 *man/stVincent.Rd
 db54e3e8e4cd7064c5b09a4af1241270 *man/sugar.Rd
 a39ac1957264492ff965e07f3f3f3f0e *man/tinting.Rd
+fc2845bfe06993288965afb367738e6f *man/tomato.Rd
 e059866b9b94c659d40ecc7b22f7b1cf *man/toycars.Rd
 400cbedfe9ec560aa26ebf3dbb44817e *man/two65.Rd
 c12e2289cd2d383926736ac3a6a85aff *man/twot.permutation.Rd
