@@ -75,7 +75,6 @@ kiwi.summary
 mean(kiwi.means) # the grand mean (only for balanced design)
 
 require(lme4)
-require(lattice)
 kiwishade.lmer <- lmer(yield ~ shade + (1|block) + (1|block:plot),
                        data=kiwishade)
 ## block:shade is an alternative to block:plot

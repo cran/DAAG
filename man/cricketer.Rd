@@ -41,9 +41,9 @@ Aggleton et al.
 
   Bailey P, Thorne P, Wynne-Thomas P. 1993. Who's Who of Cricketers.
   2nd ed, London, Hamlyn.
-  
+
   Bland M and Altman D. 2005. Do the left-handed die young?
-  Significance 2, 166-170.   
+  Significance 2, 166-170.
 }
 \seealso{\code{earlycrcktr}.}
 \examples{
@@ -59,7 +59,7 @@ lines(left2.hat[ord] ~ cricketer$year[ord])
 library(splines)
 ns3.hat <- fitted(lm(lh ~ ns(year,3), data=cricketer))
 lines(ns3.hat[ord] ~ cricketer$year[ord], col="red")
-library(survival)
+require(survival)
 summary(coxph(Surv(life, kia) ~ bs(year,3) +left, data=cricketer))
 cricketer$notacdDead <- with(cricketer, {dead[acd==1]<-0; dead})
 summary(coxph(Surv(life, notacdDead) ~ ns(year,2) +left, data=cricketer))

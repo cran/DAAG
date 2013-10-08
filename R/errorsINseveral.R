@@ -1,5 +1,5 @@
 errorsINseveral <-
-function(n=1000, a0=2.5, beta=c(1.5,0), mu=12.5, SDyerr=0.5, 
+function(n=1000, a0=2.5, beta=c(1.5,0), mu=12.5, SDyerr=0.5,
            default.Vpar=list(SDx=2, rho=-0.5, timesSDx=1.5),
            V=with(default.Vpar, matrix(c(1,rho,rho,1), ncol=2)*SDx^2),
            xerrV=with(default.Vpar, matrix(c(1,0,0,0), ncol=2)*(SDx*timesSDx)^2),
@@ -51,7 +51,6 @@ function(n=1000, a0=2.5, beta=c(1.5,0), mu=12.5, SDyerr=0.5,
     if(is.null(parset))parset <- simpleTheme(col=c("gray40","gray40"),
                                              col.line=c("black","black"))
     if(plotit){
-      library(lattice)
       zhat <- fitted(xx.lm)
       xhat <- fitted(err.lm)
       plt <- xyplot(xhat ~ zhat, aspect=1, scales=list(tck=0.5),

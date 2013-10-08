@@ -25,7 +25,8 @@ and behavioral development in mice. Developmental Psychobiology
 \examples{
 print("Multiple Regression - Example 6.2")
 
-pairs(litters, labels=c("lsize\n\n(litter size)", "bodywt\n\n(Body Weight)",  "brainwt\n\n(Brain Weight)"))
+pairs(litters, labels=c("lsize\n\n(litter size)", "bodywt\n\n(Body Weight)",
+                        "brainwt\n\n(Brain Weight)"))
   # pairs(litters) gives a scatterplot matrix with less adequate labeling
 
 mice1.lm <- lm(brainwt ~ lsize, data = litters) # Regress on lsize

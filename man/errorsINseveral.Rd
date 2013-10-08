@@ -13,7 +13,11 @@ measurement error, independently of the corresponding covariate
 values that are measured without error.
 }
 \usage{
-errorsINseveral(n = 1000, a0 = 2.5, beta = c(1.5, 0), mu = 12.5, SDyerr = 0.5, default.Vpar = list(SDx = 2, rho = -0.5, timesSDx = 1.5), V = with(default.Vpar, matrix(c(1, rho, rho, 1), ncol = 2) * SDx^2), xerrV = with(default.Vpar, matrix(c(1, 0, 0, 0), ncol = 2) * (SDx * timesSDx)^2), parset = NULL, print.summary = TRUE, plotit = TRUE)
+errorsINseveral(n = 1000, a0 = 2.5, beta = c(1.5, 0), mu = 12.5, SDyerr = 0.5,
+default.Vpar = list(SDx = 2, rho = -0.5, timesSDx = 1.5),
+V = with(default.Vpar, matrix(c(1, rho, rho, 1), ncol = 2) * SDx^2),
+xerrV = with(default.Vpar, matrix(c(1, 0, 0, 0), ncol = 2) * (SDx * timesSDx)^2),
+parset = NULL, print.summary = TRUE, plotit = TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

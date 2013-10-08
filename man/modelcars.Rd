@@ -30,7 +30,8 @@ pause()
 
 print("Response Curves - Example 4.6")
 attach(modelcars)
-stripchart(distance.traveled ~ starting.point, vertical=TRUE, pch=15,  xlab = "Distance up ramp", ylab="Distance traveled")
+stripchart(distance.traveled ~ starting.point, vertical=TRUE, pch=15,
+           xlab = "Distance up ramp", ylab="Distance traveled")
 detach(modelcars)
 
 }

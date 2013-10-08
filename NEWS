@@ -1,4 +1,14 @@
-                  Changes in DAAG version 1.16
+                  Changes in DAAG version 1.17
+
+NEW FEATURES
+   o There are improvements to the way that dependencies are handled.
+   o The file simulate-reg.pdf has been replaced by two knitr vignettes --
+     'Functions for Assessing the Sampling Properties of plot.lm()
+      Regression Diagnostics', and '{Functions that Demonstrate the
+      Sampling Properties of Variable Selection'.
+
+
+                 Changes in DAAG version 1.16
 
 NEW FEATURES
 

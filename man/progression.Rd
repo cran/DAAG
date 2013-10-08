@@ -13,7 +13,7 @@
     \item{\code{race}}{character; descriptor for event (100m, mile, ...)}
   }
 }
-\details{  
+\details{
 Record times for men's track events, from 1912 onwards.  The
 series starts with times that were recognized as record times in 1912,
 where available.
@@ -26,12 +26,11 @@ Links to sources for the data are at
 \examples{
 data(progression)
 plot(log(Time) ~ log(Distance), data=progression)
-library(lattice)
 xyplot(log(Time) ~ log(Distance), data=progression, type=c("p","r"))
 xyplot(log(Time) ~ log(Distance), data=progression,
        type=c("p","smooth"))
 res <- resid(lm(log(Time) ~ log(Distance), data=progression))
 plot(res ~ log(Distance), data=progression,
-     ylab="Residuals from regression line on log scales") 
+     ylab="Residuals from regression line on log scales")
 }
 \keyword{datasets}

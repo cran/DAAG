@@ -30,7 +30,6 @@ function(width=3.75, height=3.75, color=FALSE, trellis=FALSE,
     dev.out <- device[1]
     dev.fun <- switch(dev.out, pdf=pdf, ps=postscript)
     if(trellis){
-      library(lattice)
       if(device=="ps")
         trellis.device(file=file, device=dev.fun,
                        color = color, horiz=horiz, fonts=fonts,
@@ -46,7 +45,7 @@ function(width=3.75, height=3.75, color=FALSE, trellis=FALSE,
         dev.fun(file=file, paper="special",  horiz=horiz, fonts=fonts,
                 width=width, height=height, pointsize=pointsize[1], ...) else
       dev.fun(file=file, paper="special", fonts=fonts,
-              width=width, height=height, pointsize=pointsize[1], ...)      
+              width=width, height=height, pointsize=pointsize[1], ...)
     }
     if(trellis)trellis.par.set(list(fontsize=list(text=pointsize[1],
                                       points=pointsize[2])))

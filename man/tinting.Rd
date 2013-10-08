@@ -26,26 +26,25 @@ tinting: \code{no} < \code{lo} < \code{hi}}
    \code{hicon}: high contrast }
     \item{it}{the inspection time, the time required
 to perform a simple discrimination task (in milliseconds)}
-    \item{csoa}{critical stimulus onset asynchrony, the time 
+    \item{csoa}{critical stimulus onset asynchrony, the time
 to recognize an alphanumeric target (in milliseconds)}
     \item{agegp}{a factor with levels
-\code{younger}, 21-27, 
+\code{younger}, 21-27,
 \code{older}, 70-78 }
   }
 }
 \details{
-Visual light transmittance (VLT) levels were 100\% (tint=none), 
-81.3\% (tint=lo), and 35.1\% (tint=hi).  Based on these and other 
-data, Burns et al. argue that road safety may be compromised if 
+Visual light transmittance (VLT) levels were 100\% (tint=none),
+81.3\% (tint=lo), and 35.1\% (tint=hi).  Based on these and other
+data, Burns et al. argue that road safety may be compromised if
 the front side windows of cars are tinted to 35% VLT.
 }
 \source{
  Burns, N.R., Nettlebeck, T., White, M. and Willson, J., 1999.
 Effects of car window tinting on visual performance: a comparison of
-younger and older drivers. Ergonomics 42: 428-443. 
+younger and older drivers. Ergonomics 42: 428-443.
 }
 \examples{
-require(lattice)
 levels(tinting$agegp) <- capstring(levels(tinting$agegp))
 xyplot(csoa ~ it | sex * agegp, data=tinting) # Simple use of xyplot()
 pause()

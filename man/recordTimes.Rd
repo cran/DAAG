@@ -23,7 +23,6 @@
 }
 \examples{
 data(worldRecords)
-library(lattice)
 xyplot(log(Time) ~ log(Distance), groups=roadORtrack, data=worldRecords)
 xyplot(log(Time) ~ log(Distance), groups=roadORtrack, data=worldRecords,
        type=c("p","r"))

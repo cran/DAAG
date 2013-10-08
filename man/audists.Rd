@@ -17,7 +17,6 @@ Australian road map
 }
 \examples{
 data(audists)
-library(lattice)
 audists.cmd <- cmdscale(audists)
 xyplot(audists.cmd[,2] ~ audists.cmd[,1], groups=row.names(audists.cmd),
        panel = function(x, y, subscripts, groups)  

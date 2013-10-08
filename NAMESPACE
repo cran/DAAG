@@ -12,4 +12,5 @@ export(bestset.noise, bestsetNoise, bounce, bsnCV, bsnVaryNvar,
        show.colors, simulateLinear, simulateSampDist,
        twot.permutation, twotPermutation, vif)
 
-importFrom(latticeExtra, layer, layer_, glayer, glayer_)
+importFrom(latticeExtra, as.layer, layer, layer_, glayer, glayer_)
+importFrom(lattice, xyplot, simpleTheme, trellis.device, trellis.par.set)

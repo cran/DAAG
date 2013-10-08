@@ -7,7 +7,8 @@ model.  It also has the option to create over-dispersed data
 of a particular type.
 }
 \usage{
-poissonsim(x = seq(0, 1, length=101), a = 2, b = -4, intcp.sd=NULL, slope.sd=NULL, seed=NULL)
+poissonsim(x = seq(0, 1, length=101), a = 2, b = -4, intcp.sd=NULL,
+           slope.sd=NULL, seed=NULL)
 }
 \arguments{
   \item{x}{a numeric vector representing the explanatory variable}

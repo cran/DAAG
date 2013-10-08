@@ -7,7 +7,8 @@
   Given actual and predicted group assignments, give the confusion matrix
 }
 \usage{
-confusion(actual, predicted, gpnames = NULL, rowcol=c("actual", "predicted"), printit = c("overall","confusion"), prior = NULL, digits=3)
+confusion(actual, predicted, gpnames = NULL, rowcol=c("actual", "predicted"),
+printit = c("overall","confusion"), prior = NULL, digits=3)
 }
 \arguments{
   \item{actual}{

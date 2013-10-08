@@ -1,5 +1,11 @@
 "show.colors" <-
 function(type=c("singles", "shades", "gray"), order.cols=TRUE){
+    if(order.cols){
+        MASS.out <- try(require(MASS), silent = TRUE)
+    MASSCheck <- !is.logical(MASS.out) | (MASS.out == FALSE)
+    if(MASSCheck)print("Error: package MASS is not installed properly")
+    if(MASSCheck) return()
+    }
 type <- type[1]
 oldpar <- par(mar=c(.75, .75,1.5, .75))
 on.exit(par(oldpar))
@@ -15,9 +21,9 @@ plotshades <- function(x=1, start=1, nlines=14, numlabels=FALSE, colmat, colnam)
     endlines <- min(start+nlines-1, length(colnam))
     colrange <- start:endlines
     nlines <- length(colrange)
-    points(rep(x:(x+4), rep(nlines,5)), nlines+1.25-rep(1:nlines, 5), 
+    points(rep(x:(x+4), rep(nlines,5)), nlines+1.25-rep(1:nlines, 5),
         col=as.vector(colmat[colrange,]), pch=15, cex=2.95)
-    text(rep(x-0.25,nlines), nlines+1.25-(1:nlines), colnam[colrange], 
+    text(rep(x-0.25,nlines), nlines+1.25-(1:nlines), colnam[colrange],
         adj=0, col=paste(colnam[1:10],"4",sep=""), cex=0.8, xpd=TRUE)
     text((x+1):(x+4), rep(nlines+0.95,4), 1:4, cex=0.75)
 }
@@ -61,7 +67,7 @@ subs <- match(nongray, fiveshades, nomatch=0)
 loners <- nongray[subs==0]
 print(c(length(loners),length(fiveshades)))
 ncolm <- switch(type, singles=3, shades=4, gray=4)
-nlines <- switch(type, singles=ceiling(length(loners)/3), 
+nlines <- switch(type, singles=ceiling(length(loners)/3),
     shades=ceiling(length(fivers)/4), gray=ceiling(length(grayshades)/4))
 
 
@@ -74,7 +80,7 @@ mtext(side=3, line=-0.25, heading, at=1, adj=0)
 #    xyz <- t(sweep(col2rgb(colvec),1,c(.2126, .7152, .0722),"*"))
 #    red <- xyz[,1]
 #    green <- xyz[,2]
-#    blue <- xyz[,3]   
+#    blue <- xyz[,3]
 #    scores <- (red+blue+400)*(green>165)+ (red+green+200)*(red>25)*(green<165)
 #        +(green+blue)*(red<25)*(green>165)
 #    ord <- order(scores)

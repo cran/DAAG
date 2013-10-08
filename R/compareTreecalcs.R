@@ -1,7 +1,14 @@
 "compareTreecalcs" <-
-function (x = yesno ~ ., data = spam7, cp = 0.00025, fun = c("rpart", 
-                                                         "randomForest")) 
+function (x = yesno ~ ., data = spam7, cp = 0.00025, fun = c("rpart",
+                                                         "randomForest"))
 {
+  rpart.out <- try(require(rpart), silent = TRUE)
+  rf.out <- try(require(randomForest), silent = TRUE)
+  rpartCheck <- !is.logical(rpart.out) | (rpart.out == FALSE)
+  rfCheck <- !is.logical(rf.out) | (rf.out == FALSE)
+  if(rpartCheck)print("Error: package rpart is not installed properly")
+  if(rfCheck)print("Error: package randomForest is not installed properly")
+  if(rpartCheck | rfCheck) return()
   yvar <- all.vars(x)[1]
   m <- dim(data)[1]
   train <- sample((1:m), m%/%2)
@@ -23,7 +30,7 @@ function (x = yesno ~ ., data = spam7, cp = 0.00025, fun = c("rpart",
      }
        else {
        write.table(data.frame("Warning: Calculations ceased at the root node"),
-                      row.names=FALSE, col.names=FALSE, quote=FALSE)                  
+                      row.names=FALSE, col.names=FALSE, quote=FALSE)
        xerror <- numeric(0)
      }
     nREmin <- max(as.numeric(which.min(xerror)),0)
@@ -62,14 +69,13 @@ function (x = yesno ~ ., data = spam7, cp = 0.00025, fun = c("rpart",
     nREmin <- NULL
   }
   if ("randomForest" %in% fun) {
-    require(randomForest)
     y <- dftrain[, yvar]
     ynum <- match(yvar, names(dftrain))
     df.rf <- randomForest(x = dftrain[, -ynum], y = y)
     hat.dfcv <- predict(df.rf, type = "response")
     tab <- table(hat.dfcv, dftrain[, yvar])
     rfcvA <- sum(tab[row(tab) != col(tab)])/sum(tab)
-    hat.dftest <- predict(df.rf, newdata = dftest[, -ynum], 
+    hat.dftest <- predict(df.rf, newdata = dftest[, -ynum],
                           type = "response")
     tab <- table(hat.dftest, dftest[, yvar])
     rftest <- sum(tab[row(tab) != col(tab)])/sum(tab)
@@ -78,8 +84,8 @@ function (x = yesno ~ ., data = spam7, cp = 0.00025, fun = c("rpart",
     rfcvA <- NULL
     rftest <- NULL
   }
-  c(rpSEcvI = cv.selim, rpcvI = cv.min, rpSEtest = testerr.SE, 
-    rptest = testerr.estmin, nSErule = nSErule, nREmin = nREmin, 
+  c(rpSEcvI = cv.selim, rpcvI = cv.min, rpSEtest = testerr.SE,
+    rptest = testerr.estmin, nSErule = nSErule, nREmin = nREmin,
     rfcvI = rfcvA, rftest = rftest)
 }
 

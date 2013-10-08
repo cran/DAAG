@@ -666,13 +666,12 @@ Note the vignette \bold{rockArt}.
 \examples{
 data(rockArt)
 rockart.dist <- dist(x = as.matrix(rockArt[, 28:641]), method = "binary")
-sum(rockart.dist==1)/length(rockart.dist) 
+sum(rockart.dist==1)/length(rockart.dist)
 plot(density(rockart.dist, to = 1))
 rockart.cmd <- cmdscale(rockart.dist)
 tab <- table(rockArt$District)
 district <- as.character(rockArt$District)
 district[!(rockArt$District \%in\% names(tab)[tab>5])] <- "other"
-library(lattice)
 \dontrun{
 xyplot(rockart.cmd[,2] ~ rockart.cmd[,1], groups=district,
        auto.key=list(columns=5),
