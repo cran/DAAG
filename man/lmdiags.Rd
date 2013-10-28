@@ -9,7 +9,7 @@ Return data required for diagnostic plots
   code used to provide the graphs
 }
 \usage{
-lmdiags(x, which = c(1L:3L, 5L), cook.levels = c(0.5, 1))
+lmdiags(x, which = c(1L:3L, 5L), cook.levels = c(0.5, 1), hii=NULL)
 }
 \arguments{
   \item{x}{
@@ -22,6 +22,8 @@ lmdiags(x, which = c(1L:3L, 5L), cook.levels = c(0.5, 1))
   \item{cook.levels}{
 Levels for contours of \code{cook.levels}, by default \code{c(0.5,1)}
 }
+\item{hii}{Diagonal elements for the hat matrix.  If not supplied
+(\code{hii=NULL}), they will be calculated from the argument \code{x}.}
 }
 \details{
 See \code{\link{plot.lm}} for additional information.
@@ -32,7 +34,6 @@ See \code{\link{plot.lm}} for additional information.
   deviance residuals)}
   \item{yhn0}{As \code{yh}, but omitting observations with zero weight}
   \item{cook}{Cook's statistics}
-  \item{hii}{Diagonal elements of the hat matrix}
   \item{rsp}{standardized residuals (for \code{glm} models standardized
   Pearson residuals)}
 }
@@ -45,12 +46,11 @@ others had contributed to \code{\link{plot.lm}}
 }
 \note{
   This function is designed, in the first place, for use in connection
-  with \code{\link{plotSimDiags.lm}}, which is the
-  \code{\link{plotSimDiags}}
-  method for \code{lm} objects.
+  with \code{\link{plotSimDiags}}, used to give simulations of
+  diagnostic plots for \code{lm} objects.
 }
 \seealso{
-\code{\link{plotSimDiags.lm}}, \code{\link{plot.lm}}
+\code{\link{plotSimDiags}}, \code{\link{plot.lm}}
 }
 \examples{
 women.lm <- lm(weight ~ height, data=women)

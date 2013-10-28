@@ -1,5 +1,5 @@
 lmdiags <-
-function (x, which = c(1L:3L, 5L), cook.levels = c(0.5, 1))
+function (x, which = c(1L:3L, 5L), cook.levels = c(0.5, 1), hii=NULL)
 {
     dropInf <- function(x, h) {
         if (any(isInf <- h >= 1)) {
@@ -7,7 +7,9 @@ function (x, which = c(1L:3L, 5L), cook.levels = c(0.5, 1))
         }
         x
     }
-    out <- list(yh=NULL, rs=NULL,yhn0=NULL,cook=NULL,hii=NULL, rsp=NULL)
+    if(is.null(hii))hii<- lm.influence(x, do.coef = FALSE)$hat
+    out <- list(yh = NULL, rs = NULL, yhn0 = NULL, cook = NULL,
+                rsp = NULL, facval=NULL)
     if (!inherits(x, "lm"))
         stop("use only with \"lm\" objects")
     if (!is.numeric(which) || any(which < 1) || any(which > 6))
@@ -31,7 +33,6 @@ function (x, which = c(1L:3L, 5L), cook.levels = c(0.5, 1))
         else if (isGlm)
             sqrt(summary(x)$dispersion)
         else sqrt(deviance(x)/df.residual(x))
-        hii <- lm.influence(x, do.coef = FALSE)$hat
         if (any(show[4L:6L])) {
             cook <- if (isGlm)
                 cooks.distance(x)
@@ -43,6 +44,11 @@ function (x, which = c(1L:3L, 5L), cook.levels = c(0.5, 1))
             r
         else sqrt(w) * r
         rs <- dropInf(r.w/(s * sqrt(1 - hii)), hii)
+    }
+    if (any(show[5L:6L])) {
+        r.hat <- range(hii, na.rm = TRUE)
+        isConst.hat <- all(r.hat == 0) || diff(r.hat) < 1e-10 *
+            mean(hii, na.rm = TRUE)
     }
     if (show[1L]) {
         out$yh <- yh
@@ -56,7 +62,8 @@ function (x, which = c(1L:3L, 5L), cook.levels = c(0.5, 1))
         yhn0 <- if (is.null(w))
             yh
         else yh[w != 0]
-        if(is.null(out$rs))out$rs <- rs
+        if (is.null(out$rs))
+            out$rs <- rs
         out$yhn0 <- yhn0
     }
     if (show[4L]) {
@@ -67,12 +74,11 @@ function (x, which = c(1L:3L, 5L), cook.levels = c(0.5, 1))
         if (!is.null(w))
             r.w <- r.w[wind]
         rsp <- dropInf(r.w/(s * sqrt(1 - hii)), hii)
-        out$hii <- hii
         out$rsp <- rsp
     }
     if (show[6L]) {
-        if(is.null(out$hii))out$hii <- hii
-        if(is.null(out$cook))out$cook <- cook
+        if (is.null(out$cook))
+            out$cook <- cook
     }
     out
 }

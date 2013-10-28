@@ -42,7 +42,7 @@ boxplot(split(like, PrivPub), ylab = "Class average of attitude to science score
 rug(like[PrivPub == "private"], side = 2)
 rug(like[PrivPub == "public"], side = 4)
 detach(classmeans)
-library(lme4)
+if(require(lme4, quietly=TRUE)) {
 science.lmer <- lmer(like ~ sex + PrivPub + (1 | school) +
                      (1 | school:class), data = science,
                      na.action=na.exclude)
@@ -63,5 +63,6 @@ lines(lowess(sqrt(num[privpub=="private"]),
 lines(lowess(sqrt(num[privpub=="public"]),
              ranf[privpub=="public"], f=1.1), lty=3)
 axis(1, at=sqrt(numlabs), labels=paste(numlabs))
+}
 }
 \keyword{datasets}

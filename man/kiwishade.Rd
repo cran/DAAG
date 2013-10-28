@@ -74,12 +74,13 @@ names(kiwi.summary)<- c("Mean", "Vine 1", "Vine 2", "Vine 3", "Vine 4")
 kiwi.summary
 mean(kiwi.means) # the grand mean (only for balanced design)
 
-require(lme4)
+if(require(lme4, quietly=TRUE)) {
 kiwishade.lmer <- lmer(yield ~ shade + (1|block) + (1|block:plot),
                        data=kiwishade)
 ## block:shade is an alternative to block:plot
 
 kiwishade.lmer
+
 
 ##                  Residuals and estimated effects
 xyplot(residuals(kiwishade.lmer) ~ fitted(kiwishade.lmer)|block,
@@ -93,5 +94,6 @@ xyplot(residuals(kiwishade.lmer) ~ fitted(kiwishade.lmer)|block,
 ploteff <- ranef(kiwishade.lmer, drop=TRUE)[[1]]
 qqmath(ploteff, xlab="Normal quantiles", ylab="Plot effect estimates",
        scales=list(tck=0.5))
+}
 }
 \keyword{datasets}

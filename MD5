@@ -1,5 +1,5 @@
-935a811f625f5ce9edb5e39fc4e14ba9 *DESCRIPTION
-647d73fa86ade86c820219761dea7cbe *NAMESPACE
+09bc88ffcd0fb2729715a9f9626514fd *DESCRIPTION
+7a58c83079e4ade980b348d2eb25a969 *NAMESPACE
 fab68386b40f6f5f258a370b8695a2e1 *NEWS
 1bb15956a43ffbeffcfd7d9822af6378 *R/CVbinary.R
 fb002059768b7a015ce45971efc41925 *R/CVlm.R
@@ -20,7 +20,7 @@ ebe408cb186a0c50bfe56edb9e0a9f5e *R/errorsINseveral.R
 fa55152648751ed04be4c44514341e8f *R/errorsINx.R
 7e71e89ccb124be659be01960884f1e8 *R/excessRisk.R
 6b739059315f3a03ad956cef2ff4f504 *R/hardcopy.R
-cd867af636cd795eb41b8c3028a58a97 *R/lmdiags.R
+da096881c9963bbf8e9421c9a461e53b *R/lmdiags.R
 1e4101d916284a93c64a982c1dbf15f7 *R/logisticsim.R
 63e4d8e4e00beb61cf0378f1fa5df79a *R/multilap.R
 1b17538e07193d9c8b159f3b83aabff1 *R/obounce.R
@@ -36,8 +36,7 @@ db7dd541436efb1cc201bb43e90d3d97 *R/panelCorr.R
 e2175fb48b33f3c12d7090005f797791 *R/panelplot.R
 f9fd5a14b15ba5ef7072f4fc28c122d5 *R/pause.R
 1aba850bd1e97f5fb2ef32db3e3702d8 *R/plotSampDist.R
-d1c7d796b0f8ddd0f9b784d9966e0caf *R/plotSimDiags.R
-0af0da35862c8452e24224e613b49096 *R/plotSimDiags.lm.R
+063ec4a77604d8ee3cf1742d36d79a49 *R/plotSimDiags.R
 feb315f03174de25a3092f3d41901422 *R/plotSimScat.R
 0eed3e88e33e646958e5455b0d93d0c4 *R/poissonsim.R
 b6123dcb96fd0ed913289d35dad0fc85 *R/powerplot.R
@@ -176,6 +175,7 @@ d2a207c6bf92be1dd380692353d6a2a9 *data/vlt.rda
 4da9c842e873892084c164545e174166 *data/whoops.rda
 ccb33894bfbd9fcd44ba976b43eedee2 *data/worldRecords.RData
 f0a1acf740f8aca562c2cae0a4c4ee02 *data/zzDAAGxdb.rda
+8eb76df52d77ede0beef52d1e7398c93 *inst/doc/motifs.txt
 78a47bd88a6b1948b088231c158d50e2 *inst/doc/rockArt.pdf
 0532361e8e9652b9b8f042eddd64be0e *inst/doc/simulate-regdiags.R
 03d1d96b86f66fd60d11c13b20c02891 *inst/doc/simulate-regdiags.Rnw
@@ -262,13 +262,13 @@ fcf4f79961daee229b66196750b8333f *man/humanpower.Rd
 7defe0b1dbf8449a082c866c6cb80107 *man/intersalt.Rd
 4c2e5045d2e3cce5da45ada079adb3df *man/ironslag.Rd
 56a474dec134dab4c57a33ad847b4746 *man/jobs.Rd
-d03dcbbbbdc57dbe3901eafe53283af0 *man/kiwishade.Rd
+b4bd8367a90cbad2fc184a9ed4ca055a *man/kiwishade.Rd
 8ae3f9910a44e1707fbe1c89b90f455f *man/leafshape.Rd
 22c99ef4448b3098a7659a337f70748d *man/leafshape17.Rd
 9b00f485e7ead05c7eaf4ff105167d34 *man/leaftemp.Rd
 903cf71790b58a10636fd62dabb1c7d7 *man/leaftemp.all.Rd
 1c5a45d6cb75fb5081eb61aafdeea835 *man/litters.Rd
-6640d505ef8441f85d2a9289737b5cde *man/lmdiags.Rd
+a91075d05fbe5a7d981f5f016428e45f *man/lmdiags.Rd
 cb2b5f7b589ca7a12fe05de755e53bc6 *man/logisticsim.Rd
 77e4cb1d2b99f13af182dbac83aa6f62 *man/lung.Rd
 fb42f5515fa95a934b2a36b17b80f50a *man/measles.Rd
@@ -306,8 +306,8 @@ fc7d3ae33cdbd3c74ba9120a3c5a244c *man/pair65.Rd
 eb0982b79daa8865fc9ebcd99e0971f6 *man/panelplot.Rd
 dd5cf763e28a3961f72d3202d092391a *man/pause.Rd
 f930c1ea042da7e5ab7741315ed1608a *man/plotSampDist.Rd
-2f42f854a5202435c125dd44007896c8 *man/plotSimDiags.Rd
-a5d7b332ccfec0511ac27c2616555dd6 *man/plotSimDiags.lm.Rd
+c245924c737535266c27805c0082bef6 *man/plotSimDiags.Rd
+45d856a6c4592e72ea6a3f0212601244 *man/plotSimScat.Rd
 27748c1d47cb7c8b68196adaf2bb61d4 *man/poissonsim.Rd
 da59cfc3e422c13dd65bb70a44bba878 *man/possum.Rd
 3455b0e0cf47c54733ba0b6f3d7d84a5 *man/possumsites.Rd
@@ -328,7 +328,7 @@ d8623bc345bbe3ddc8048012e231196e *man/rice.Rd
 72fa6ac7bccaae3a82e9bcc3e9c78aa8 *man/rockArt.Rd
 886f8b4c6f718816cb2a3d05e6b87f44 *man/roller.Rd
 9b8c01ed4ee1f462eb021fa03804ccb7 *man/sampdist.Rd
-917ebdc1140e411fd932a6474c5edfef *man/science.Rd
+2368aa35a672eef0c8001195586549b9 *man/science.Rd
 0de5d8525552ad9e7e0b3d53235167f4 *man/seedrates.Rd
 1934d1852dc19c3202449e0c80280bdf *man/show.colors.Rd
 624fa2b4062f17093a2761070a7acc42 *man/simulateLinear.Rd

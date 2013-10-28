@@ -1,5 +1,5 @@
 Package: DAAG
-Version: 1.17
+Version: 1.18
 Title: Data Analysis And Graphics data and functions
 Author: John H. Maindonald and W. John Braun
 Maintainer: W. John Braun <braun@stats.uwo.ca>
@@ -17,6 +17,6 @@ License: Unlimited
 URL: http://www.stats.uwo.ca/DAAG
 VignetteBuilder: knitr
 Repository: CRAN
-Packaged: 2013-10-08 00:03:27 UTC; johnm1
+Packaged: 2013-10-28 13:53:59 UTC; braun
 NeedsCompilation: no
-Date/Publication: 2013-10-08 08:04:56
+Date/Publication: 2013-10-28 18:25:36

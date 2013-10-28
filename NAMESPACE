@@ -7,7 +7,7 @@ export(bestset.noise, bestsetNoise, bounce, bsnCV, bsnVaryNvar,
        logisticsim, multilap, onesamp, onet.permutation,
        onetPermutation, oneway.plot, onewayPlot, overlap.density,
        overlapDensity, panel.corr, panelCorr, panelplot, pause,
-       plotSampDist, plotSimDiags, plotSimDiags.lm, plotSimScat,
+       plotSampDist, plotSimDiags, plotSimScat,
        poissonsim, powerplot, press, qreference, sampdist,
        show.colors, simulateLinear, simulateSampDist,
        twot.permutation, twotPermutation, vif)
