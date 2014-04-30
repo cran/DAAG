@@ -42,6 +42,6 @@ function (obj, rand = NULL, nfolds = 10, print.details = TRUE)
             3))
         cat("\n")
     }
-    invisible(list(cvhat = cvhat, internal = hat, acc.cv = acc.cv,
-        acc.internal = acc.internal))
+    invisible(list(cvhat = cvhat, internal = hat, training=hat, acc.cv = acc.cv,
+                   acc.internal = acc.internal, acc.training=acc.internal))
 }

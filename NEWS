@@ -1,3 +1,22 @@
+                  Changes in DAAG version 1.19
+
+NEW FEATURES
+  o The function align2D() has been added.  This finds the linear 
+    transformation which, applied to one set of points in the (x, y) 
+    plane, gives the best match in a least squares sense to a second 
+    set of points.
+  o A bug in the function plotSimDiags() has been fixed.
+
+BUG FIXES
+  o The code for lmdiags() has been tidied.  
+
+
+                  Changes in DAAG version 1.18
+NEW FEATURES
+  o The functionality of lmdiags(), called from plotSimDiags(),
+    has been slightly improved.
+
+
                   Changes in DAAG version 1.17
 
 NEW FEATURES

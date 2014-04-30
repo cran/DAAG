@@ -10,7 +10,7 @@ export(bestset.noise, bestsetNoise, bounce, bsnCV, bsnVaryNvar,
        plotSampDist, plotSimDiags, plotSimScat,
        poissonsim, powerplot, press, qreference, sampdist,
        show.colors, simulateLinear, simulateSampDist,
-       twot.permutation, twotPermutation, vif)
+       twot.permutation, twotPermutation, vif, align2D)
 
 importFrom(latticeExtra, as.layer, layer, layer_, glayer, glayer_)
 importFrom(lattice, xyplot, simpleTheme, trellis.device, trellis.par.set)

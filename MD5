@@ -1,8 +1,9 @@
-09bc88ffcd0fb2729715a9f9626514fd *DESCRIPTION
-7a58c83079e4ade980b348d2eb25a969 *NAMESPACE
-fab68386b40f6f5f258a370b8695a2e1 *NEWS
-1bb15956a43ffbeffcfd7d9822af6378 *R/CVbinary.R
+b534c5426ba0c33da5620c00b37fe150 *DESCRIPTION
+9fdb9780e9a5f498141263de5f456960 *NAMESPACE
+0d5ce3bd32254deb9a3809a462c1f9f3 *NEWS
+036650b6491ae9bfb61b3bcaeb614315 *R/CVbinary.R
 fb002059768b7a015ce45971efc41925 *R/CVlm.R
+1752ba7a2415fe607a9fb2f67893d765 *R/align2D.R
 4aea3d2dbfa3e9773d80d20fbcbccb91 *R/bestset.noise.R
 501f77567a6513338af23d71c81dd567 *R/bestsetNoise.R
 113a00315c5e20389cbb91f08124bdb5 *R/bounce.R
@@ -13,7 +14,7 @@ d198640b6f0dab4d4b675074f062c83f *R/capstring.R
 a4ab78df1f88ccd002c98cb0cfb9d32f *R/compareTreecalcs.R
 6d5b004c39b034b264a879d11fef7e7c *R/component.residual.R
 4ec859432fda465d995ca2519ac8f969 *R/confusion.R
-08202c8439c07c2c058de2b7b06bbcc9 *R/cv.binary.R
+c228209f1d5744787b910a98f9a3807e *R/cv.binary.R
 ec42f93eb644dcbfd77ddfd1478caa7f *R/cv.lm.R
 a332db140a52983cc5736c5ca8ece896 *R/datafile.R
 ebe408cb186a0c50bfe56edb9e0a9f5e *R/errorsINseveral.R
@@ -49,7 +50,7 @@ b1f9683b7ff55698b542090dac97e397 *R/simulateSampDist.R
 dfb7ffa74663712c2cad20162eb202dd *R/twot.R
 ff50dcc312c6778e57e8954f981aaa57 *R/twotPermutation.R
 da7cdfc9ebe32d9d709edfd0b23f01bd *R/vif.R
-7f71881db08fcfdf4129d25f6a0e2d91 *build/vignette.rds
+9f0adb5e49b52aaa6dc84b9f8dd89be5 *build/vignette.rds
 9887d95ea7f0d0d5bee75f8eba67e899 *data/ACF1.rda
 de7c16c42f8ceb5f6f35c1150cdb546b *data/Cars93.summary.rda
 b3cf1b3cf60e40f7f830e53a04ec1006 *data/DAAGxdb.rda
@@ -197,6 +198,7 @@ adeb58cd2e31640d65b38a66077a291a *man/Cars93.summary.Rd
 b71d2f6f926c0d40855ba3e1926afc5c *man/SP500W90.Rd
 ab54feefdee4bbc1da15c14508deec51 *man/SP500close.Rd
 8892662bb5f6d444238efb3372a402f7 *man/ais.Rd
+5b5380250961010a70fa163288d85177 *man/align2D.Rd
 daebcb0c99fbff6add42e1a1ec786ae9 *man/allbacks.Rd
 a1b242574d9829ada0f6cdf5b8255b5d *man/anesthetic.Rd
 a022e91973c6073ba1cdc6c559591cea *man/ant111b.Rd

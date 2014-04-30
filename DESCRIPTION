@@ -1,5 +1,5 @@
 Package: DAAG
-Version: 1.18
+Version: 1.20
 Title: Data Analysis And Graphics data and functions
 Author: John H. Maindonald and W. John Braun
 Maintainer: W. John Braun <braun@stats.uwo.ca>
@@ -13,10 +13,10 @@ Imports: latticeExtra
 Suggests: leaps, oz, lme4, quantreg, knitr, boot, rpart, randomForest,
         MASS, survival
 ZipData: yes
-License: Unlimited
+License: GPL-3
 URL: http://www.stats.uwo.ca/DAAG
 VignetteBuilder: knitr
 Repository: CRAN
-Packaged: 2013-10-28 13:53:59 UTC; braun
+Packaged: 2014-04-30 14:13:14 UTC; braun
 NeedsCompilation: no
-Date/Publication: 2013-10-28 18:25:36
+Date/Publication: 2014-04-30 17:21:00
