@@ -24,7 +24,7 @@ function (test = NULL, m = 50, nrep = 6, distribution = function(x) qnorm(x,
             fac = factor(rep(1:nrep, rep(m, nrep))),
             id = factor(rep(1, m * nrep)))
         colpch <- c("black")
-        qq <- qqmath(~y | fac, data = xy, par.strip.text = list(cex = 0),
+        qq <- lattice::qqmath(~y | fac, data = xy, par.strip.text = list(cex = 0),
             distribution = distribution, layout = c(ncols, nrows),
             xlab = "", ylab = "", aspect = 1, pch=16
             )
@@ -42,7 +42,7 @@ function (test = NULL, m = 50, nrep = 6, distribution = function(x) qnorm(x,
             xlab <- paste("Quantiles of", deparse(substitute(distribution)))
         if (is.null(ylab))
             ylab <- ""
-        qq <- qqmath(~y | fac, data = xy, layout = c(ncols, nrows),
+        qq <- lattice::qqmath(~y | fac, data = xy, layout = c(ncols, nrows),
             groups = id, aspect = 1, xlab = xlab, ylab = "", pch=16,
            distribution = distribution, par.strip.text = list(cex = cex.strip))
     }

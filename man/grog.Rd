@@ -19,7 +19,7 @@ beer, wine, and spirits (including spirit-based products).
     \item{\code{Year}}{Year ending in June of the given year}
   }
 }
-\details{  
+\details{
   Data are total available pure alcohol content, for the three
   categories, divided by numbers of persons aged 15 years or more.  The
   source data for New Zealand included quarterly figures from December
@@ -29,8 +29,9 @@ beer, wine, and spirits (including spirit-based products).
   line from later years.
 }
 \source{Australian data are from \url{http://www.abs.gov.au}.
-  New Zealand data are derived from data from
-  \url{http://www.stats.govt.nz/people/health/alcohol.htm}
+  For New Zealand data, go to
+  \url{http://www.stats.govt.nz/infoshare/} Click on 'Industry sectors'
+  and then on 'Alcohol Available for Consumption - ALC'.
 }
 \examples{
 data(grog)

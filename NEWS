@@ -1,4 +1,18 @@
-                  Changes in DAAG version 1.19
+                 Changes in DAAG version 1.21
+
+NEW FEATURES
+  o The dataset hurricNamed (deaths from Atlantic hurricanes,
+    damage assessments, and other measures, from 1950 onwards) 
+    has been added.
+  o The dataset cps3 (a subset of cps10 has been added
+  o The help file CVlm.Rd has been amended to give the correct 
+    return value for CVlm() and cv.lm().
+  o An enhanced version of overlapDensity()
+    (an alias is  overlap.density()), as assumed by the code for
+    Figure 13.3 on page 421 of the 3rd edition of "Data Analysis 
+    and Graphics using R", has replaced the former version.
+  
+                 Changes in DAAG version 1.19
 
 NEW FEATURES
   o The function align2D() has been added.  This finds the linear 

@@ -1,4 +1,4 @@
-errorsINseveral <-
+  errorsINseveral <-
 function(n=1000, a0=2.5, beta=c(1.5,0), mu=12.5, SDyerr=0.5,
            default.Vpar=list(SDx=2, rho=-0.5, timesSDx=1.5),
            V=with(default.Vpar, matrix(c(1,rho,rho,1), ncol=2)*SDx^2),
@@ -53,11 +53,11 @@ function(n=1000, a0=2.5, beta=c(1.5,0), mu=12.5, SDyerr=0.5,
     if(plotit){
       zhat <- fitted(xx.lm)
       xhat <- fitted(err.lm)
-      plt <- xyplot(xhat ~ zhat, aspect=1, scales=list(tck=0.5),
+      plt <- lattice::xyplot(xhat ~ zhat, aspect=1, scales=list(tck=0.5),
                     panel=function(x,y,...){
-                      panel.xyplot(x,y,type="p",...)
-                      panel.abline(lm(y ~ x), lty=2)
-                      panel.abline(0,1)
+                      lattice::panel.xyplot(x,y,type="p",...)
+                      lattice::panel.abline(lm(y ~ x), lty=2)
+                      lattice::panel.abline(0,1)
                     },
                     xlab="Fitted values; regress on exact z",
                     ylab="Fitted values; regress on x = xWITHerr",

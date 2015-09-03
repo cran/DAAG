@@ -17,24 +17,24 @@ function (sampsize = c(3, 9, 30), seed = NULL, nsamp = 1000, FUN = mean,
   form <- formula(paste("~", paste(names(df), collapse="+")))
   lab <- lapply(sampsize, function(x) substitute(A, list(A = paste(x))))
   if (plot.type[1] == "density")
-    gph <- densityplot(form, data=df, layout = layout, outer=TRUE,
+    gph <- lattice::densityplot(form, data=df, layout = layout, outer=TRUE,
                        plot.points = FALSE, panel = function(x, ...) {
-                         panel.densityplot(x, ..., col = "black")
-                         panel.densityplot(y, col = "gray40", lty = 2,
+                         lattice::panel.densityplot(x, ..., col = "black")
+                         lattice::panel.densityplot(y, col = "gray40", lty = 2,
                                            ...)
                        }, xlim = xlim, xlab = "", scales = list(tck = tck),
-                       between = list(x = 0.5), strip = strip.custom(strip.names = TRUE,
+                       between = list(x = 0.5), strip = lattice::strip.custom(strip.names = TRUE,
                                                   factor.levels = as.expression(lab), var.name = "Sample size",
                                                   sep = expression(" = ")))
   else if (plot.type[1] == "qq")
-    gph <- qqmath(form, data = df, layout = layout, plot.points = FALSE,
+    gph <- lattice::qqmath(form, data = df, layout = layout, plot.points = FALSE,
                   outer=TRUE,
                   panel = function(x, ...) {
-                    panel.qqmath(x, ..., col = "black", alpha=0.5)
-                    panel.qqmath(y, col = "gray40", lty = 2, type = "l",
+                    lattice::panel.qqmath(x, ..., col = "black", alpha=0.5)
+                    lattice::panel.qqmath(y, col = "gray40", lty = 2, type = "l",
                                  ...)
                   }, xlab = "", xlim = c(-3, 3), ylab = "", scales = list(tck = tck),
-                  between = list(x = 0.5), strip = strip.custom(strip.names = TRUE,
+                  between = list(x = 0.5), strip = lattice::strip.custom(strip.names = TRUE,
                                              factor.levels = as.expression(lab), var.name = "Sample size",
                                              sep = expression(" = ")))
   if (plot.type[1] %in% c("density", "qq"))

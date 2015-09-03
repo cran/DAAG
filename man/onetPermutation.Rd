@@ -7,7 +7,8 @@ t-test using a permutation test.  The permutation
 density can  also be plotted.
 }
 \usage{
-onetPermutation(x=pair65$heated - pair65$ambient, nsim=2000, plotit=TRUE)
+onetPermutation(x = DAAG::pair65$heated - DAAG::pair65$ambient, nsim = 2000, 
+plotit = TRUE)
 }
 \arguments{
   \item{x}{a numeric vector containing the sample values (centered

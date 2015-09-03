@@ -9,8 +9,9 @@
   are used in Chapter 14 of DAAGUR.
 }
 \usage{
-datafile(file = c("fuel", "travelbooks"), datastore = DAAGxdb,
-altstore = zzDAAGxdb, showNames = FALSE)
+datafile(file = c("fuel", "travelbooks"), datastore =
+                 DAAG::DAAGxdb, altstore = DAAG::zzDAAGxdb, showNames =
+                 FALSE)
 }
 \arguments{
   \item{file}{character; with the defaults for \code{datastore} and

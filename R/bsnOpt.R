@@ -4,7 +4,7 @@ function (X= matrix(rnorm(25*10), ncol=10), y=NULL,
               nbest=1, intercept=TRUE, criterion="cp", tcrit=NULL,
               print.summary = TRUE, really.big = FALSE, ...)
 {
-    leaps.out <- try(require(leaps), silent = TRUE)
+    leaps.out <- try(requireNamespace("leaps"), silent = TRUE)
     if ((is.logical(leaps.out) == TRUE) & (leaps.out == TRUE)) {
         if(is.data.frame(X)){
             if(intercept) X <- model.matrix(~., data=X)[,-1] else
@@ -15,7 +15,7 @@ function (X= matrix(rnorm(25*10), ncol=10), y=NULL,
         if (is.null(colnames(X)))
             colnames(X) <- paste("V", 1:ncol(X), sep = "")
         if(is.null(y))y <- rnorm(m)
-        u <- regsubsets(X, y, method = method, nvmax = nvmax,
+        u <- leaps::regsubsets(X, y, method = method, nvmax = nvmax,
                         nbest = nbest, really.big = really.big, intercept=intercept, ...)
         usum <- summary(u)
         nmodels <- nrow(usum$which)

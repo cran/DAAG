@@ -1,6 +1,6 @@
 excessRisk <-
 function (form = weight ~ seatbelt + airbag, response = "dead", 
-            margin = "airbag", data = nassCDS, decpl = 4, printResults = TRUE) 
+            margin = "airbag", data = DAAG::nassCDS, decpl = 4, printResults = TRUE) 
 {
   vars <- all.vars(form)
   isweight <- length(form) > 2

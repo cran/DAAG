@@ -59,26 +59,28 @@ function (mu = 12.5, n = 200, a = 15, b = 1.5, SDx = 2, SDyerr = 1.5,
                                                function(x) bquote(.(x))))
     lab <- as.expression(lab)
     if (gpdiff == 0) {
-        gph <- xyplot(y ~ x | tau, data = matdf, outer = TRUE,
+        gph <- lattice::xyplot(y ~ x | tau, data = matdf, outer = TRUE,
                      aspect = 1, between = list(x = 0.25, y = 0.25),
                      xlab = "Explanatory variable (x or w = xWITHerr)",
-                     par.settings = parset, layout = layout, strip = strip.custom(strip.names = TRUE,
-                                                             factor.levels = lab, var.name = expression(tau),
-                                                             sep = expression(" = ")), par.strip.text = list(cex = 0.925),
+                     par.settings = parset, layout = layout, 
+                     strip = lattice::strip.custom(strip.names = TRUE,
+                     factor.levels = lab, var.name = expression(tau),
+                     sep = expression(" = ")), par.strip.text = list(cex = 0.925),
                      panel = function(x, y, ...) {
-                         panel.xyplot(x, y, type = c("p", "r"), ...)
-                         panel.abline(a = a, b = b, lty = 2)
+                         lattice::panel.xyplot(x, y, type = c("p", "r"), ...)
+                         lattice::panel.abline(a = a, b = b, lty = 2)
                      }, scales = list(x = list(relation = xrelation),
                         y = list(relation = "same"),
                         tck = 0.5))
     }
     else gph <- xyplot(y ~ x | tau, groups = gps, data = matdf,
                       outer = TRUE, par.settings = parset, aspect = 1,
-                      between = list(x = 0.25, y = 0.25), strip = strip.custom(strip.names = TRUE,
-                                                          factor.levels = lab, var.name = expression(tau),
-                                                          sep = expression(" = ")), par.strip.text = list(cex = 0.925),
+                      between = list(x = 0.25, y = 0.25), 
+                      strip = lattice::strip.custom(strip.names = TRUE,
+                      factor.levels = lab, var.name = expression(tau),
+                      sep = expression(" = ")), par.strip.text = list(cex = 0.925),
                       layout = layout, panel = function(x, y, ...) {
-                          panel.superpose(x, y, type = "p", ...)
+                          lattice::panel.superpose(x, y, type = "p", ...)
                           subs <- list(...)$subscripts
                           fac <- list(...)$groups[subs]
                           gps.lm <- lm(y ~ fac + x)
@@ -87,12 +89,12 @@ function (mu = 12.5, n = 200, a = 15, b = 1.5, SDx = 2, SDyerr = 1.5,
                           xlim <- range(x)
                           mid <- c(xlim[1] + diff(xlim) * 0.01, ylim[2] -
                                    diff(ylim) * 0.01 - sed/2)
-                          panel.arrows(mid[1], mid[2] - sed/2, mid[1],
+                          lattice::panel.arrows(mid[1], mid[2] - sed/2, mid[1],
                                        mid[2] + sed/2, angle = 90, ends = "both",
                                        length = 0.01)
-                          panel.text(mid[1], mid[2], "SED", pos = 4, cex = 0.75)
+                          lattice::panel.text(mid[1], mid[2], "SED", pos = 4, cex = 0.75)
                           hat <- fitted(gps.lm)
-                          panel.superpose(x, y = hat, type = "r", ...)
+                          lattice::panel.superpose(x, y = hat, type = "r", ...)
                       }, auto.key = list(columns = 2, lines = TRUE), xlab = "Explanatory variable (x or w = xWITHerr)",
                       scales = list(x = list(relation = xrelation),
                       y = list(relation = "same"),

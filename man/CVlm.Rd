@@ -11,17 +11,17 @@ Each fold is removed, in turn, while the remaining data is used
 to re-fit the regression model and to predict at the deleted observations.
 }
 \usage{
-CVlm(df = houseprices, form.lm = formula(sale.price ~ area), m=3, dots =
-FALSE, seed=29,  plotit = c("Observed","Residual"),
-main="Small symbols show cross-validation predicted values",
-legend.pos="topleft", printit=TRUE)
-cv.lm(df = houseprices, form.lm = formula(sale.price ~ area), m=3, dots =
-FALSE, seed=29,  plotit = c("Observed","Residual"),
-main="Small symbols show cross-validation predicted values",
-legend.pos="topleft", printit=TRUE)
-}
+CVlm(data = DAAG::houseprices, form.lm = formula(sale.price ~ area),
+              m = 3, dots = FALSE, seed = 29, plotit = c("Observed","Residual"),
+              main="Small symbols show cross-validation predicted values",
+              legend.pos="topleft", printit = TRUE)
+cv.lm(data = DAAG::houseprices, form.lm = formula(sale.price ~ area),
+              m = 3, dots = FALSE, seed = 29, plotit = c("Observed","Residual"),
+              main="Small symbols show cross-validation predicted values",
+              legend.pos="topleft", printit = TRUE)
+              }
 \arguments{
-  \item{df}{a data frame}
+  \item{data}{a data frame}
   \item{form.lm}{a formula or \code{lm} call or \code{lm} object}
   \item{m}{the number of folds}
   \item{dots}{uses pch=16 for the plotting character}
@@ -43,19 +43,25 @@ legend.pos="topleft", printit=TRUE)
   variable, the fitted lines that are shown for the individual folds
   are approximations.
   }
-\value{
-\item{ss}{the cross-validation residual sum of squares}
-\item{df}{degrees of freedom}
+  \value{The input data frame is returned, with additional columns
+    \code{Predicted} (Predicted values using all observations)
+    and \code{cvpred} (cross-validation predictions). The
+cross-validation residual sum of squares (\code{ss}) and
+degrees of freedom (\code{df}) are returned as attributes of
+the data frame.
 }
 \author{J.H. Maindonald}
 \seealso{\code{\link{lm}}, \code{\link{CVbinary}}}
 \examples{
 CVlm()
 \dontrun{
-CVlm(df=nihills, form.lm=formula(log(time)~log(climb)+log(dist)),
+CVlm(data=nihills, form.lm=formula(log(time)~log(climb)+log(dist)),
           plotit="Observed")
-CVlm(df=nihills, form.lm=formula(log(time)~log(climb)+log(dist)),
-          plotit="Residual")
+CVlm(data=nihills, form.lm=formula(log(time)~log(climb)+log(dist)),
+     plotit="Residual")
+out <- CVlm(data=nihills, form.lm=formula(log(time)~log(climb)+log(dist)),
+               plotit="Observed")
+out[c("ms","df")]
 }
 }
 \keyword{models}

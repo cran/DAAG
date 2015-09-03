@@ -3,18 +3,18 @@ function (m = 100, nvar = nvmax:50, nvmax = 3, method = "exhaustive",
               intercept=TRUE,
               plotit = TRUE, xlab = "# of variables from which to select",
               ylab = "p-values for t-statistics", main = paste("Select 'best'",
-                                                  nvmax, "variables"), details = FALSE, really.big = TRUE,
-              smooth = TRUE)
+                                                  nvmax, "variables"), details = FALSE,
+              really.big = TRUE, smooth = TRUE)
 {
     if (nvar[1] < nvmax)
         stop(paste("Initial value of 'num' must be at least",
                    nvmax))
-    leaps.out <- try(require(leaps), silent = TRUE)
+    leaps.out <- try(requireNamespace("leaps"), silent = TRUE)
     if (!is.logical(leaps.out) | (leaps.out == FALSE)) {
         print("Error: package leaps is not installed properly")
         return()
     }
-    quantreg.out <- try(require(quantreg), silent = TRUE)
+    quantreg.out <- try(requireNamespace("quantreg"), silent = TRUE)
     best <- matrix(0, nrow = length(nvar), ncol = nvmax)
     if (details) {
         bestCoef <- bestSE <- best
@@ -47,8 +47,8 @@ function (m = 100, nvar = nvmax:50, nvmax = 3, method = "exhaustive",
         g <- -log(-log(pval))
         if (smooth)
             if (quantreg.out) {
-                mod.ns <- rq(clogy ~ ns(log(x), 4), tau = 0.5)
-                hat <- predict(mod.ns)[1:length(nvar)]
+                mod.ns <- quantreg::rq(clogy ~ ns(log(x), 4), tau = 0.5)
+                hat <- quantreg::predict.rq(mod.ns)[1:length(nvar)]
                 lines(nvar, hat, col = "gray40", lwd = 1.5)
             }
             else {

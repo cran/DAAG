@@ -1,7 +1,7 @@
 "show.colors" <-
 function(type=c("singles", "shades", "gray"), order.cols=TRUE){
     if(order.cols){
-        MASS.out <- try(require(MASS), silent = TRUE)
+        MASS.out <- try(requireNamespace("MASS", quietly=TRUE), silent = TRUE)
     MASSCheck <- !is.logical(MASS.out) | (MASS.out == FALSE)
     if(MASSCheck)print("Error: package MASS is not installed properly")
     if(MASSCheck) return()
@@ -9,7 +9,7 @@ function(type=c("singles", "shades", "gray"), order.cols=TRUE){
 type <- type[1]
 oldpar <- par(mar=c(.75, .75,1.5, .75))
 on.exit(par(oldpar))
-order.cols <- order.cols & require(stats)
+order.cols <- order.cols & requireNamespace("stats")
 unique.colors <- function(){
     colnam <- colors()
     vector.code <- apply(col2rgb(colnam),2,function(x)x[1]+x[2]*1000+x[3]*10000)
@@ -41,14 +41,13 @@ plotcols <- function(x=1, start=1, wid=5, nlines, numlabels=FALSE, colvec=loners
         col=colvals,  adj=0, cex=0.8, xpd=TRUE)
 }
 classify.colors <- function(colr, colset=loners){
-    require(MASS)
     gsub <- grep("green",colr)
     rsub <- grep("red",colr)
     bsub <- grep("blue",colr)
     colxyz <- t(col2rgb(colr[c(rsub,gsub,bsub)]))
     colxyz <- data.frame(colxyz, rep(c("red","green","blue"), c(length(rsub),length(gsub),length(bsub))))
     names(colxyz)<- c("red","green","blue","gp")
-    col.lda <- lda(gp ~ red+green+blue, data=colxyz)
+    col.lda <- MASS::lda(gp ~ red+green+blue, data=colxyz)
     colrgb <- data.frame(t(col2rgb(colset)))
     names(colrgb) <- c("red", "green", "blue")
     newcol <- predict(col.lda, newdata=colrgb)

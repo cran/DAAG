@@ -1,6 +1,6 @@
 `datafile` <-
-function (file = c("fuel", "travelbooks"), datastore = DAAGxdb, 
-    altstore = zzDAAGxdb, showNames = FALSE) 
+function (file = c("fuel", "travelbooks"), datastore = DAAG::DAAGxdb, 
+    altstore = DAAG::zzDAAGxdb, showNames = FALSE) 
 {
     if (!is.null(file)) 
         if (file[1] == "") 

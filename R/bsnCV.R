@@ -3,7 +3,7 @@ function (m = 100, n = 40, method = "exhaustive", nvmax = 3,
               X = NULL, y=NULL, intercept=TRUE, nfolds = 2,
               print.summary = TRUE, really.big = FALSE)
 {
-    leaps.out <- try(require(leaps), silent = TRUE)
+    leaps.out <- try(requireNamespace("leaps"), silent = TRUE)
     if (!is.logical(leaps.out) | (leaps.out == FALSE)) {
         print("Error: package leaps is not installed properly")
         return()
@@ -30,7 +30,7 @@ function (m = 100, n = 40, method = "exhaustive", nvmax = 3,
         test <- !train
         xxi <- X[train, ]
         yi <- y[train]
-        u <- regsubsets(xxi, yi, method = method, nvmax = nvmax,
+        u <- leaps::regsubsets(xxi, yi, method = method, nvmax = nvmax,
                         nbest = 1,  intercept=intercept, really.big = really.big)
         if(intercept){
         x <- X[test, summary(u)$which[nvmax, -1]]

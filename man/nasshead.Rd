@@ -22,18 +22,18 @@
 \details{
 For full details of the coding of values in columns of
 \code{nass9702cor}, consult one of the SAS format files that
-can be obtained by following the instructions on Dr Meyer's web site
-that is noted below.
+can be obtained by following the instructions on Dr Meyer's web
+site that is noted below.
 }
 \source{
-  \url{http://www.stat.uga.edu/~mmeyer/airbags.htm}\\
+  \url{http://www.stat.colostate.edu/~meyer/airbags.htm}\\
   \url{ftp://ftp.nhtsa.dot.gov/nass/}\\
   Click, e.g., on 1997 and then on SASformats.
 See also
 \url{http://www.maths.anu.edu.au/~johnm/datasets/airbags}
-}  
+}
 \references{
-  Meyer, M.C. and Finney, T. (2005): \emph{Who wants airbags?}. Chance 
+  Meyer, M.C. and Finney, T. (2005): \emph{Who wants airbags?}. Chance
   18:3-16.
 
   Farmer, C.H. 2006. \emph{Another look at Meyer and Finney's `Who wants

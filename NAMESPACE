@@ -14,3 +14,20 @@ export(bestset.noise, bestsetNoise, bounce, bsnCV, bsnVaryNvar,
 
 importFrom(latticeExtra, as.layer, layer, layer_, glayer, glayer_)
 importFrom(lattice, xyplot, simpleTheme, trellis.device, trellis.par.set)
+importFrom("grDevices", "as.graphicsAnnot", "col2rgb", "colors",
+            "palette", "pdf", "postscript", "rainbow", "rgb")
+ importFrom("graphics", "abline", "axis", "box", "legend", "lines",
+            "mtext", "panel.smooth", "par", "plot", "plot.new",
+            "plot.window", "points", "rect", "strwidth", "text",
+            "title")
+ importFrom("methods", "as")
+ importFrom("stats", "anova", "as.formula", "coef", "complete.cases",
+            "cooks.distance", "cor", "density", "deriv", "deviance",
+            "df.residual", "fitted", "formula", "glm", "hatvalues",
+            "lm", "lm.influence", "model.frame", "model.matrix",
+            "model.response", "predict", "qnorm", "qqnorm", "qt",
+            "qtukey", "quantile", "rbinom", "relevel", "resid",
+            "residuals", "rnorm", "rpois", "runif", "sd", "simulate",
+            "summary.aov", "summary.lm", "t.test", "terms", "var",
+            "weights")
+ importFrom("utils", "write.table")

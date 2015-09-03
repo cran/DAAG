@@ -68,14 +68,14 @@ function (obj, simvalues = NULL, seed = NULL, types = NULL, which = c(1:3,  5),
                                                                             16), lty = 2, col = c("black", "gray")), layout = layout,
                       data = objdf, xlab = "Fitted values", ylab = "Residuals",
                       main = getCaption(1), ...)
-        gph <- gph + layer(panel.abline(h = 0, lty = 3, col = "gray"))
+        gph <- gph + latticeExtra::layer(lattice::panel.abline(h = 0, lty = 3, col = "gray"))
         gphlist[[1]] <- gph
     }
     if (show[2]) {
-        gph <- qqmath(~rs | gp, data = objdf, prepanel = prepanel.qqmathline,
+        gph <- lattice::qqmath(~rs | gp, data = objdf, prepanel = lattice::prepanel.qqmathline,
                       panel = function(x, ...) {
-                          panel.qqmathline(x, lty = 2, ...)
-                          panel.qqmath(x, ...)
+                          lattice::panel.qqmathline(x, lty = 2, ...)
+                          lattice::panel.qqmath(x, ...)
                       }, layout = layout, xlab = "Theoretical Quantiles",
                       ylab = ylab23, ...)
         gphlist[[2]] <- gph
@@ -102,8 +102,8 @@ function (obj, simvalues = NULL, seed = NULL, types = NULL, which = c(1:3,  5),
             "Std. Pearson resid."
         else "Standardized residuals"
         panel5.diag <- function(x, y, ...) {
-            panel.xyplot(x, y, ...)
-            panel.abline(h = 0, lty = 3, col = "gray")
+            lattice::panel.xyplot(x, y, ...)
+            lattice::panel.abline(h = 0, lty = 3, col = "gray")
         }
 
         r.hat <- range(hii, na.rm = TRUE)
@@ -134,8 +134,8 @@ function (obj, simvalues = NULL, seed = NULL, types = NULL, which = c(1:3,  5),
                               ##     panel.points(xu,ym, pch=2, col="red")
                               ## },
                               scales=list(x=list(at=0:0:(nlev[1L]-1), labels=obj$xlevels[[1L]])))
-                gph <- gph + layer(panel.abline(v=vval, col = "gray", lty = "F4"),
-                                   panel.abline(h = 0, lty = 3, col = "gray"),
+                gph <- gph + latticeExtra::layer(lattice::panel.abline(v=vval, col = "gray", lty = "F4"),
+                                   lattice::panel.abline(h = 0, lty = 3, col = "gray"),
                                    data=list(vval=vval))
             }
             else {
@@ -149,7 +149,7 @@ function (obj, simvalues = NULL, seed = NULL, types = NULL, which = c(1:3,  5),
         p <- length(coef(obj))
         if (length(cook.levels))
             yscale.cpts <- function(lim, ...) {
-                ans <- yscale.components.default(lim = lim, ...)
+                ans <- lattice::yscale.components.default(lim = lim, ...)
                 ans$right <- ans$left
                 ans$right$ticks$at <- c(-rev(sqrt(cook.levels)) *
                                         ymult, sqrt(cook.levels) * ymult)
@@ -180,7 +180,7 @@ function (obj, simvalues = NULL, seed = NULL, types = NULL, which = c(1:3,  5),
         laby <- paste(c(rev(cook.levels), cook.levels))
         gph2 <- xyplot(cl.h ~ hh, data = xy, type = "l", lty = 3,
                        col = "red")
-        gph <- gph + as.layer(gph2)
+        gph <- gph + latticeExtra::as.layer(gph2)
     }
         gphlist[[5]] <- gph
     }
@@ -195,21 +195,21 @@ function (obj, simvalues = NULL, seed = NULL, types = NULL, which = c(1:3,  5),
         xmax <- gph[["x.limits"]][2]
         ymax <- gph[["y.limits"]][2]
         panel6 <- function(x, y, ...) {
-            panel.xyplot(x, y, ...)
+            lattice::panel.xyplot(x, y, ...)
             for (i in seq_along(bval)) {
                 bi2 <- bval[i]^2
                 if (ymax > bi2 * xmax) {
                     xi <- xmax
                     yi <- bi2 * xi
-                    panel.abline(0, bi2, lty = 2)
-                    panel.text(xi, yi, paste(bval[i]), adj = c(1.25,
+                    lattice::panel.abline(0, bi2, lty = 2)
+                    lattice::panel.text(xi, yi, paste(bval[i]), adj = c(1.25,
                                                        0.5), cex = 0.75)
                 }
                 else {
                     yi <- ymax
                     xi <- yi/bi2
-                    panel.lines(c(0, xi), c(0, yi), lty = 2)
-                    panel.text(xi, ymax, paste(bval[i]), adj = c(0.5,
+                    lattice::panel.lines(c(0, xi), c(0, yi), lty = 2)
+                    lattice::panel.text(xi, ymax, paste(bval[i]), adj = c(0.5,
                                                          1.25), cex = 0.75)
                 }
             }

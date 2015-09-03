@@ -1,9 +1,9 @@
 "compareTreecalcs" <-
-function (x = yesno ~ ., data = spam7, cp = 0.00025, fun = c("rpart",
+function (x = yesno ~ ., data = DAAG::spam7, cp = 0.00025, fun = c("rpart",
                                                          "randomForest"))
 {
-  rpart.out <- try(require(rpart), silent = TRUE)
-  rf.out <- try(require(randomForest), silent = TRUE)
+  rpart.out <- try(requireNamespace("rpart"), silent = TRUE)
+  rf.out <- try(requireNamespace("randomForest"), silent = TRUE)
   rpartCheck <- !is.logical(rpart.out) | (rpart.out == FALSE)
   rfCheck <- !is.logical(rf.out) | (rf.out == FALSE)
   if(rpartCheck)print("Error: package rpart is not installed properly")
@@ -15,8 +15,7 @@ function (x = yesno ~ ., data = spam7, cp = 0.00025, fun = c("rpart",
   dftrain <- data[train, ]
   dftest <- data[-train, ]
   if ("rpart" %in% fun) {
-    require(rpart)
-    df.rpart <- rpart(x, data = dftrain, cp = cp)
+    df.rpart <- rpart::rpart(x, data = dftrain, cp = cp)
     cptable <- df.rpart$cptable
     err.root <- df.rpart$frame$dev[1]/df.rpart$frame$n[1]
     if("xerror" %in% colnames(cptable)){
@@ -42,11 +41,11 @@ function (x = yesno ~ ., data = spam7, cp = 0.00025, fun = c("rpart",
       cv.selim <- as.vector(err.root * xerror[nSErule])
       cp.selim <- mean(CP[(nSErule - 1):nSErule])
       cp.remin <- mean(CP[(nREmin - 1):nREmin])
-      df.rpart <- prune(df.rpart, cp = cp.remin)
+      df.rpart <- rpart::prune(df.rpart, cp = cp.remin)
       hat <- predict(df.rpart, newdata = dftest, type = "class")
       tab <- table(hat, dftest[, yvar])
       testerr.estmin <- sum(tab[row(tab) != col(tab)])/sum(tab)
-      df.rpart <- prune(df.rpart, cp = cp.selim)
+      df.rpart <- rpart::prune(df.rpart, cp = cp.selim)
       hat <- predict(df.rpart, newdata = dftest, type = "class")
       tab <- table(hat, dftest[, yvar])
       testerr.SE <- sum(tab[row(tab) != col(tab)])/sum(tab)
@@ -71,7 +70,7 @@ function (x = yesno ~ ., data = spam7, cp = 0.00025, fun = c("rpart",
   if ("randomForest" %in% fun) {
     y <- dftrain[, yvar]
     ynum <- match(yvar, names(dftrain))
-    df.rf <- randomForest(x = dftrain[, -ynum], y = y)
+    df.rf <- randomForest::randomForest(x = dftrain[, -ynum], y = y)
     hat.dfcv <- predict(df.rf, type = "response")
     tab <- table(hat.dfcv, dftrain[, yvar])
     rfcvA <- sum(tab[row(tab) != col(tab)])/sum(tab)

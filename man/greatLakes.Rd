@@ -22,11 +22,11 @@ Yearly averages of Great Lake heights: 1918 - 2009
 For more details, go to the website that is the source of the data.
 }
 \source{
-  \url{http://www.lre.usace.army.mil/greatlakes/hh/greatlakeswaterlevels/historicdata/}
+  \url{http://www.lre.usace.army.mil/Missions/GreatLakesInformation/GreatLakesWaterLevels/HistoricalData.aspx}
 }
 \examples{
 data(greatLakes)
 plot(greatLakes)
-## maybe str(greatLakes) 
+## maybe str(greatLakes)
 }
 \keyword{datasets}

@@ -6,8 +6,8 @@
   data into a training and test set.
 }
 \usage{
-compareTreecalcs(x = yesno ~ ., data = spam7, cp = 0.00025,
-                 fun = c("rpart", "randomForest"))
+compareTreecalcs(x = yesno ~ ., data = DAAG::spam7, cp = 0.00025, fun = c("rpart",
+"randomForest"))
 }
 \arguments{
   \item{x}{model formula}

@@ -52,11 +52,10 @@ are restricted in other ways also.}
 }
 
 \source{
-  \url{http://www.stat.uga.edu/~mmeyer/airbags.htm}
-
+  \url{http://www.stat.colostate.edu/~meyer/airbags.htm}\\
   \url{ftp://ftp.nhtsa.dot.gov/nass/}
 
-See also
+See also\\
 \url{http://www.maths.anu.edu.au/~johnm/datasets/airbags}
 }
 \references{

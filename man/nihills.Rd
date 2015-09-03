@@ -2,9 +2,9 @@
 \alias{nihills}
 \docType{data}
 \title{Record times for Northern Ireland mountain running events}
-\description{ 
-  Data are from the 2007 calendar for the Northern Ireland Mountain
-  Running Association.  
+\description{
+  Data were from the 2007 calendar for the Northern Ireland Mountain
+  Running Association.
 }
 \usage{data(nihills)}
 \format{
@@ -18,8 +18,8 @@
 }
 \details{These data make an interesting comparison with the dataset
   \code{hills2000} in the DAAG package.}
-\source{
-  \url{http://www.nimra.org.uk/calendar.asp}
+\source{For more recent information, see
+  \url{http://www.nimra.org.uk/index.php/fixtures/}
 }
 \examples{
 data(nihills)

@@ -3,7 +3,7 @@ function (m = 100, n = 40, method = "exhaustive", nvmax = 3,
               X = NULL, y=NULL, intercept=TRUE,
               print.summary = TRUE, really.big = FALSE, ...)
 {
-    leaps.out <- try(require(leaps), silent = TRUE)
+    leaps.out <- try(requireNamespace("leaps", quietly=TRUE), silent = TRUE)
     if ((is.logical(leaps.out) == TRUE) & (leaps.out == TRUE)) {
         if (is.null(X)) {
             X <- matrix(rnorm(m * n), ncol = n)
@@ -21,7 +21,7 @@ function (m = 100, n = 40, method = "exhaustive", nvmax = 3,
                 colnames(X) <- paste("V", 1:n, sep = "")
 
         if(is.null(y))y <- rnorm(m)
-        u <- regsubsets(X, y, method = method, nvmax = nvmax,
+        u <- leaps::regsubsets(X, y, method = method, nvmax = nvmax,
                         nbest = 1, intercept=intercept, really.big = really.big,
                         ...)
         if(is.null(intercept))intercept <- TRUE

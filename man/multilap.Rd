@@ -6,8 +6,8 @@ A subset of data is selected for which the treatment to control
 ratio of non-binary covariates is never outside a specified range.  
 }
 \usage{
-multilap(df=nsw74psid1, maxf=20, colnames=c("educ", "age", "re74", "re75", 
-"re78"))
+multilap(df = DAAG::nsw74psid1, maxf = 20, colnames = c("educ",
+                 "age", "re74", "re75", "re78"))
 }
 \arguments{
   \item{df}{a data frame}

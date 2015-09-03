@@ -1,8 +1,13 @@
 \name{cps1}
 \alias{cps1}
+\alias{cps2}
+\alias{cps3}
 \docType{data}
 \title{Labour Training Evaluation Data}
-\usage{cps1}
+\usage{cps1
+cps2
+cps3
+}
 \description{
   A non-experimental "control" group, used in various studies of
   the effect of a labor training program, alternative to the
@@ -47,7 +52,7 @@ programs. Journal of the American Statistical Association 94:
  Lalonde, R. 1986. Evaluating the economic evaluations of
  training programs. American Economic Review 76: 604-620.
 
-  Smith, J. A. and Todd,  P.E. 2005,"Does Matching overcome. LaLonde's
+  Smith, J. A. and Todd,  P.E. 2005,"Does Matching overcome LaLonde's
  critique of nonexperimental estimators", \emph{Journal of
  Econometrics} 125: 305-353.
 

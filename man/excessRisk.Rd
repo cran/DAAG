@@ -8,9 +8,10 @@ for the \code{response} given a set of classifying factors.  Output
 facilitates a check on how the factor specified as \code{margin}
 may, after accounting for other classifying factors, affect the
 response.  }
-\usage{ excessRisk(form = weight ~ seatbelt + airbag, response
-= "dead", margin = "airbag", data = nassCDS, decpl = 4,
-printResults=TRUE) }
+\usage{
+excessRisk(form = weight ~ seatbelt + airbag, response = "dead", margin = "airbag",
+data = DAAG::nassCDS, decpl = 4, printResults = TRUE)
+}
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{form}{\code{form} is a formula in which classifying factors

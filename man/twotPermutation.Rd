@@ -7,7 +7,8 @@ t-test using a permutation test.  The permutation density
 can  also be plotted.
 }
 \usage{
-twotPermutation(x1=two65$ambient, x2=two65$heated, nsim=2000, plotit=TRUE)
+twotPermutation(x1 = DAAG::two65$ambient, x2 = DAAG::two65$heated, nsim = 2000,
+plotit = TRUE)
 }
 \arguments{
   \item{x1}{Sample 1}

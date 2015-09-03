@@ -1,5 +1,5 @@
 CVlm <-
-function (df = houseprices, form.lm = formula(sale.price ~ area),
+function (data = DAAG::houseprices, form.lm = formula(sale.price ~ area),
               m = 3, dots = FALSE, seed = 29, plotit = c("Observed","Residual"),
               main="Small symbols show cross-validation predicted values",
               legend.pos="topleft", printit = TRUE)
@@ -18,26 +18,26 @@ function (df = houseprices, form.lm = formula(sale.price ~ area),
     if (class(form.lm) %in% c("call","lm")) form <- formula(form.lm) else
     stop("form.lm must be formula or call or lm object")
     formtxt <- deparse(form)
-    mf <- model.frame(form, data=df)
+    mf <- model.frame(form, data=data)
     ynam <- attr(mf, "names")[attr(attr(mf, "terms"),"response")]
-    df.lm <- lm(mf)
+    data.lm <- lm(mf)
     tm <- terms(mf)
     xcolumns <- labels(tm)
-    n <- nrow(df)
-    df[, ynam] <- model.response(mf)
-    df[, "Predicted"] <- predict(df.lm)
-    df[, "cvpred"] <- numeric(n)
+    n <- nrow(data)
+    data[, ynam] <- model.response(mf)
+    data[, "Predicted"] <- predict(data.lm)
+    data[, "cvpred"] <- numeric(n)
     yval <- mf[, ynam]
-    if(gphtype=="Residual") yval <- yval-df[, "Predicted"]
+    if(gphtype=="Residual") yval <- yval-data[, "Predicted"]
     if (!is.null(seed)) set.seed(seed)
-    n <- dim(df)[1]
+    n <- dim(data)[1]
     rand <- sample(n)%%m + 1
     foldnum <- sort(unique(rand))
     for (i in foldnum) {
         rows.in <- rand != i
         rows.out <- rand == i
-        subs.lm <- lm(form, data=df[rows.in, ])
-        df[rows.out, "cvpred"] <- predict(subs.lm, newdata=df[rows.out,])
+        subs.lm <- lm(form, data=data[rows.in, ])
+        data[rows.out, "cvpred"] <- predict(subs.lm, newdata=data[rows.out,])
     }
     if (length(xcolumns)==1){
         stline <- TRUE
@@ -48,7 +48,7 @@ function (df = houseprices, form.lm = formula(sale.price ~ area),
     }
     if (printit) {
         options(digits = 3)
-        print(anova(df.lm))
+        print(anova(data.lm))
         cat("\n")
     }
     if (plotit) {
@@ -70,13 +70,13 @@ function (df = houseprices, form.lm = formula(sale.price ~ area),
         }
         ylab <- ynam
         if(gphtype=="Residual")ylab <- paste(ynam, " (offset from predicted using all data)")
-        plot(as.formula(paste("yval ~", xnam)), data=df, ylab = ylab, type = "p",
+        plot(as.formula(paste("yval ~", xnam)), data=data, ylab = ylab, type = "p",
              pch=ptypes[rand], col=coltypes[rand], cex=1.25,
              xlab=xlab)
         title(main=main, cex=1.05)
         if(dots){
-            with(df,
-        points(as.formula(paste("yval ~", xnam)), data=df, type = "p",
+            with(data,
+        points(as.formula(paste("yval ~", xnam)), data=data, type = "p",
              pch=16, col=coltypes[rand], cex=1)
                  )
     }
@@ -88,11 +88,11 @@ function (df = houseprices, form.lm = formula(sale.price ~ area),
             rows.in <- rand != i
             rows.out <- rand == i
             n.out <- sum(rows.out)
-            resid <- df[rows.out, ynam] - df[rows.out, "cvpred"]
+            resid <- data[rows.out, ynam] - data[rows.out, "cvpred"]
             ss <- sum(resid^2)
             sumss <- sumss+ss
             if (printit) {
-                fold_data <- t(cbind(df[rows.out, c(xnam, "cvpred", ynam)], resid))
+                fold_data <- t(cbind(data[rows.out, c(xnam, "cvpred", ynam)], resid))
                 rownames(fold_data) = c(xnam, "cvpred", ynam, "CV residual")
                 cat("\nfold", i, "\n")
                 cat("Observations in test set:", n.out, "\n")
@@ -101,10 +101,10 @@ function (df = houseprices, form.lm = formula(sale.price ~ area),
                     round(ss/n.out, 2), "   n =", n.out, "\n")
             }
             if (plotit) {
-                xval <- df[rows.out, xnam]
+                xval <- data[rows.out, xnam]
                 nminmax <- c(which.min(xval), which.max(xval))
-                cvpred <- df[rows.out, "cvpred"]
-                if(gphtype=="Residual")cvpred <- cvpred-df[rows.out, "Predicted"]
+                cvpred <- data[rows.out, "cvpred"]
+                if(gphtype=="Residual")cvpred <- cvpred-data[rows.out, "Predicted"]
                 points(xval, cvpred, col = coltypes[i], pch = ptypes[i],
                        cex = 0.75, lwd=1)
                 n1 <- which.min(xval)
@@ -122,12 +122,12 @@ function (df = houseprices, form.lm = formula(sale.price ~ area),
             }
         }
     }
-    sumdf <- sum(!is.na(df[, "Predicted"]))
+    sumdf <- sum(!is.na(data[, "Predicted"]))
     if(printit){
         cat("\nOverall", "(Sum over all", n.out, "folds)", "\n")
         print(c(`ms` = sumss/sumdf))
     }
-    attr(df, "ms") <- sumss/sumdf
-    attr(df, "df") <- sumdf
-    invisible(df)
+    attr(data, "ms") <- sumss/sumdf
+    attr(data, "df") <- sumdf
+    invisible(data)
 }
