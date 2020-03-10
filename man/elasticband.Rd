@@ -20,6 +20,7 @@ elastic band was stretched}
  J. H. Maindonald
 }
 \examples{
+\dontrun{
 print("Example 1.8.1")
 
 attach(elasticband)     # R now knows where to find stretch and distance
@@ -57,6 +58,6 @@ elastic.lm$call
 pause()
 
  mode(elastic.lm$call)
-
+}
 }
 \keyword{datasets}

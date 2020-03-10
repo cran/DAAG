@@ -20,6 +20,7 @@ elastic band was stretched}
  J. H. Maindonald
 }
 \examples{
+\dontrun{
 plot(elastic1)
 
 print("Inline Functions - Example 12.2.2")
@@ -34,6 +35,6 @@ pause()
 
 print("Data Output - Example 12.3.2")
 write.table(elastic1, file="bandsframe.txt")
-
+}
 }
 \keyword{datasets}

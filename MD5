@@ -1,4 +1,4 @@
-528bdb979396b0ec5ffe7f780d7f4147 *DESCRIPTION
+19c2ac44141b1d192afe02bc8a1aef89 *DESCRIPTION
 bcb257c7b3ba9287c5c6301aa597a119 *NAMESPACE
 c242d65569d19585a5c5743d2a56c605 *NEWS
 036650b6491ae9bfb61b3bcaeb614315 *R/CVbinary.R
@@ -86,7 +86,7 @@ a84513e8a7320d2b24c4ba5744b14e7b *data/cps2.rda
 7f5a138990d8fa5aeba12b6632afa68b *data/cricketer.rda
 02475b4cfb8a5c13e7f3f79cdf796426 *data/cuckoohosts.rda
 71ffc7f8a24303cd34de605b6b94b260 *data/cuckoos.rda
-bdf9b33bf6046d45e497220d8f35e57d *data/datalist
+8fd3384ab7ec1537a5d818f9f14a6907 *data/datalist
 71f9010448d9216491a3ded50e1c78e2 *data/dengue.rda
 2196e47e4e3f52cc15e8fc3f5d73863c *data/dewpoint.rda
 a8475563c9dbb4dbfaad152b65f6f7a5 *data/droughts.rda
@@ -182,10 +182,10 @@ f0a1acf740f8aca562c2cae0a4c4ee02 *data/zzDAAGxdb.rda
 78a47bd88a6b1948b088231c158d50e2 *inst/doc/rockArt.pdf
 0532361e8e9652b9b8f042eddd64be0e *inst/doc/simulate-regdiags.R
 03d1d96b86f66fd60d11c13b20c02891 *inst/doc/simulate-regdiags.Rnw
-4bb89760328a40b0e795cc5ef62d4c1a *inst/doc/simulate-regdiags.pdf
+6c0110b9a2584a30449195f07b617375 *inst/doc/simulate-regdiags.pdf
 e9ee9331248c5d86e91b592b174b7ebf *inst/doc/simulate-varselect.R
 8f9eeb5b4282fe036bee58079dfaccdd *inst/doc/simulate-varselect.Rnw
-0d84b489a590f56565f3808795fde45e *inst/doc/simulate-varselect.pdf
+d734087bf194d40578a2821f82f5c25e *inst/doc/simulate-varselect.pdf
 9ff636c14da87d776b93de9481366af9 *inst/misc/seedrates.txt
 94a82aa3e0010db76bf2b6a1d3ba3794 *inst/misc/viewtemps.RData
 9ff636c14da87d776b93de9481366af9 *inst/seedrates.txt
@@ -193,7 +193,7 @@ e9ee9331248c5d86e91b592b174b7ebf *inst/doc/simulate-varselect.R
 f448084908f14a77d60a4185bdf0a009 *man/CVbinary.Rd
 ca634b6c238d36bb11eb78cf2d096add *man/CVlm.Rd
 adeb58cd2e31640d65b38a66077a291a *man/Cars93.summary.Rd
-11d35f7066f79124ad7a55b86d39145a *man/DAAG-package.Rd
+0ba5f7c844e118d8d4282a985927ce2a *man/DAAG-package.Rd
 9925a1b911d8a770aa3ac555596495e3 *man/DAAGxdb.Rd
 6776b96003fdfa6ed234b894dab3eb6e *man/Lottario.Rd
 5e4f738126f1d10691bc8a252c716b56 *man/Manitoba.lakes.Rd
@@ -211,7 +211,7 @@ f99b1f026e79e751f7911493e6380353 *man/antigua.Rd
 68edd72ce9928c3be437e836e2c67655 *man/austpop.Rd
 59be236925b06fc559df712cc35c5244 *man/bestsetNoise.Rd
 cc3d18ebae037083b4be057b2f7d7bc8 *man/biomass.Rd
-d3f341dc6de857344c8cdb7442d96bc5 *man/bomregions.Rd
+a85d42e7e4fbeba6ba0538d0a9da2e6b *man/bomregions.Rd
 b5e2a6063432f4cc19f0994ebda0f04e *man/bomsoi.Rd
 c51df84613d505a1725733519609bbea *man/bomsoi2001.Rd
 39145970129777b17123d78b053c56bd *man/bostonc.Rd
@@ -236,9 +236,9 @@ e597ed669a510ce50be7eb43e3e9959b *man/dewpoint.Rd
 0f30919bb85d7b0d1891351665b61545 *man/droughts.Rd
 2b3e4f02f8ec4be7b1905dd9cc7dda61 *man/edcCO2.Rd
 caad0103e66a36ca56c190d4e3d22f96 *man/edcT.Rd
-d66cdb711b5fff8f34fa5b8900b0c5d4 *man/elastic1.Rd
+ad9099dbef924993a975a48be3324a29 *man/elastic1.Rd
 66cdba3efaa4ad4a115c523adc7a57de *man/elastic2.Rd
-d0f53b582d8f9380bf6a28cde09ddb7a *man/elasticband.Rd
+17d95db835b2bbcf8ac6d373d5eb821d *man/elasticband.Rd
 05126dc11435efaf40a348610b3af288 *man/errorsINseveral.Rd
 c1cda28ddd072e93fbe1bb20e2ced1d5 *man/errorsINx.Rd
 2978ae1b55c0555fc1b5e85716f2aefc *man/excessRisk.Rd
@@ -260,7 +260,7 @@ bb862a83483159a21c2a1072103a6850 *man/hotspots.Rd
 3a1b5e394d49d411860a7f0a184bf6a3 *man/hotspots2006.Rd
 285598319e5befd9577307b37ce137e1 *man/houseprices.Rd
 fcf4f79961daee229b66196750b8333f *man/humanpower.Rd
-bc2f0a6bbaeac8d931443f40d760a123 *man/hurricNamed.Rd
+7db56e0ccc10973813ec6e22a0e1b8d1 *man/hurricNamed.Rd
 7defe0b1dbf8449a082c866c6cb80107 *man/intersalt.Rd
 4c2e5045d2e3cce5da45ada079adb3df *man/ironslag.Rd
 56a474dec134dab4c57a33ad847b4746 *man/jobs.Rd

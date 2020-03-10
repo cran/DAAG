@@ -51,7 +51,7 @@ Named US Atlantic Hurricanes
 }
 \references{
   \url{http://www.icatdamageestimator.com/}
-  \url{www.aoml.noaa.gov/hrd/hurdat/mwr_pdf/}
+  \url{https://www.aoml.noaa.gov/hrd/hurdat/mwr_pdf/}
   \url{http://en.wikipedia.org/wiki/List_of_Atlantic_hurricanes}
   \url{http://www.pnas.org/cgi/doi/10.1073/pnas.1402786111}
 }

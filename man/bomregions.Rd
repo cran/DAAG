@@ -49,7 +49,7 @@ The CO2 series \code{co2law}, for Law Dome ice core data. is from
 \url{http://cdiac.ornl.gov/trends/co2/lawdome.html}.
 
 The CO2 series \code{co2mlo} is from Dr. Pieter Tans, NOAA/ESRL
-(\url{www.esrl.noaa.gov/gmd/ccgg/trends/})
+(\url{https://www.esrl.noaa.gov/gmd/ccgg/trends/})
 
 The series \code{CO2} is a composite series, obtained by adding 0.46 to
 he Law data for 1900 to 1958, then following this with the Moana Loa
