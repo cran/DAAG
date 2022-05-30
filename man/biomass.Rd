@@ -1,5 +1,6 @@
 \name{biomass}
 \alias{biomass}
+\docType{data}
 \title{Biomass Data}
 \usage{biomass}
 \description{

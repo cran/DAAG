@@ -1,13 +1,19 @@
 \name{monica}
 \alias{monica}
+\alias{mifem}
+\docType{data}
 \title{WHO Monica Data}
-\usage{monica}
+\usage{
+  data(monica)
+  data(mifem)
+  }
 \description{
-The \code{monica} data frame has 6357 rows and 12 columns. Note
-that \code{mifem} is the female subset of this data frame.
+The \code{monica} data frame has 6357 rows and 12 columns. The
+dataset \code{mifem} (1295 rows) is the subset that has data
+for females.
 }
 \format{
-  This data frame contains the following columns:
+  Columns are:
   \describe{
     \item{outcome}{mortality outcome, a factor with levels \code{live}, 
 \code{dead}} 
@@ -40,13 +46,21 @@ print("CART - Example 10.7")
 summary(monica)
 pause()
 
-require(rpart)
+library(rpart)
 monica.rpart <- rpart(outcome ~ ., data = monica, cp = 0.0025)
 plotcp(monica.rpart)
 printcp(monica.rpart)
 pause()
-
 monicab.rpart <- prune(monica.rpart, cp=0.006)
 print(monicab.rpart)
+summary(mifem)
+pause()
+mifem.rpart <- rpart(outcome ~ ., data = mifem, cp = 0.0025)
+plotcp(mifem.rpart)
+printcp(mifem.rpart)
+pause()
+
+mifemb.rpart <- prune(mifem.rpart, cp=0.006)
+print(mifemb.rpart)
 }
 \keyword{datasets}

@@ -1,0 +1,299 @@
+---
+title: Use of Simulation to Assess Regression Diagnostics
+author: "John Maindonald"
+date: "01/01/2019"
+output:
+  bookdown::html_document2:
+    base_format: rmarkdown::html_vignette
+    number_sections: false
+link-citations: yes
+bibliography: vigref.bib
+vignette: >
+  %\VignetteIndexEntry{Use of Simulation to Assess Regression Diagnostics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+<!-- ```{r setup-misc, include=FALSE, cache=FALSE} -->
+<!-- library(knitr) -->
+<!-- options(replace.assign=TRUE,width=50) -->
+<!-- opts_chunk$set(fig.path='figure/gph-', cache.path='cache/gph-', -->
+<!--                fig.align='center', dev='pdf', fig.width=5, -->
+<!--                fig.height=5, fig.show='hold', cache=TRUE, par=TRUE) -->
+<!-- knit_hooks$set(par=function(before, options, envir){ -->
+<!-- if (before && options$fig.show!='none') par(mar=c(4,4,1.6,.1), -->
+<!--               cex.lab=.95,cex.axis=.9,mgp=c(2,.7,0),tcl=-.3) -->
+<!-- }, crop=hook_pdfcrop) -->
+<!-- ``` -->
+
+# Calibration of Regression Diagnostics
+
+Indications of departures from regression assumptions in diagnostic
+plots may reflect sampling variation.  This is an especial issue for
+relatively small datasets.  Diagnostic plots for a number of sets of
+simulated data may be an essential aid to judgement.  In effect, the
+observed diagnostic plot is judged against a simulated sampling
+distribution for such plots.
+
+## A 'simple' straight line regression example
+We use data, from the _DAAG_ PACKAGE, that compares record times
+for Northern Island hill races between males and females:
+```{r LOAD-DAAG}
+library(DAAG, warn.conflicts=FALSE)
+library(latticeExtra)
+```
+
+The data that are plotted in Figure \@ref(fig:mf) are, as they
+stand, problematic for least squares fitting. A least squares line has
+nevertheless been added to the plot.  The discussion that immediately
+follows highlights problems that would largely be
+avoided if a logarithmic transformation had first been applied on
+both axes.
+
+```{r mf, eval=FALSE, echo=FALSE}
+plot(timef~time, data=nihills,
+     xlab="Male record times",
+     ylab="Female record times")
+mtext("Female vs male record times", side=3, line=0.25)
+mftime.lm <- lm(timef ~ time, data=nihills)
+abline(mftime.lm)
+plot(mftime.lm, which=1)
+```
+
+```{r cap1, echo=F}
+cap1 <- "Record times for hill races are compared -- females versus
+  males." 
+```
+
+
+```{r mf, fig.width=4.0, fig.height=4.25, eval=TRUE, echo=FALSE, out.width="47%", fig.show='hold', fig.cap=cap1}
+```
+
+Code is:
+```{r mf, eval=FALSE, echo=TRUE, tidy=FALSE}
+```
+
+Figure \@ref(fig:diag-mftime) shows
+the four default diagnostic plots from the
+regression on `timef` on `time`.
+
+```{r cap2, echo=F}
+cap2 <- "Diagnostic plots from the regession of `timef` on `time`."
+```
+
+```{r diag-mftime, fig.width=2.85, fig.height=3.15, eval=TRUE, echo=FALSE, out.width="22%", fig.show='hold', fig.cap=cap2}
+plot(mftime.lm, cex.caption=0.8, ask=FALSE)
+``` 
+
+## The function `plotSimScat()`
+
+The function `plotSimScat()` is designed for use with
+straight line regression.  It plots either actual data values
+and simulated values against the $x$-variable, or residuals and
+simulated residuals.
+
+Figure \@ref(fig:4sim-xy) shows four scatterplots that overlay
+residuals from the actual data with residuals that are simulated from
+the model.  The coefficients used are those for the fitted least
+squares line, and the standard deviation is the estimate that is
+returned by R's `lm()` function.
+
+```{r cap3, echo=F}
+cap3 <- "The plots are four simulations of points.  The coefficients
+  used, and the standard deviation, are from the fitted least squares line.  The residuals from the fitted model are in gray."
+```
+
+```{r 4sim-xy, fig.width=7.0, fig.height=3.0, eval=TRUE, echo=FALSE, fig.cap=cap3}
+mftime.lm <- lm(timef ~ time, data=nihills)
+gph <- plotSimScat(mftime.lm, show="residuals")
+gph <- update(gph, xlab="Record times for males (h)",
+              ylab="Record times for females (h)")
+print(gph)
+```
+
+The largest simulated value lies consistently above the data value.
+Code is:
+```{r 4sim-xy, ref.label="4sim-xy", eval=FALSE, echo=TRUE}
+```
+
+
+# Diagnostic Plots for Simulated Data -- `plotSimDiags()`
+
+The function `plotSimDiags()` can be used with any `lm`
+object, or object of a class that inherits from `lm`.
+For simplicity, the function is used here with a straight line
+regression object.  As a basis for the diagnostic plots, for the object
+`mftime.lm` that was created earlier, from use of
+`plot.lm()`.
+
+## Residuals versus fitted values
+
+Figure \@ref(fig:4simwhich1) shows simulations for the first panel
+(Residuals vs Fitted) above.  With just one explanatory variable, the
+difference between plotting against $\hat{\alpha} + \hat{\beta} x$ and
+plotting against $x$ (as in Figure \@ref(fig:4sim-xy) using
+`plotSimScat()`) amounts only to a change of labeling on the
+$x$-axis.  The plot against $x$-values in Figure \@ref(fig:4sim-xy)
+had the convenience that it allowed exactly the same $x$-axis labeling for
+each different simulation.
+
+```{r cap4, echo=F}
+cap4 <- "Residuals versus fitted values, for four sets of simulated data."
+```
+
+```{r 4simwhich1, eval=TRUE, echo=FALSE, fig.width=7, fig.height=3.0, fig.cap=cap4}
+plotSimDiags(obj=mftime.lm, which=1, layout=c(4,1))
+```
+
+Code is:
+```{r 4simwhich1-code, ref.label="4simwhich1", eval=FALSE, echo=TRUE, tidy=FALSE}
+```
+
+The simulations indicate that, in these circumstances, there can be
+a pattern in the smooth curve that is added that is largely due to
+the one data value is widely separated from other data values.
+
+## A check for normality:
+
+Figure \@ref(fig:diag-mftime) (the second plot) identified two large
+negative residuals and one large positive residual.
+
+Are the deviations from a line much what might be expected given
+statistical variation?  Figure \@ref(fig:4simwhich2) shows
+normal probability plots for four sets of simulated data:
+
+```{r cap5, echo=F}
+cap5 <- "Normal probability plots for four sets of simulated
+  data."
+```
+
+```{r 4simwhich2, fig.width=7, fig.height=3.0, eval=T, echo=FALSE, fig.cap=cap5}
+plotSimDiags(obj=mftime.lm, which=2, layout=c(4,1))
+```
+
+
+Code is as for Figure \@ref(fig:4simwhich1), but with the argument
+`which=2`.
+
+## Is the variance constant?
+
+At the low end of the range in Figure \@ref(fig:diag-mftime)
+(the third plot), the variance hardly changes with increasing fitted
+value.  The sudden bend upwards in the smooth curve is due to the
+large absolute values of the residuals for the three largest fitted
+values.
+
+Figure \@ref(fig:4simwhich3) shows the equivalent plots for four sets of simulated data.  None of the plots show the same increase in scale with
+fitted value as in the third panel of Figure \@ref(fig:diag-mftime).
+
+```{r cap6, echo=F}
+cap6 <- "Scale-location plots for four sets of simulated data."
+```
+
+```{r 4simwhich3, fig.width=7.0, fig.height=3.0, eval=T, echo=FALSE, fig.cap=cap6}
+plotSimDiags(obj=mftime.lm, which=3, layout=c(4,1))
+```
+
+Code is as for Figure \@ref(fig:4simwhich1), but with the argument
+`which=3`.
+
+## Issues of leverage
+
+Figure \@ref(fig:diag-mftime) (the third plot) warned that there are severe
+problems with leverage, as was already obvious from the
+scatterplot in Figure \@ref(fig:mf).  Here, there is not much point
+in doing a simulation.  We already know from the previous simulations
+that the large residual that is associated with the highest leverage
+point is unlikely to be due to statistical variation.
+
+Figure \@ref(fig:4simwhich5) shows plots for simulated data:
+
+```{r cap7, echo=F}
+cap7 <- "Scale-location plots for four sets of simulated data."
+```
+
+```{r 4simwhich5, fig.width=7, fig.height=3.0, eval=T, echo=FALSE, fig.cap=cap7}
+plotSimDiags(obj=mftime.lm, which=5, layout=c(4,1))
+```
+
+
+Code is as for Figure \@ref(fig:4simwhich1), but with the argument
+`which=5`.
+
+## All 4 default diagnostic plots in the same call
+
+Do for example:
+```{r all4, eval=T, echo=T}
+gphs1to4 <- plotSimDiags(obj=mftime.lm, layout=c(4,2))
+```
+
+Then `gphs1to4[[1]]` holds simulations for the first
+diagnostic plot, `gphs1to4[[2]]` holds simulations for
+the second diagnostic plot, and so on.
+
+To show the first set of diagnostic plots, enter:
+```{r plot1, eval=F}
+update(gphs1to4[[1]], layout=c(4,2))
+```
+
+This approach has the advantage that the same simulated data
+values are used for all diagnostics, without the need to set
+a prior random number seed.
+
+## What further checks and tests should be applied?
+
+It bears emphasizing that, depending on the
+nature of the data, there will be further checks and tests
+that should be applied.  
+
+Comments in @tukey_1997 are apt. There should be incisive
+and informed critique of the data used, of the model, and of
+the inferences made.  Exposure to diverse challenges will
+build (or destroy!) confidence in model-based inferences.
+Specific types of challenge may include:
+
+* For experiments, is the design open to criticism?
+* Look for biases in processes that generated the data.
+* Look for inadequacies in laboratory procedure.
+* Use all relevant graphical or other summary checks to
+critique the model that underpins the analysis.
+*Where possible, check the performance of the model on
+test data that reflects the manner of use of results.
+(If for example predictions are made that will be applied a
+year into the future, check how predictions made a year
+ahead panned out for historical data.)
+* For experimental data, have the work replicated
+independently by another research group, from generation of
+data through to analysis.
+
+It is important that analysts search out all available
+information about the processes that generated the data,
+and consider critically how this may affect the reliance
+placed on it. We should trust those results that have
+withstood thorough and informed challenge.
+
+For observational data, the challenges that are appropriate
+will depend strongly on the nature of the claims made as a
+result of any analysis.  Analyses of observational data 
+commonly afford large opportunities for over-interpretation
+and/or misinterpretation.
+
+Data that have been collected over a
+significant period of time is an important special case. Departures
+from a fitted line may well show a pattern with time. The functions
+`acf()` and `pacf()` should be used to check for
+autocorrelation in the residuals.
+
+Additionally, the process used to generate the data, and
+subject area insights, will set limits on the inferences
+that can reasonably be drawn.
+
+## References

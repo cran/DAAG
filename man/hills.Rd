@@ -1,16 +1,26 @@
 \name{hills}
 \alias{hills}
+\alias{hills2000}
+\docType{data}
 \title{Scottish Hill Races Data}
-\usage{hills}
+\usage{
+  data(hills)
+  data(hills2000)
+  }
 \description{
-The record times in 1984 for 35 Scottish hill races.
+  The record times in 1984 (\code{hills}) for 35 Scottish hill races,
+  or in 2000 (\code{hills2000}) for 56 hill races.  The \code{hills2000}
+  dataset is the subset of \code{\link{races2000}} for which \code{type}
+  is \code{hill}.
 }
 \format{
-  This data frame contains the following columns:
   \describe{
     \item{dist}{distance, in miles (on the map)}
     \item{climb}{total height gained during the route, in feet}
     \item{time}{record time in hours}
+    \item{timef}{record time in hours for females, in the
+      \code{hills2000} dataset.
+    }
   }
 }
 \source{
@@ -18,12 +28,14 @@ The record times in 1984 for 35 Scottish hill races.
      analysis. Statistical Science  1, 397-402.
 
      Also, in MASS library, with time in minutes.
+
+The Scottish Running Resource, http://www.hillrunning.co.uk
 }
 \references{
      A.C. Atkinson (1988) Transformations unmasked. Technometrics 30,
-     311-318. [ "corrects" the time for Knock Hill from 78.65 to 18.65. It   
+     311-318. [ "corrects" the time for Knock Hill, in the \code{hills}
+     dataset, from 78.65 to 18.65. It   
      is unclear if this based on the original records.]
-
 }
 \examples{
 print("Transformation - Example 6.4.3")

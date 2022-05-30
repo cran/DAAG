@@ -24,7 +24,7 @@
   corrections.
 }
 \source{
-\url{http://www.ncdc.noaa.gov/paleo/icecore/antarctica/domec/domec_epica_data.html}
+\url{https://www.ncei.noaa.gov/products/paleoclimatology/ice-core}
 }
 \references{
 Jouzel, J., et al.  2007.

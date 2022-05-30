@@ -1,3 +1,65 @@
+Changes in DAAG version 1.25.1-3
+   o A number of URLs have been updated.
+   o The bomregions2021 dataset updates the bomregions data 
+     to 2021.
+   o The dataset mdbAVtJtoD, with monthly Murray-Darling 
+     basin data from January 1950 through to February 2022,
+     has been added.
+   
+Changes in DAAG version 1.25
+
+UPDATES
+  o Vignettes sources are now R Markdown, with the
+    format bookdown::html_document2 format combined
+    with base_format: rmarkdown::html_vignette
+    (This combination allows automatic numbering of
+    figures, and cross-references.)
+  o The `bomregions2018` dataset updates `bomregions`
+    to include data through to 2018.  The updates
+    `bomregions2012` and `bomregions2015` have been
+    omitted.  A further column `avDMI` has been added, 
+    holding values (from 1960 onwards) of the Annual 
+    average (Indian) Dipole Mode Index.
+  o Web links on what is now the `bomregions2018` help
+    page have been updated.  The url in the DESCRIPTION 
+    file now links to the development version of DAAG 
+    on the gitlab site.
+  o The `head.injury` dataset (which was a copy of the
+    `headInjury` dataset) has been removed.
+  o Help pages for related data sets have, in several
+    cases, been combined.
+
+                 Changes in DAAG version 1.24-1
+                 
+NEW FEATURES
+  o The dataset coralPval, holding 3072 p-values from a gene
+    expression array comparison between post- and pre-settlement
+    coral larvae, has been added.
+  o The dataset bomregions2015 (updates bomregions to include data 
+    up to 2015) has been added.
+  o The dataset lognihills, which replaces values in all 4 columns
+    of nihills by log(values), has been added. Column names are 
+    logdist, logclimb, logtime and logtimef.  
+  o The generic function sumry(), with a method and print method
+    for glm (but not other) objects, has been added.
+  o The function DAAGtheme(), used to generate themes for use in 
+    an intended 4th edition of Data Analysis and Graphics Using R,
+    has been added.    
+  o The functions CVlm() (alias cv.lm()), simulateLinear(), 
+    qreference() and sampdist() all now return lattice objects.
+    If the result is returned to the command line, the graph is
+    plotted just as before.
+
+BUG FIXES
+  o A line that subtracted 1 from the bottom and top margins, 
+    causing an error if the margin was already set to < 1, was
+    removed from onetPermutation(), twot() and twotPermutation().
+  o Code has been amended so that term labels ('term.labels') are
+    given by attr(obj$terms, "term.labels").  The code now
+    replaced expected to find 'term.labels' among the attributes 
+    of the summary object; this would have failed starting 
+    several R releases back.
+  
                  Changes in DAAG version 1.21
 
 NEW FEATURES
@@ -19,11 +81,10 @@ NEW FEATURES
     transformation which, applied to one set of points in the (x, y) 
     plane, gives the best match in a least squares sense to a second 
     set of points.
-  o A bug in the function plotSimDiags() has been fixed.
 
 BUG FIXES
   o The code for lmdiags() has been tidied.  
-
+  o A bug in the function plotSimDiags() has been fixed.
 
                   Changes in DAAG version 1.18
 NEW FEATURES

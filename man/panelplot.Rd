@@ -5,7 +5,8 @@
 Panel plots of various types.
 }
 \usage{
-panelplot(data, panel=points, totrows=3, totcols=2, oma=rep(2.5, 4), par.strip.text=NULL)
+panelplot(data, panel=points, totrows=3, totcols=2, oma=rep(2.5, 4), 
+par.strip.text=NULL, ...)
 }
 \arguments{
   \item{data}{ A list consisting of elements, each of which
@@ -15,6 +16,7 @@ consists of x, y, xlim and ylim vectors}
   \item{totcols}{The number of columns in the plot layout}
   \item{oma}{Outer margin area}
   \item{par.strip.text}{A data frame with column cex}
+  \item{...}{Other parameters to be passed to plotting functions}
 }
 \author{J.H. Maindonald}
 

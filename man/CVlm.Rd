@@ -13,12 +13,15 @@ to re-fit the regression model and to predict at the deleted observations.
 \usage{
 CVlm(data = DAAG::houseprices, form.lm = formula(sale.price ~ area),
               m = 3, dots = FALSE, seed = 29, plotit = c("Observed","Residual"),
+              col.folds=NULL,               
               main="Small symbols show cross-validation predicted values",
-              legend.pos="topleft", printit = TRUE)
+              legend.pos="topleft", 
+              printit = TRUE, ...)
 cv.lm(data = DAAG::houseprices, form.lm = formula(sale.price ~ area),
               m = 3, dots = FALSE, seed = 29, plotit = c("Observed","Residual"),
+              col.folds=NULL,               
               main="Small symbols show cross-validation predicted values",
-              legend.pos="topleft", printit = TRUE)
+              legend.pos="topleft", printit = TRUE, ...)
               }
 \arguments{
   \item{data}{a data frame}
@@ -30,13 +33,15 @@ cv.lm(data = DAAG::houseprices, form.lm = formula(sale.price ~ area),
     \code{"Residual"}, or a logical value.  The logical \code{TRUE} is
     equivalent to \code{"Observed"}, while \code{FALSE} is equivalent
     to \code{""} (no plot)}
+  \item{col.folds}{Per fold color settings}
   \item{main}{main title for graph}
   \item{legend.pos}{position of legend: one of
     \code{"bottomright"}, \code{"bottom"}, \code{"bottomleft"},
 	  \code{"left"}, \code{"topleft"}, \code{"top"}, \code{"topright"},
           \code{"right"}, \code{"center"}.
-  }
+  }  
   \item{printit}{if TRUE, output is printed to the screen}
+  \item{\dots}{Other arguments, to be passed through to the function \code{legend()}}
 }
 \details{
   When \code{plotit="Residual"} and there is more than one explanatory

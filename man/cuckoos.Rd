@@ -1,5 +1,6 @@
 \name{cuckoos}
 \alias{cuckoos}
+\docType{data}
 \title{Cuckoo Eggs Data}
 \usage{cuckoos}
 \description{
@@ -25,7 +26,8 @@ different species of host bird.
   \source{ Latter, O.H. (1902). The eggs of Cuculus canorus. An
 Inquiry into the dimensions of the cuckoo's egg and the relation of the
 variations to the size of the eggs of the foster-parent, with notes on
-coloration, &c. Biometrika i, 164.  
+coloration, &c. Biometrika i, 164.  Tippett (1931) gives summary details
+of the data.
 } 
   \references{
  Tippett, L.H.C. 1931: "The Methods of Statistics". Williams & Norgate, 

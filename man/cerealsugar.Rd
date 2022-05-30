@@ -1,5 +1,6 @@
 \name{cerealsugar}
 \alias{cerealsugar}
+\docType{data}
 \title{Percentage of Sugar in Breakfast Cereal}
 \usage{cerealsugar}
 \description{

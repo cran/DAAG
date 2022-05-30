@@ -1,5 +1,6 @@
 \name{austpop}
 \alias{austpop}
+\docType{data}
 \title{Population figures for Australian States and Territories}
 \usage{austpop}
 \description{

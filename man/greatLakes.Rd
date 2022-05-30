@@ -22,7 +22,7 @@ Yearly averages of Great Lake heights: 1918 - 2009
 For more details, go to the website that is the source of the data.
 }
 \source{
-  \url{http://www.lre.usace.army.mil/Missions/GreatLakesInformation/GreatLakesWaterLevels/HistoricalData.aspx}
+  \url{https://www.lre.usace.army.mil/Missions/Great-Lakes-Information/Great-Lakes-Information-2/Water-Level-Data/}
 }
 \examples{
 data(greatLakes)

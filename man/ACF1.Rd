@@ -1,5 +1,6 @@
 \name{ACF1}
 \alias{ACF1}
+\docType{data}
 \title{Aberrant Crypt Foci in Rat Colons}
 \usage{ACF1}
 \description{
@@ -11,7 +12,7 @@ at 3 different times.
 \format{
   This data frame contains the following columns:
   \describe{
-    \item{count}{The number of ACF observed in section 1 of
+    \item{count}{Observed number of ACF in section 1 of
 each rat colon}
     \item{endtime}{Time of sacrifice, in weeks following injection
 of AOM}

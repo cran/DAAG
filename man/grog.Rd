@@ -28,9 +28,9 @@ beer, wine, and spirits (including spirit-based products).
   1997 that was obtained by extrapolating back the third quarter trend
   line from later years.
 }
-\source{Australian data are from \url{http://www.abs.gov.au}.
+\source{Australian data are from \url{https://www.abs.gov.au}.
   For New Zealand data, go to
-  \url{http://www.stats.govt.nz/infoshare/} Click on 'Industry sectors'
+  \url{https://infoshare.stats.govt.nz/} Click on 'Industry sectors'
   and then on 'Alcohol Available for Consumption - ALC'.
 }
 \examples{

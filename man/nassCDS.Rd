@@ -12,29 +12,29 @@ are restricted in other ways also.}
 \format{
   A data frame with 26217 observations on the following 15 variables.
   \describe{
-    \item{\code{dvcat}}{ordered factor with levels (estimated impact
+    \item{dvcat}{ordered factor with levels (estimated impact
       speeds) \code{1-9km/h}, \code{10-24}, \code{25-39}, \code{40-54},
       \code{55+}
     }
-    \item{\code{weight}}{Observation weights, albeit of uncertain
+    \item{weight}{Observation weights, albeit of uncertain
       accuracy, designed to account for varying sampling probabilities.}
-    \item{\code{dead}}{factor with levels \code{alive} \code{dead}}
-    \item{\code{airbag}}{a factor with levels \code{none} \code{airbag}}
-    \item{\code{seatbelt}}{a factor with levels \code{none} \code{belted}}
-    \item{\code{frontal}}{a numeric vector; 0 = non-frontal, 1=frontal impact}
-    \item{\code{sex}}{a factor with levels \code{f} \code{m}}
-    \item{\code{ageOFocc}}{age of occupant in years}
-    \item{\code{yearacc}}{year of accident}
-     \item{\code{yearVeh}}{Year of model of vehicle; a numeric vector}
-     \item{\code{abcat}}{Did one or more (driver or passenger) airbag(s)
+    \item{dead}{factor with levels \code{alive} \code{dead}}
+    \item{airbag}{a factor with levels \code{none} \code{airbag}}
+    \item{seatbelt}{a factor with levels \code{none} \code{belted}}
+    \item{frontal}{a numeric vector; 0 = non-frontal, 1=frontal impact}
+    \item{sex}{a factor with levels \code{f} \code{m}}
+    \item{ageOFocc}{age of occupant in years}
+    \item{yearacc}{year of accident}
+     \item{yearVeh}{Year of model of vehicle; a numeric vector}
+     \item{abcat}{Did one or more (driver or passenger) airbag(s)
        deploy? This factor has levels \code{deploy} \code{nodeploy}
        \code{unavail}}
-    \item{\code{occRole}}{a factor with levels \code{driver} \code{pass}}
-    \item{\code{deploy}}{a numeric vector: 0 if an airbag was
+    \item{occRole}{a factor with levels \code{driver} \code{pass}}
+    \item{deploy}{a numeric vector: 0 if an airbag was
       unavailable or did not deploy; 1 if one or more bags deployed.}
-    \item{\code{injSeverity}}{a numeric vector; 0:none, 1:possible injury,
+    \item{injSeverity}{a numeric vector; 0:none, 1:possible injury,
       2:no incapacity, 3:incapacity, 4:killed; 5:unknown, 6:prior death}
-    \item{\code{caseid}}{character, created by pasting together the
+    \item{caseid}{character, created by pasting together the
       populations sampling unit, the case number, and the vehicle
       number.  Within each year, use this to uniquely identify the
       vehicle.
@@ -52,11 +52,11 @@ are restricted in other ways also.}
 }
 
 \source{
-  \url{http://www.stat.colostate.edu/~meyer/airbags.htm}\\
-  \url{ftp://ftp.nhtsa.dot.gov/nass/}
+  \url{https://www.stat.colostate.edu/~meyer/airbags.htm}\\
+  \url{https://www.nhtsa.gov/file-downloads}
 
 See also\\
-\url{http://www.maths.anu.edu.au/~johnm/datasets/airbags}
+\url{https://maths-people.anu.edu.au/~johnm/datasets/airbags/}
 }
 \references{
   Meyer, M.C. and Finney, T. (2005): \emph{Who wants airbags?}. Chance

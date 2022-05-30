@@ -81,7 +81,7 @@ John Maindonald, with some code chunks adapted from \code{plot.lm}
   are not \code{NULL} will be printed in turn.
 }
 \seealso{
-code{\link{plot.lm}}, code{\link{lmdiags}}
+\code{\link{plot.lm}}, \code{\link{lmdiags}}
 }
 \examples{
 women.lm <- lm(height ~ weight, data=women)

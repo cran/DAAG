@@ -10,13 +10,13 @@ overlapDensity(x0, x1, ratio = c(0.05, 20), ratio.number = FALSE,
           plotvalues = c("Density", "Numbers"), gpnames = c("Control", "Treatment"),
           cutoffs = c(lower = TRUE, upper = TRUE), bw = FALSE,
           xlab = "Score", ylab = NULL,
-          col = 1:2, lty = 1:2, lwd = c(1, 1))
+          col = 1:2, lty = 1:2, lwd = c(1, 1), ...)
 
 overlap.density(x0, x1, ratio = c(0.05, 20), ratio.number = FALSE,
           plotvalues = c("Density", "Numbers"), gpnames = c("Control", "Treatment"),
           cutoffs = c(lower = TRUE, upper = TRUE), bw = FALSE,
           xlab = "Score", ylab = NULL,
-          col = 1:2, lty = 1:2, lwd = c(1, 1))
+          col = 1:2, lty = 1:2, lwd = c(1, 1), ...)
 }
 \arguments{
   \item{x0}{control group measurements}
@@ -47,6 +47,7 @@ scale plot}
   \item{col}{standard color parameter}
   \item{lty}{standard line type preference}
   \item{lwd}{standard line width preference}
+  \item{...}{Other parameters to be passed to \code{plot()}}
 }
 \author{J.H. Maindonald}
 \seealso{ \code{t.test} }

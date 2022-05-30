@@ -17,6 +17,6 @@ For a list of , use \code{library(help="DAAG")}.
 \author{
 Author: John H Maindonald
 
-Maintainer: W John Braun \email{john.braun@ubc.ca}
+Maintainer: W John Braun \email{braun@stats.uwo.ca}
 }
 \keyword{package}

@@ -64,8 +64,10 @@ function (obj, simvalues = NULL, seed = NULL, types = NULL, which = c(1:3,  5),
     else as.graphicsAnnot(caption[[k]])
     if (show[1]) {
         formyx <- r ~ yh | gp
-        gph <- xyplot(formyx, type = types[[1]], par.settings = simpleTheme(pch = c(16,
-                                                                            16), lty = 2, col = c("black", "gray")), layout = layout,
+        gph <- lattice::xyplot(formyx, type = types[[1]], panel=lattice::panel.xyplot,
+                               par.settings = simpleTheme(pch = c(16,
+                                                                            16), 
+                                                          lty = 2, col = c("black", "gray")), layout = layout,
                       data = objdf, xlab = "Fitted values", ylab = "Residuals",
                       main = getCaption(1), ...)
         gph <- gph + latticeExtra::layer(lattice::panel.abline(h = 0, lty = 3, col = "gray"))
@@ -84,7 +86,7 @@ function (obj, simvalues = NULL, seed = NULL, types = NULL, which = c(1:3,  5),
         yl <- as.expression(substitute(sqrt(abs(YL)), list(YL = as.name(ylab23))))
         sqrtabsr <- sqrt(abs(objdf[["rs"]]))
         formyx <- sqrtabsr ~ yhn0 | gp
-        gph <- xyplot(formyx, type = types[[3]], par.settings = simpleTheme(pch = c(16,
+        gph <- lattice::xyplot(formyx, type = types[[3]], par.settings = simpleTheme(pch = c(16,
                                                                             16), lty = 2, col = c("black", "gray")), layout = layout,
                       data = objdf, xlab = "Fitted values", ylab = yl,
                       ...)
@@ -92,7 +94,7 @@ function (obj, simvalues = NULL, seed = NULL, types = NULL, which = c(1:3,  5),
     }
     if (show[4]) {
         objdf$x <- rep(1:nobs, numsim)
-        gph <- xyplot(cook ~ x | gp, data = objdf, type = types[[4]],
+        gph <- lattice::xyplot(cook ~ x | gp, data = objdf, type = types[[4]],
                       layout = layout, xlab = "Obs. number", ylab = "Cook's distance",
                       ...)
         gphlist[[4]] <- gph
@@ -125,7 +127,7 @@ function (obj, simvalues = NULL, seed = NULL, types = NULL, which = c(1:3,  5),
                 levels(facval) <- obj$xlevels[[1L]]
                 xlim <- c(-1/2, sum((nlev-1)*ff)+1/2)
                 vval <- ff[1L] * (0:(nlev[1L]-1))-1/2
-                gph <- xyplot(rsp ~ facval|gp, xlim=xlim, ylab=ylab5, data = objdf,
+                gph <- lattice::xyplot(rsp ~ facval|gp, xlim=xlim, ylab=ylab5, data = objdf,
                               ## panel.groups=function(x,y,...){
                               ##     panel.points(x,y,...)
                               ##     xu <- unique(x)
@@ -161,7 +163,7 @@ function (obj, simvalues = NULL, seed = NULL, types = NULL, which = c(1:3,  5),
                 ans
             }
         formyx <- rsp ~ xx | gp
-        gph <- xyplot(formyx, type = types[[5]], data = objdf,
+        gph <- lattice::xyplot(formyx, type = types[[5]], data = objdf,
                       par.settings = simpleTheme(pch = c(16, 16), lty = 2,
                       col = c("black", "gray")), scales = list(y = list(alternating = 3)),
                       layout = layout, xlab = "Leverage", ylab = ylab5,
@@ -178,7 +180,7 @@ function (obj, simvalues = NULL, seed = NULL, types = NULL, which = c(1:3,  5),
         aty <- c(-rev(sqrt(cook.levels)) * ymult, sqrt(cook.levels) *
                  ymult)
         laby <- paste(c(rev(cook.levels), cook.levels))
-        gph2 <- xyplot(cl.h ~ hh, data = xy, type = "l", lty = 3,
+        gph2 <- lattice::xyplot(cl.h ~ hh, data = xy, type = "l", lty = 3,
                        col = "red")
         gph <- gph + latticeExtra::as.layer(gph2)
     }
@@ -188,7 +190,7 @@ function (obj, simvalues = NULL, seed = NULL, types = NULL, which = c(1:3,  5),
         g <- with(objdf, dropInf(hii/(1 - hii), hii))
         ymx <- with(objdf, max(cook, na.rm = TRUE) * 1.025)
         athat <- pretty(hii)
-        gph <- xyplot(cook ~ g | gp, xlim = c(0, max(g, na.rm = TRUE)),
+        gph <- lattice::xyplot(cook ~ g | gp, xlim = c(0, max(g, na.rm = TRUE)),
                       data = objdf, ylim = c(0, ymx))
         p <- length(coef(obj))
         bval <- with(objdf, pretty(sqrt(p * cook/g), 5))
@@ -214,7 +216,7 @@ function (obj, simvalues = NULL, seed = NULL, types = NULL, which = c(1:3,  5),
                 }
             }
         }
-        gph <- xyplot(cook ~ g | gp, xlim = c(0, max(g, na.rm = TRUE)),
+        gph <- lattice::xyplot(cook ~ g | gp, xlim = c(0, max(g, na.rm = TRUE)),
                       data = objdf, ylim = c(0, ymx), main = getCaption(6),
                       ylab = "Cook's distance", xlab = expression("Leverage  " *
                                                 h[ii]), layout = layout, scales = list(x = list(at = athat/(1 -

@@ -1,18 +1,37 @@
 \name{nswpsid1}
 \docType{data}
+\alias{cps1}
+\alias{cps2}
+\alias{cps3}
+\alias{psid1}
+\alias{psid2}
+\alias{psid3}
 \alias{nswpsid1}
 \title{Labour Training Evaluation Data}
-\usage{psid1}
+\usage{
+  data(psid1)
+  data(nswpsid1)
+  }
 \description{
-  This data frame contains 2787 rows and 10 columns. These data are
-  pertinent to an investigation of the way that earnings changed,
-  between 1974-1975 and 1978, in the absence of training. Data for the
-  experimental treatment group in \code{nswdemo} are combined with the
-  \code{psid1} control data from the Panel Study of Income Dynamics
+  The \code{cps1}  (15992 rows) and \code{psid1} (2490 rows)
+  datasets are from
+  non-experimental "control" groups, used in various studies of
+  the effect of a labor training program, alternative to the
+  experimental control group in \code{\link{nswdemo}}.
+  The \code{cps2} (2369 rows) and \code{cps3} (429 rows) subsets
+  of \code{cps1} are designed to 
+  be better matched to the experimental data than \code{cps1}.
+  Likewise, \code{psid2} (253 rows) and \code{psid3} (128 rows)
+  are subsets of \code{psid1} that are
+  designed to be better matched to the experimental data than
+  \code{psid1}.
+  The \code{nswpsid1} dataset (2675 rows) combines the experimental
+  treatment group in \code{nswdemo} with the \code{psid1} 
+  control data from the Panel Study of Income Dynamics
   (PSID) study.
 }
 \format{
-  This data frame contains the following columns:
+  Columns are:
   \describe{
     \item{trt}{a numeric vector 
 identifying the study in which the subjects were enrolled
@@ -41,7 +60,7 @@ treatment group in \code{nswdemo} with the \code{psid1} control data
 from the Panel Study of Income Dynamics (PSID) study.
 }
 \source{
-  \url{http://www.nber.org/~rdehejia/nswdata.html}
+  \url{https://users.nber.org/~rdehejia/nswdata.html}
 }
 \references{
  Dehejia, R.H. and Wahba, S. 1999. Causal effects in

@@ -1,9 +1,10 @@
 \name{leaftemp}
 \alias{leaftemp}
+\docType{data}
 \title{Leaf and Air Temperature Data}
 \usage{leaftemp}
 \description{
-These data consist of measurements of vapour pressure and of the 
+Data are measurements of vapour pressure and of the 
 difference between leaf and air temperature.
 }
 \format{

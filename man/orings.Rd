@@ -1,5 +1,6 @@
 \name{orings}
 \alias{orings}
+\docType{data}
 \title{Challenger O-rings Data}
 \usage{orings}
 \description{

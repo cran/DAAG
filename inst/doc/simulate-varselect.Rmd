@@ -1,0 +1,92 @@
+---
+title: "Sampling Properties of Variable Selection"
+author: "John Maindonald"
+date: "01/01/2019"
+output:
+  bookdown::html_document2:
+    base_format: rmarkdown::html_vignette
+    number_sections: false
+link-citations: yes
+bibliography: vigref.bib
+vignette: >
+  %\VignetteIndexEntry{Sampling Properties of Variable Selection}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup}
+knitr::opts_chunk$set(echo=FALSE)
+```
+
+The function `varselect()` in the _leaps_ package can be
+used for variable selection.  Available approaches are forward,
+backward, and exhaustive selection.  The _DAAG_ package
+has the functions `bestsetNoise()` and `bsnVaryNvar()`
+that are designed to give insight on the sampling properties of output
+from the function `lm()`, when one of these variable selection
+approaches has been used to choose the explanatory variables that
+appear in the model.
+
+```{r loadDAAG}
+suppressMessages(library(DAAG, quietly=TRUE, warn.conflicts=FALSE))
+```
+
+## $p$-value based variable selection, with data that are pure noise
+
+The function `bestsetNoise()` (_DAAG_) can be used to
+experiment with the behaviour of various variable selection techniques
+with data that is purely noise.  @m-b, Section 6.5, pp.~197-198,
+gives examples of the use of this function.  For example, try:
+
+```{r bestset, eval=FALSE, echo=TRUE}
+bestsetNoise(m=100, n=40, nvmax=3)
+bestsetNoise(m=100, n=40, method="backward", nvmax=3)
+``` 
+
+The analyses will typically yield a model that, if assessed using
+output from the R function `lm()`, appears to have highly (but
+spuriously) statistically significant explanatory power, with one or
+more coefficients that appear (again spuriously) significant at a
+level of around $p$=0.01 or less.
+
+The function `bestsetNoise()` has provision to specify the
+model matrix.  Model matrices with uncorrelated columns of independent
+Normal data, which is the default, are not a good match to most
+practical situations.
+
+## $p$-values, vs number of variables available for selection
+
+As above, datasets of random normal data were created, always with 100
+observations and with the number of variables varying between 3 and
+50.  For three variables, there was no selection, while in other cases
+the ``best'' three variables were selected, by exhaustive search.
+Figure \@ref(fig:exhaust) plots the p-values for the 3 variables that
+were selected against the total number of variables. The fitted line
+estimates the median $p$-value, as a function of `nvar`.  The
+function `bsnVaryNvar()` that is used for the calculations
+makes repeated calls to `bestsetNoise()`.
+Similar results will be obtained from use of forward or backward
+selection.
+
+```{r cap1, echo=F}
+cap1 <- "$p$-values from the R function  `lm()`, versus number of
+  variables available for selection."
+
+```{r exhaust, eval=TRUE, fig.width=5, fig.height=3.75, echo=FALSE, message=FALSE, out.width="60%", fig.cap=cap1}
+## Code
+suppressMessages(library(quantreg, quietly=TRUE))
+library(splines, quietly=TRUE)
+set.seed(37)   # Use to reproduce graph that is shown
+bsnVaryNvar(m=100, nvar=3:50, nvmax=3)
+```
+
+Code is:
+
+```{r exhaust, eval=FALSE, echo=TRUE}
+```
+
+When all 3 variables are taken, the $p$-values are expected to average
+0.5.  Notice that, for selection of the best 3 variables out of 10,
+the median $p$-value has reduced to about 0.1.
+
+## Reference

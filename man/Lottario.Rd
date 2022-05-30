@@ -1,5 +1,6 @@
-\name{Lottario} 
+\name{Lottario}
 \alias{Lottario} 
+\docType{data}
 \title{Ontario Lottery Data} 
 \usage{Lottario} 
 \description{The data frame \code{Lottario}

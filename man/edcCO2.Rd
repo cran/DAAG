@@ -18,7 +18,7 @@ in Antarctica) Dome C ice core covering 0 to 800 kyr BP.
 Data are a composite series.
 }
 \source{
-\url{http://www.ncdc.noaa.gov/paleo/icecore/antarctica/domec/domec_epica_data.html}  
+\url{https://www.ncei.noaa.gov/products/paleoclimatology/ice-core}  
 }
 \references{
 Luthi, D., M. et al.  2008.

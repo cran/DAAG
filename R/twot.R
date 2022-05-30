@@ -1,7 +1,5 @@
 "twot.permutation" <-
 function(x1=DAAG::two65$ambient, x2=DAAG::two65$heated, nsim=2000, plotit=TRUE){
-# oldpar<-par(mar=par()$mar-c(1,0,1,0))
-# on.exit(par(oldpar))
 n1 <- length(x1)
 n2<-length(x2)
 n<-n1+n2

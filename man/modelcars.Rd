@@ -1,5 +1,6 @@
 \name{modelcars}
 \alias{modelcars}
+\docType{data}
 \title{Model Car Data}
 \usage{modelcars}
 \description{

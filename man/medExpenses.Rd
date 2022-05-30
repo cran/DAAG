@@ -1,5 +1,6 @@
 \name{medExpenses}
 \alias{medExpenses}
+\docType{data}
 \title{Family Medical Expenses}
 \usage{medExpenses}
 \description{

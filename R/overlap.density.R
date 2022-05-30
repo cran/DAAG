@@ -3,7 +3,7 @@ function (x0, x1, ratio = c(0.05, 20), ratio.number = FALSE,
           plotvalues = c("Density", "Numbers"), gpnames = c("Control", "Treatment"), 
           cutoffs = c(lower = TRUE, upper = TRUE), bw = FALSE, 
           xlab = "Score", ylab = NULL, 
-          col = 1:2, lty = 1:2, lwd = c(1, 1)) 
+          col = 1:2, lty = 1:2, lwd = c(1, 1), ...) 
 {
     if (is.null(plotvalues)) 
         plotvalues <- ""
@@ -50,7 +50,7 @@ function (x0, x1, ratio = c(0.05, 20), ratio.number = FALSE,
         ylim[2] <- ylim[2] + 0.1 * diff(ylim)
         plot(d1$x, pf1, xlim = xlim, xlab = xlab, xaxt = "n", 
             bty = "n", yaxs = "i", ylim = ylim, ylab = ylab, 
-            main = "", type = "n")
+            main = "", type = "n", ...)
         axis(1)
         box(bty = "L")
         lines(d0$x, pf0, col = col[1], lty = lty[1], lwd = lwd[1])

@@ -1,5 +1,6 @@
 \name{cfseal}
 \alias{cfseal}
+\docType{data}
 \title{Cape Fur Seal Data}
 \usage{cfseal}
 \description{

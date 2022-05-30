@@ -1,20 +1,28 @@
 \name{possum}
 \alias{possum}
+\alias{fossum}
+\docType{data}
 \title{Possum Measurements}
-\usage{possum}
+\usage{
+  data(possum)
+  data(fossum)
+  }
 \description{
 The \code{possum} data frame consists of nine morphometric
 measurements on each of 104 mountain brushtail possums, trapped
-at seven sites from Southern Victoria to central Queensland.
+at seven Australian sites from Southern Victoria to central Queensland.
+See \code{\link{possumsites}} for further details.
+The \code{fossum} data frame is the subset of \code{possum} that has
+measurements for the 43 females.
 }
 \format{
   This data frame contains the following columns:
   \describe{
     \item{case}{observation number}
     \item{site}{one of seven locations where possums were
-trapped}
-    \item{Pop}{a factor which classifies the sites as
-\code{Vic} Victoria,
+      trapped. The sites were, in order,Cambarville, Bellbird, Whian Whian,
+      Byrangery, Conondale, Allyn River and Bulburin }
+    \item{Pop}{a factor which classifies the sites as \code{Vic} Victoria,
 \code{other} New South Wales or Queensland}
     \item{sex}{a factor with levels
 \code{f} female,
@@ -37,7 +45,7 @@ Lindenmayer, D. B., Viggers, K. L., Cunningham, R. B., and
 Donnelly, C. F. 1995. Morphological variation among columns of the
 mountain brushtail possum, Trichosurus caninus Ogilby
 (Phalangeridae: Marsupiala). Australian Journal of Zoology 43:
-449-458. 
+449-458.
 }
 \examples{
 boxplot(earconch~sex, data=possum)
@@ -48,7 +56,7 @@ oldpar <- par(oma=c(2,4,5,4))
 pairs(possum[, c(9:11)], pch=c(0,2:7), col=c("red","blue"),
   labels=c("tail\nlength","foot\nlength","ear conch\nlength"))
 chh <- par()$cxy[2]; xleg <- 0.05; yleg <- 1.04
-oldpar <- par(xpd=TRUE)  
+oldpar <- par(xpd=TRUE)
 legend(xleg, yleg, c("Cambarville", "Bellbird", "Whian Whian  ",
   "Byrangery", "Conondale  ","Allyn River", "Bulburin"), pch=c(0,2:7),
   x.intersp=1, y.intersp=0.75, cex=0.8, xjust=0, bty="n", ncol=4)
@@ -83,9 +91,11 @@ here <- !is.na(possum$footlgth)
 possum.lda <- lda(site ~ hdlngth+skullw+totlngth+ taill+footlgth+
   earconch+eye+chest+belly, data=possum, subset=here)
 options(digits=4)
-possum.lda$svd   # Examine the singular values   
+possum.lda$svd   # Examine the singular values
 plot(possum.lda, dimen=3)
   # Scatterplot matrix - scores on 1st 3 canonical variates (Figure 11.4)
 possum.lda
+pause()
+boxplot(fossum$totlngth)
 }
 \keyword{datasets}

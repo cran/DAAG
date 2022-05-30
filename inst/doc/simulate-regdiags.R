@@ -1,82 +1,99 @@
+## ----setup, include = FALSE---------------------------------------------------
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
 
-## ----setup, include=FALSE, cache=FALSE-----------------------------------
-library(knitr)
-options(replace.assign=TRUE,width=50)
-opts_chunk$set(fig.path='figs/gph-', cache.path='cache/gph-',
-               fig.align='center', dev='pdf', fig.width=5,
-               fig.height=5, fig.show='hold', cache=TRUE, par=TRUE)
-knit_hooks$set(par=function(before, options, envir){
-if (before && options$fig.show!='none') par(mar=c(4,4,1.6,.1),
-              cex.lab=.95,cex.axis=.9,mgp=c(2,.7,0),tcl=-.3)
-}, crop=hook_pdfcrop)
-
-
-## ----LOAD-DAAG-----------------------------------------------------------
+## ----LOAD-DAAG----------------------------------------------------------------
 library(DAAG, warn.conflicts=FALSE)
 library(latticeExtra)
 
+## ----mf, eval=FALSE, echo=FALSE-----------------------------------------------
+#  plot(timef~time, data=nihills,
+#       xlab="Male record times",
+#       ylab="Female record times")
+#  mtext("Female vs male record times", side=3, line=0.25)
+#  mftime.lm <- lm(timef ~ time, data=nihills)
+#  abline(mftime.lm)
+#  plot(mftime.lm, which=1)
 
-## ----nimff, eval=FALSE, echo=FALSE---------------------------------------
-## plot(timef~time, data=nihills,
-##      xlab="Male record times",
-##      ylab="Female record times")
-## mftime.lm <- lm(timef ~ time, data=nihills)
-## abline(mftime.lm)
-## plot(mftime.lm, which=1)
+## ----cap1, echo=F-------------------------------------------------------------
+cap1 <- "Record times for hill races are compared -- females versus
+  males." 
 
-
-## ----nimff-do, ref.label="nimff", dev='pdf', fig.width=2.75, fig.height=2.85, eval=TRUE, echo=FALSE, out.width="0.47\\textwidth"----
-
-
-## ----code-nimff, ref.label="nimff", eval=FALSE, echo=TRUE, tidy=FALSE----
-## NA
-
-
-## ----4sims-do-nimff, dev='pdf', fig.width=6.5, fig.height=2.875, eval=TRUE, echo=FALSE----
+## ----mf, fig.width=4.0, fig.height=4.25, eval=TRUE, echo=FALSE, out.width="47%", fig.show='hold', fig.cap=cap1----
+plot(timef~time, data=nihills,
+     xlab="Male record times",
+     ylab="Female record times")
+mtext("Female vs male record times", side=3, line=0.25)
 mftime.lm <- lm(timef ~ time, data=nihills)
-gph <- plotSimScat(mftime.lm, layout=c(4,1), show="residuals")
+abline(mftime.lm)
+plot(mftime.lm, which=1)
+
+## ----mf, eval=FALSE, echo=TRUE, tidy=FALSE------------------------------------
+#  plot(timef~time, data=nihills,
+#       xlab="Male record times",
+#       ylab="Female record times")
+#  mtext("Female vs male record times", side=3, line=0.25)
+#  mftime.lm <- lm(timef ~ time, data=nihills)
+#  abline(mftime.lm)
+#  plot(mftime.lm, which=1)
+
+## ----cap2, echo=F-------------------------------------------------------------
+cap2 <- "Diagnostic plots from the regession of `timef` on `time`."
+
+## ----diag-mftime, fig.width=2.85, fig.height=3.15, eval=TRUE, echo=FALSE, out.width="22%", fig.show='hold', fig.cap=cap2----
+plot(mftime.lm, cex.caption=0.8, ask=FALSE)
+
+## ----cap3, echo=F-------------------------------------------------------------
+cap3 <- "The plots are four simulations of points.  The coefficients
+  used, and the standard deviation, are from the fitted least squares line.  The residuals from the fitted model are in gray."
+
+## ----4sim-xy, fig.width=7.0, fig.height=3.0, eval=TRUE, echo=FALSE, fig.cap=cap3----
+mftime.lm <- lm(timef ~ time, data=nihills)
+gph <- plotSimScat(mftime.lm, show="residuals")
 gph <- update(gph, xlab="Record times for males (h)",
               ylab="Record times for females (h)")
 print(gph)
 
+## ----4sim-xy, ref.label="4sim-xy", eval=FALSE, echo=TRUE----------------------
+#  mftime.lm <- lm(timef ~ time, data=nihills)
+#  gph <- plotSimScat(mftime.lm, show="residuals")
+#  gph <- update(gph, xlab="Record times for males (h)",
+#                ylab="Record times for females (h)")
+#  print(gph)
 
-## ----4sims-do-nimff, ref.label="4sims-do-nimff", eval=FALSE, echo=TRUE----
-## mftime.lm <- lm(timef ~ time, data=nihills)
-## gph <- plotSimScat(mftime.lm, layout=c(4,1), show="residuals")
-## gph <- update(gph, xlab="Record times for males (h)",
-##               ylab="Record times for females (h)")
-## print(gph)
+## ----cap4, echo=F-------------------------------------------------------------
+cap4 <- "Residuals versus fitted values, for four sets of simulated data."
 
-
-## ----diag-logmftime, dev='pdf', fig.width=2.85, fig.height=3, eval=TRUE, echo=FALSE, out.width="0.24\\textwidth"----
-plot(mftime.lm, cex.caption=0.8, ask=FALSE)
-
-
-## ----4sims-mftimesimdiag1, eval=TRUE, echo=FALSE, fig.width=6.25, fig.height=2.85----
+## ----4simwhich1, eval=TRUE, echo=FALSE, fig.width=7, fig.height=3.0, fig.cap=cap4----
 plotSimDiags(obj=mftime.lm, which=1, layout=c(4,1))
 
+## ----4simwhich1-code, ref.label="4simwhich1", eval=FALSE, echo=TRUE, tidy=FALSE----
+#  plotSimDiags(obj=mftime.lm, which=1, layout=c(4,1))
 
-## ----4sims-mftimesimdiag1-code, ref.label="4sims-mftimesimdiag1", eval=FALSE, echo=TRUE, tidy=FALSE----
-## NA
+## ----cap5, echo=F-------------------------------------------------------------
+cap5 <- "Normal probability plots for four sets of simulated
+  data."
 
-
-## ----4sims-mftimesimdiag2, dev='pdf', fig.width=6.5, fig.height=2.65, eval=T, echo=FALSE----
+## ----4simwhich2, fig.width=7, fig.height=3.0, eval=T, echo=FALSE, fig.cap=cap5----
 plotSimDiags(obj=mftime.lm, which=2, layout=c(4,1))
 
+## ----cap6, echo=F-------------------------------------------------------------
+cap6 <- "Scale-location plots for four sets of simulated data."
 
-## ----4sims-mftimesimdiag3, dev='pdf', fig.width=6.5, fig.height=2.65, eval=T, echo=FALSE----
+## ----4simwhich3, fig.width=7.0, fig.height=3.0, eval=T, echo=FALSE, fig.cap=cap6----
 plotSimDiags(obj=mftime.lm, which=3, layout=c(4,1))
 
+## ----cap7, echo=F-------------------------------------------------------------
+cap7 <- "Scale-location plots for four sets of simulated data."
 
-## ----4sims-mftimesimdiag5, dev='pdf', fig.width=6.5, fig.height=2.65, eval=T, echo=FALSE----
+## ----4simwhich5, fig.width=7, fig.height=3.0, eval=T, echo=FALSE, fig.cap=cap7----
 plotSimDiags(obj=mftime.lm, which=5, layout=c(4,1))
 
+## ----all4, eval=T, echo=T-----------------------------------------------------
+gphs1to4 <- plotSimDiags(obj=mftime.lm, layout=c(4,2))
 
-## ----all6, eval=T, echo=T------------------------------------------------
-gphs1to6 <- plotSimDiags(obj=mftime.lm, which=1:6, layout=c(4,2))
-
-
-## ----plot1, eval=T, fig.width=6.5, fig.height=4.2------------------------
-update(gphs1to6[[1]], layout=c(4,2))
-
+## ----plot1, eval=F------------------------------------------------------------
+#  update(gphs1to4[[1]], layout=c(4,2))
 

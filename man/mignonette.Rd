@@ -1,10 +1,12 @@
 \name{mignonette}
 \alias{mignonette}
+\docType{data}
 \title{Darwin's Wild Mignonette Data}
 \usage{mignonette}
 \description{
-Data which compare the heights of crossed plants with
-self-fertilized plants.  Plants were paired within the
+Data compare the heights of crossed plants with
+self-fertilized plants of the wild mignonette
+\emph{reseda lutea}.  Plants were paired within the
 pots in which they were grown, with one on one side and
 one on the other.
 }
@@ -20,7 +22,7 @@ the self-fertilized plants}
 \source{
 Darwin, Charles. 1877.  The Effects of Cross and Self
 Fertilisation in the Vegetable Kingdom.  Appleton and Company, New
-York.
+York, page 118.
 }
 \examples{
 print("Is Pairing Helpful? - Example 4.3.1")

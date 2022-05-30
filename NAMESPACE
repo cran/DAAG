@@ -1,27 +1,32 @@
 ## Export almost all
-
+S3method(sumry, glm)
+S3method(print, sumry.glm)
 export(bestset.noise, bestsetNoise, bounce, bsnCV, bsnVaryNvar,
        bsnOpt, capstring, compareTreecalcs, component.residual,
-       confusion, cv.binary, cv.lm, CVbinary, CVlm, datafile,
-       errorsINseveral, errorsINx, excessRisk, hardcopy, lmdiags,
-       logisticsim, multilap, onesamp, onet.permutation,
+       confusion, cv.binary, cv.lm, CVbinary, CVlm, DAAGtheme,
+       datafile, errorsINseveral, errorsINx, excessRisk, hardcopy, 
+       lmdiags, logisticsim, multilap, onesamp, onet.permutation,
        onetPermutation, oneway.plot, onewayPlot, overlap.density,
        overlapDensity, panel.corr, panelCorr, panelplot, pause,
-       plotSampDist, plotSimDiags, plotSimScat,
-       poissonsim, powerplot, press, qreference, sampdist,
-       show.colors, simulateLinear, simulateSampDist,
-       twot.permutation, twotPermutation, vif, align2D)
+       plotSampDist, plotSimDiags, plotSimScat, poissonsim, 
+       powerplot, press, qreference, sampdist, show.colors, 
+       simulateLinear, simulateSampDist, twot.permutation, 
+       twotPermutation, vif, align2D, sumry, print.sumry.glm)
 
 importFrom(latticeExtra, as.layer, layer, layer_, glayer, glayer_)
-importFrom(lattice, xyplot, simpleTheme, trellis.device, trellis.par.set)
+importFrom(lattice, xyplot, simpleTheme, trellis.device, trellis.par.set,
+           panel.xyplot)
 importFrom("grDevices", "as.graphicsAnnot", "col2rgb", "colors",
             "palette", "pdf", "postscript", "rainbow", "rgb")
- importFrom("graphics", "abline", "axis", "box", "legend", "lines",
+importFrom("graphics", "abline", "axis", "box", "legend", "lines",
             "mtext", "panel.smooth", "par", "plot", "plot.new",
             "plot.window", "points", "rect", "strwidth", "text",
             "title")
- importFrom("methods", "as")
- importFrom("stats", "anova", "as.formula", "coef", "complete.cases",
+importFrom("methods", "as")
+importFrom(Rdpack,reprompt)
+importFrom("grDevices", "adjustcolor")
+importFrom("utils", "modifyList")
+importFrom("stats", "anova", "as.formula", "coef", "complete.cases",
             "cooks.distance", "cor", "density", "deriv", "deviance",
             "df.residual", "fitted", "formula", "glm", "hatvalues",
             "lm", "lm.influence", "model.frame", "model.matrix",
@@ -29,5 +34,6 @@ importFrom("grDevices", "as.graphicsAnnot", "col2rgb", "colors",
             "qtukey", "quantile", "rbinom", "relevel", "resid",
             "residuals", "rnorm", "rpois", "runif", "sd", "simulate",
             "summary.aov", "summary.lm", "t.test", "terms", "var",
-            "weights")
+            "weights", "naprint", "printCoefmat", "setNames",
+            "summary.glm", "symnum")
  importFrom("utils", "write.table")

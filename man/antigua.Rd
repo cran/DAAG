@@ -1,11 +1,17 @@
 \name{antigua}
 \alias{antigua}
+\alias{ant111b}
+\docType{data}
 \title{Averages by block of yields for the Antigua Corn data}
 \description{
   These data frames have yield averages by blocks (parcels). The
-\code{ant111b} data set is a subset of this.
+\code{ant111b}dataset is a subset that has block averages of
+corn yields for treatment 111 only
 }
-\usage{antigua}
+\usage{
+  data(antigua)
+  data(ant111b)
+  }
 \format{ A data frame with 324 observations on 7 variables.
   \describe{
     \item{id}{a numeric vector}

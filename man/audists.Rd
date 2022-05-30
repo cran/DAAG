@@ -17,10 +17,14 @@ Australian road map
 }
 \examples{
 data(audists)
+\dontrun{
 audists.cmd <- cmdscale(audists)
-xyplot(audists.cmd[,2] ~ audists.cmd[,1], groups=row.names(audists.cmd),
+library(lattice)
+xyplot(audists.cmd[,2] ~ audists.cmd[,1], 
+       groups=row.names(audists.cmd),
        panel = function(x, y, subscripts, groups)  
                         ltext(x = x, y = y, label = groups[subscripts],
                         cex=1, fontfamily = "HersheySans"))
+}
 }
 \keyword{datasets}

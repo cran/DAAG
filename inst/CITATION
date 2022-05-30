@@ -1,0 +1,20 @@
+ bibentry(
+     bibtype = "book",
+     title = "Data analysis and graphics using R. An Example-Based Approach.",
+     author = as.person("John H Maindonald [aut], W John Braun [aut]"),
+     year = "2011",
+     edition = 3,
+     publisher = "Cambridge University Press",
+     address = "Cambridge",
+     note = "The DAAG package was created to support this text. ",
+     textVersion=
+         paste("John H Maindonald and W John Braun (2011). ",
+               "Data analysis and graphics using R. An Example-Based Approach. ",
+               "3rd edition, Cambridge University Press, Cambridge, U.K.", sep=""),
+     mfooter=
+         paste("To use the package 'DESCRIPTION' metadata to auto-generate",
+               "a citation that directly references the DAAG package, enter:",
+               sQuote("citation(\"DAAG\", auto=TRUE)")),
+     key = "DAAG-package"
+   )
+

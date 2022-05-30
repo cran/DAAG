@@ -1,5 +1,6 @@
 \name{bostonc}
 \alias{bostonc}
+\docType{data}
 \title{Boston Housing Data -- Corrected}
 \usage{bostonc}
 \description{

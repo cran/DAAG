@@ -1,5 +1,6 @@
 \name{dewpoint}
 \alias{dewpoint}
+\docType{data}
 \title{Dewpoint Data}
 \usage{dewpoint}
 \description{

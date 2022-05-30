@@ -1,5 +1,6 @@
 \name{moths}
 \alias{moths}
+\docType{data}
 \title{Moths Data}
 \usage{moths}
 \description{

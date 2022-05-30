@@ -1,0 +1,9 @@
+                        Gpdh  Sod  Xdh   AvRate Myr 
+"Drosophila subgroups"  1.5   25.7 30.4  22.4    55  
+"Drosophila subgenera"  2     30.7 29.2	 22.3    60  
+"Drosophial genera"     4.4   34.9 31.7	 24.9    65  
+"dipteran families"     9.25  33.7 25.3	 22     120 
+"mammalian orders"      11.6  46   17.1	 18.7    70  
+"animal phyla"          13.2  19.2 19.2	 17.5   600 
+fungi                   40    24.9 13.7	 21.4   300 
+kingdoms                13    12.6 11.5	 11.9  1100

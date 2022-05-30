@@ -1,5 +1,6 @@
 \name{Cars93.summary}
 \alias{Cars93.summary}
+\docType{data}
 \title{A Summary of the Cars93 Data set}
 \usage{Cars93.summary}
 \description{

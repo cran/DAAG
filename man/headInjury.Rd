@@ -1,5 +1,7 @@
 \name{headInjury}
 \alias{headInjury}
+\alias{head.injury}
+\docType{data}
 \title{Minor Head Injury (Simulated) Data}
 \usage{headInjury}
 \description{

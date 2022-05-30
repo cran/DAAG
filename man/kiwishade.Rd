@@ -1,5 +1,6 @@
 \name{kiwishade}
 \alias{kiwishade}
+\docType{data}
 \title{Kiwi Shading Data}
 \usage{kiwishade}
 \description{
@@ -83,6 +84,7 @@ kiwishade.lmer
 
 
 ##                  Residuals and estimated effects
+library(lattice)
 xyplot(residuals(kiwishade.lmer) ~ fitted(kiwishade.lmer)|block,
                 data=kiwishade, groups=shade,
                 layout=c(3,1), par.strip.text=list(cex=1.0),

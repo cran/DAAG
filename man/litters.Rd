@@ -1,5 +1,6 @@
 \name{litters}
 \alias{litters}
+\docType{data}
 \title{Mouse Litters}
 \usage{litters}
 \description{

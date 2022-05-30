@@ -1,5 +1,6 @@
 \name{appletaste}
 \alias{appletaste}
+\docType{data}
 \title{Tasting experiment that compared four apple varieties}
 \description{
   Each of 20 tasters each assessed three out of the four varieties.

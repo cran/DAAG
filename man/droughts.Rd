@@ -1,5 +1,6 @@
 \name{droughts}
 \alias{droughts}
+\docType{data}
 \title{Periods Between Rain Events}
 \usage{droughts}
 \description{

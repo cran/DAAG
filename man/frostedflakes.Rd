@@ -1,5 +1,6 @@
 \name{frostedflakes}
 \alias{frostedflakes}
+\docType{data}
 \title{Frosted Flakes data}
 \usage{elastic1}
 \description{

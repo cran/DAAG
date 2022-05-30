@@ -1,5 +1,6 @@
 \name{frogs}
 \alias{frogs}
+\docType{data}
 \title{Frogs Data}
 \usage{frogs}
 \description{

@@ -1,5 +1,6 @@
 \name{anesthetic}
 \alias{anesthetic}
+\docType{data}
 \title{Anesthetic Effectiveness}
 \usage{anesthetic}
 \description{

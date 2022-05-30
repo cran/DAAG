@@ -1,9 +1,10 @@
 \name{humanpower}
 \alias{humanpower1}
 \alias{humanpower2}
+\docType{data}
 \title{Oxygen uptake versus mechanical power, for humans}
 \description{
-The data set from Daedalus project.
+Data are from Daedalus project; see the reference below.
 }
 \usage{data(humanpower1)}
 \format{

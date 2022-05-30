@@ -1,5 +1,6 @@
 \name{pair65}
 \alias{pair65}
+\docType{data}
 \title{Heated Elastic Bands}
 \usage{pair65}
 \description{

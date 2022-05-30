@@ -8,12 +8,11 @@ levels.
 \usage{
 capstring(names)
 }
-%- maybe also `usage' for other objects documented here.
 \arguments{
   \item{names}{a character vector}
 }
 \value{
-  \item{}{a character vector with upper case initial values}
+  A character vector with upper case initial values.
 }
 \author{W.J. Braun}
 \examples{

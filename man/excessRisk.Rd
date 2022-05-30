@@ -36,19 +36,15 @@ data = DAAG::nassCDS, decpl = 4, printResults = TRUE)
 \value{
   The function returns a data frame, with one row for each combination of
   levels of factors on the right of the formula, but excluding the
-  factor specified as \code{margin}
-  \item{}{Count for level 2 of response \& level 1 of margin}
-  \item{}{Total tount for level 1 of margin}
-  \item{}{Count for level 2 of response \& level 2 of margin}
-  \item{}{Total count for level 2 of margin}
-  \item{}{Proportion; divide count for level 1 of margin by total}
-  \item{}{Proportion; divide count for level 2 of margin by total}
-  \item{}{Excess count for level 2 of response in row; relative to
-    the assumption that, in that row, there is no association between
-    \code{response} and \code{margin}.  This is the observed response
+  factor specified as \code{margin}.
+  The final three columns show the count for level 1 as a fraction
+  of the margin by total, the count for level 2 as a fraction of
+  the margin by total, and the excess count for level 2 of response in 
+  the row, under the assumption that, in that row, there is no association 
+  between \code{response} and \code{margin}.  This is the observed response
     (for the default arguments, number of dead) for level 2 (airbag deployed),
     less the number that would have been expected if the proportion
-    had been that for level 1. (Negative values favor airbags.)}
+    had been that for level 1. (Negative values favor airbags.)
 }
 \references{See \code{help(nassCDS)}}
 \author{John Maindonald}

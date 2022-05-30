@@ -35,7 +35,7 @@ identifying the study in which the subjects were enrolled
   }
 }
 \source{
-  \url{http://www.nber.org/~rdehejia/nswdata.html}
+  \url{https://users.nber.org/~rdehejia/nswdata.html}
 }
 \references{
  Dehejia, R.H. and Wahba, S. 1999. Causal effects in

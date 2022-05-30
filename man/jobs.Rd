@@ -1,5 +1,6 @@
 \name{jobs}
 \alias{jobs}
+\docType{data}
 \title{Canadian Labour Force Summary Data (1995-96)}
 \usage{jobs}
 \description{

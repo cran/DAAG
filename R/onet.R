@@ -1,7 +1,5 @@
 "onet.permutation" <-
 function(x=DAAG::pair65$heated-DAAG::pair65$ambient, nsim=2000, plotit=TRUE){
-oldpar<-par(mar=par()$mar-c(1,0,1,0))
-on.exit(par(oldpar))
 n <- length(x)
 dbar <- mean(x)
 absx <- abs(x)

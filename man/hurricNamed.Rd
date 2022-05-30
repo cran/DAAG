@@ -17,8 +17,8 @@ Named US Atlantic Hurricanes
     \item{\code{Year}}{Numeric}
     \item{\code{LF.WindsMPH}}{Maximum sustained windspeed (>= 1 minute) to occur along
     the US coast. Prior to 1980, this is estimated from the maximum
-    windspeed associated with the Saffir-Simpson index at landfall. If 2
-  or more landfalls, the maximum is taken}
+    windspeed associated with the Saffir-Simpson index at landfall.
+    If 2 or more landfalls, the maximum is taken}
     \item{\code{LF.PressureMB}}{Atmospheric pressure at landfall in
       millibars. If 2 or more landfalls, the minimum is taken}
     \item{\code{LF.times}}{Date of first landfall}
@@ -39,21 +39,23 @@ Named US Atlantic Hurricanes
   adjusting for the severity of the storm than those with male names.
 }
 \source{
-  \url{http://www.icatdamageestimator.com/}
+  \url{https://www.icat.com/storms/catastrophe-resources}
   Deaths except for Audrey and Katrina, are in the Excel file
   that is available from
-  \url{http://www.pnas.org/content/suppl/2014/05/30/1402786111.DCSupplemental}
+  \url{https://www.pnas.org/doi/10.1073/pnas.1402786111}
+  
   NOAA Monthly Weather Reports (MWRs) supplied the numbers of deaths for
   all except Donna, Celia, Audrey and Katrina.  The figure for Celia is
-  from \url{http://www.nhc.noaa.gov/pdf/NWS-TPC-5.pdf}.  For the other
-  three hurricanes it is from the Atlantic hurricane list in Wikipedia
+  from \url{https://www.nhc.noaa.gov/pdf/NWS-TPC-5.pdf}.  For the other
+  three hurricanes, it is from the Atlantic hurricane list in Wikipedia
   (see the references.)
 }
 \references{
-  \url{http://www.icatdamageestimator.com/}
   \url{https://www.aoml.noaa.gov/hrd/hurdat/mwr_pdf/}
-  \url{http://en.wikipedia.org/wiki/List_of_Atlantic_hurricanes}
-  \url{http://www.pnas.org/cgi/doi/10.1073/pnas.1402786111}
+  \url{https://en.wikipedia.org/wiki/List_of_Atlantic_hurricanes}
+  \url{https://www.nhtsa.gov/file-downloads}
+
+Jung, Kiju, et al. "Female hurricanes are deadlier than male hurricanes." Proceedings of the National Academy of Sciences 111.24 (2014): 8782-8787.
 }
 \examples{
 data(hurricNamed)

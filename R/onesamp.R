@@ -1,6 +1,6 @@
 "onesamp" <-
 function(dset, x = "unsprayed", y = "sprayed", xlab = NULL, ylab = NULL, 
-	dubious = NULL, conv = NULL, dig = 2)
+	dubious = NULL, conv = NULL, dig = 2, ...)
 {
 	if(!is.null(conv))
 		dset <- round(dset * conv, 1)
@@ -20,7 +20,7 @@ function(dset, x = "unsprayed", y = "sprayed", xlab = NULL, ylab = NULL,
 	ylim <- range(c(xv[!omit], yv[!omit]))
 	xlim <- ylim
 	plot(dset[!omit, xname], dset[!omit, yname], pch = 1, lwd = 1, xlab = 
-		xlabel, ylab = ylabel, xlim = xlim, ylim = ylim)
+		xlabel, ylab = ylabel, xlim = xlim, ylim = ylim, asp=1, ...)
 	if(sum(omit) != 0) {
 		points(dset[omit, xname], dset[omit, yname], pch = 4)
 	}

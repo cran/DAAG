@@ -9,7 +9,7 @@ whether there was any benefit to using the paired design.
 }
 \usage{
 onesamp(dset, x="unsprayed", y="sprayed", xlab=NULL, ylab=NULL,
-        dubious=NULL, conv=NULL, dig=2)
+        dubious=NULL, conv=NULL, dig=2, ...)
 }
 \arguments{
   \item{dset}{a matrix or dataframe having two columns}
@@ -21,6 +21,7 @@ onesamp(dset, x="unsprayed", y="sprayed", xlab=NULL, ylab=NULL,
     specifying points that are to be omitted}
   \item{conv}{scaling factor that should be applied to data}
   \item{dig}{round SE to this number of digits for dispplay on graph }
+  \item{...}{Further arguments, to be passed to \code{plot()}}
 }
 \value{
 

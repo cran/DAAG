@@ -1,5 +1,6 @@
 \name{geophones}
 \alias{geophones}
+\docType{data}
 \title{Seismic Timing Data}
 \usage{geophones}
 \description{

@@ -34,7 +34,7 @@ bsnVaryNvar(m = 100, nvar = nvmax:50, nvmax = 3, method = "exhaustive",
               plotit = TRUE, xlab = "# of variables from which to select",
               ylab = "p-values for t-statistics", main = paste("Select 'best'",
                                                   nvmax, "variables"),
-              details = FALSE, really.big = TRUE, smooth = TRUE)
+              details = FALSE, really.big = TRUE, smooth = TRUE, ...)
 }
 \arguments{
   \item{m}{the number of observations to be simulated, ignored if X is supplied.}

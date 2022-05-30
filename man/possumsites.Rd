@@ -5,7 +5,7 @@
 \description{
 The \code{possumsites} data frame consists of Longitudes, Latitudes,
 and altitudes for the seven sites from Southern Victoria to central Queensland
-where the \code{possum} observations were made.
+where the \code{\link{possum}} observations were made.
 }
 \format{
   This data frame contains the following columns:
@@ -20,7 +20,7 @@ Lindenmayer, D. B., Viggers, K. L., Cunningham, R. B., and
 Donnelly, C. F. 1995. Morphological variation among columns of the
 mountain brushtail possum, Trichosurus caninus Ogilby
 (Phalangeridae: Marsupiala). Australian Journal of Zoology 43:
-449-458. 
+449-458.
 }
 \examples{
 require(oz)

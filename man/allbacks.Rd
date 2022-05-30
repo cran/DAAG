@@ -1,5 +1,6 @@
 \name{allbacks}
 \alias{allbacks}
+\docType{data}
 \title{Measurements on a Selection of Books}
 \usage{allbacks}
 \description{

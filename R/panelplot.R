@@ -1,7 +1,7 @@
 "panelplot" <-
 function (data, panel = points, totrows = 3, totcols = 2, oma = rep(2.5,
                                                               4),
-par.strip.text = NULL)
+par.strip.text = NULL, ...)
 {
     opar <- par(mfrow = c(totrows, totcols), mar = rep(0, 4),
                 oma = oma)
@@ -31,7 +31,7 @@ par.strip.text = NULL)
         }
         else strip.text <- NULL
 #        plot.new()
-        plot.window(unique(xlim), unique(ylim))
+        plot.window(unique(xlim), unique(ylim), ...)
         if (!is.null(strip.text)) {
             chh <- par()$cxy[2]
             ht <- par()$usr[4] - 0.725 * chh
@@ -40,6 +40,6 @@ par.strip.text = NULL)
             text(xmid, ht + chh * 0.35, strip.text, cex = cex.strip)
         }
         panel(lis, nrows = i, ncols = j)
-        box()
+        box(...)
     }
 }

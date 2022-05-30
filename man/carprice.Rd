@@ -1,5 +1,6 @@
 \name{carprice}
 \alias{carprice}
+\docType{data}
 \title{US Car Price Data}
 \usage{carprice}
 \description{

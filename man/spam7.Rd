@@ -4,17 +4,19 @@
 \usage{spam7}
 \description{
 The data consist of 4601 email items, of which 1813 items were identified
-as spam.
+as spam.  This is a subset of the full dataset, with six only of the
+57 explanatory variables in the complete dataset.
 }
 \format{
-  This data frame contains the following columns:
+  Columns included are:
   \describe{
-    \item{crl.tot}{total length of words in capitals}
-    \item{dollar}{number of occurrences of the \$ symbol}
-    \item{bang}{number of occurrences of the ! symbol}
-    \item{money}{number of occurrences of the word `money'}
-    \item{n000}{number of occurrences of the string `000'}
-    \item{make}{number of occurrences of the word `make'}
+    \item{crl.tot}{total length of uninterrupted sequences of capitals}
+    \item{dollar}{Occurrences of `\$', as percent of total number of characters}
+    \item{bang}{Occurrences of `!', as percent of total number of characters}
+    \item{money}{Occurrences of `money', as percent of total number of words}
+    \item{n000}{Occurrences of the string `000', as percent of total
+      number of words}
+    \item{make}{Occurrences of `make', as \% of total number of words}
     \item{yesno}{outcome variable, a factor with levels
     \code{n} not spam,
     \code{y} spam}
@@ -23,9 +25,8 @@ as spam.
 \source{
  George Forman, Hewlett-Packard Laboratories
 
-These data are available from the University
-of California at Irvine Repository of Machine Learning Databases
-and Domain Theories. The address is:  http://www.ics.uci.edu/~Here
+The complete dataset, and documentation, are available from
+\href{https://archive.ics.uci.edu/ml/datasets/spambasehttps://archive.ics.uci.edu/ml/datasets/spambase/}{Spam database}
 }
 \examples{
 require(rpart)
