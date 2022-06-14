@@ -3,20 +3,20 @@
 \docType{data}
 \title{Australian athletes data set}
 \description{
-  These data were collected in a study of how 
-  data on various characteristics of the bloood varied with sport
-  body size and sex of the athlete.
+  These data were collected in a study of how data on 
+  various characteristics of the blood varied with sport,
+  body size, and sex of the athlete.
 }
 \usage{data(ais)}
 \format{
   A data frame with 202 observations on the following 13 variables.
   \describe{
-    \item{rcc}{red blood cell count, in \eqn{10^{12} l^{-1}}{}}
-    \item{wcc}{while blood cell count, in \eqn{10^{12}}{} per liter}
+    \item{rcc}{red blood cell count, in \eqn{10^{12} l^{-1}}}
+    \item{wcc}{while blood cell count, in \eqn{10^{12}} per liter}
     \item{hc}{hematocrit, percent}
     \item{hg}{hemaglobin concentration, in g per decaliter}
-    \item{ferr}{plasma ferritins, ng \eqn{dl^{-1}}{}}
-    \item{bmi}{Body mass index, kg \eqn{cm^{-2} 10^2}{}}
+    \item{ferr}{plasma ferritins, ng \eqn{dl^{-1}}}
+    \item{bmi}{Body mass index, kg \eqn{cm^{-2} 10^2}}
     \item{ssf}{sum of skin folds}
     \item{pcBfat}{percent Body fat}
     \item{lbm}{lean body mass, kg}

@@ -1,4 +1,4 @@
-fcadeefd4d1233402ec0537baf817b0c *DESCRIPTION
+b023a27eb3eef6b77fc686cbd23807aa *DESCRIPTION
 f85f622b4a78455eddc85a28371eaf58 *NAMESPACE
 fe569aba9ea6e019fd6f6d57d44763dc *NEWS
 036650b6491ae9bfb61b3bcaeb614315 *R/CVbinary.R
@@ -55,7 +55,7 @@ cdf7af3dc58e365c27825a27db60780e *R/sumry.R
 a98067922ef849862d28e021672cd070 *R/twotPermutation.R
 da7cdfc9ebe32d9d709edfd0b23f01bd *R/vif.R
 34a9bf694e44b3eefb822d140f34a10c *README.md
-a27c8744e1e0ad3838738563fb051e8d *build/partial.rdb
+a821839e5440b5506608c6394d232e49 *build/partial.rdb
 7d3742c707e4414f62d87a90084916b3 *build/vignette.rds
 9887d95ea7f0d0d5bee75f8eba67e899 *data/ACF1.rda
 de7c16c42f8ceb5f6f35c1150cdb546b *data/Cars93.summary.rda
@@ -218,7 +218,7 @@ a8ff3e00800815dec1c75837b0562db6 *man/Cars93.summary.Rd
 d5ec40b15a4195373e15d524108fadbe *man/Manitoba.lakes.Rd
 b71d2f6f926c0d40855ba3e1926afc5c *man/SP500W90.Rd
 ab54feefdee4bbc1da15c14508deec51 *man/SP500close.Rd
-8892662bb5f6d444238efb3372a402f7 *man/ais.Rd
+03ef5ecfae3573f9fc0bcc207145c038 *man/ais.Rd
 5b5380250961010a70fa163288d85177 *man/align2D.Rd
 3cb447cf53fd87e3886f716944daeded *man/allbacks.Rd
 d900c66c0401db91cdcba22f4ae7dac7 *man/anesthetic.Rd
@@ -231,7 +231,7 @@ cb4daa04c71f4ef240cf4d74b79d35d4 *man/antigua.Rd
 5a0859f4ef095f4b0e99d45dcbf2ff6a *man/biomass.Rd
 ee986c86230732b3f28a8649f19476f7 *man/bomregions2021.Rd
 aa487fc8a1a6a0f94fc74114ef8b5979 *man/bomsoi.Rd
-ee0045c282e6f808d30c885093712aac *man/bostonc.Rd
+06349e76d7a8f9b76683ab6e6b66dd70 *man/bostonc.Rd
 d6f085b10bc5e971d72954c735c56aff *man/bounce.Rd
 9aa99bdcc12b17e3a69e8ec956251d5b *man/capstring.Rd
 1a41bfc2a0e15ed0cc93f402d7ee9cbb *man/carprice.Rd
@@ -252,7 +252,7 @@ d4b474a022e35ff2e7835a6999dfb48f *man/dengue.Rd
 c0026a642b3562ae36f3559a9cdf7872 *man/dewpoint.Rd
 3629ebe82ddc20e20fb1988941d5f206 *man/droughts.Rd
 6ba54683a1bb067e673b78eb6a759fc8 *man/edcCO2.Rd
-a663f6b3478340b5c7407cc966f7b5db *man/edcT.Rd
+756cb50ae300c57151cbac1cf5fe77f3 *man/edcT.Rd
 b218619f0ca35b82f5f1023652dfe5f2 *man/elastic1.Rd
 feec0057410452bc60b09dd72a3dcbea *man/elasticband.Rd
 05126dc11435efaf40a348610b3af288 *man/errorsINseveral.Rd
@@ -342,7 +342,7 @@ d8623bc345bbe3ddc8048012e231196e *man/rice.Rd
 59ce10f5ed8afb9248e31e6c2e17d10d *man/socsupport.Rd
 c29b9e39a64a39a91f2d9be382372062 *man/softbacks.Rd
 bc66d08037f822fef983485ee90f1157 *man/sorption.Rd
-cabfc8202d41a6c7cd9ee1252dddc3ea *man/spam7.Rd
+36821c565a8129d225ba2da5e17ea376 *man/spam7.Rd
 cf5c2aa1b30299bb8d9e84c279c7a8f1 *man/stVincent.Rd
 db54e3e8e4cd7064c5b09a4af1241270 *man/sugar.Rd
 5317b3e502081496583034ca2b75c460 *man/sumry.Rd

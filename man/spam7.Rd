@@ -11,12 +11,12 @@ as spam.  This is a subset of the full dataset, with six only of the
   Columns included are:
   \describe{
     \item{crl.tot}{total length of uninterrupted sequences of capitals}
-    \item{dollar}{Occurrences of `\$', as percent of total number of characters}
+    \item{dollar}{Occurrences of the dollar sign, as percent of total number of characters}
     \item{bang}{Occurrences of `!', as percent of total number of characters}
     \item{money}{Occurrences of `money', as percent of total number of words}
     \item{n000}{Occurrences of the string `000', as percent of total
       number of words}
-    \item{make}{Occurrences of `make', as \% of total number of words}
+    \item{make}{Occurrences of `make', as a percent of total number of words}
     \item{yesno}{outcome variable, a factor with levels
     \code{n} not spam,
     \code{y} spam}
