@@ -2,9 +2,9 @@
 \alias{frostedflakes}
 \docType{data}
 \title{Frosted Flakes data}
-\usage{elastic1}
+\usage{frostedflakes}
 \description{
-The \code{frosted flakes} data frame has 101 rows and 2 columns
+The \code{frosted flakes} data frame has 100 rows and 2 columns
 giving the sugar concentration (in percent) for 25 g samples
 of a cereal as measured by 2 methods -- high performance liquid
 chromatography (a slow accurate lab method) and a quick method

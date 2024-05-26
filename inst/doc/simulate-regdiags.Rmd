@@ -69,8 +69,8 @@ plot(mftime.lm, which=1)
 ```
 
 ```{r cap1, echo=F}
-cap1 <- "Record times for hill races are compared -- females versus
-  males." 
+cap1 <- "Record times for hill races are compared -- 
+females versus males." 
 ```
 
 

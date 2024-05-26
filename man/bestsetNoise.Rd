@@ -125,9 +125,9 @@ The function \code{bsnVaryVvar} makes repeated calls to
     fewer columns of predictors. If \code{tcrit} is non-NULL, and there
     is no model for which all coefficients have \emph{t}-statistics
     less than \code{tcrit} in absolute value, \code{u1} will be NULL.}
-  \code{tcrit}{For each model, the minimum of the absolute values of
+  \item{tcrit}{For each model, the minimum of the absolute values of
   the \emph{t}-statistics.}
-  \code{regsubsets_obj}{The object returned by the call to \code{regsubsets}.}
+  \item{regsubsets_obj}{The object returned by the call to \code{regsubsets}.}
   }
 
   \note{These functions are primarily designed to demonstrate the biases

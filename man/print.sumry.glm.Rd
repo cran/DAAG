@@ -31,7 +31,7 @@
     are printed.}  
   \item{deviance.residuals}{logical. If \code{TRUE}, deviance residuals
     are printed.}      
-  \item{show.iter}{\code{NULL} or {integer}. If \code{NULL}, or if
+  \item{show.iter}{\code{NULL} or \code{integer}. If \code{NULL}, or if
   the number of iterations is greater than the specified integer,
   then the number of iterations will be printed.}    
   \item{\dots}{further arguments passed to or from other methods.}

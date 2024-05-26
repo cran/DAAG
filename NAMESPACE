@@ -25,7 +25,7 @@ importFrom("graphics", "abline", "axis", "box", "legend", "lines",
 importFrom("methods", "as")
 importFrom(Rdpack,reprompt)
 importFrom("grDevices", "adjustcolor")
-importFrom("utils", "modifyList")
+importFrom("utils", "modifyList", "write.table")
 importFrom("stats", "anova", "as.formula", "coef", "complete.cases",
             "cooks.distance", "cor", "density", "deriv", "deviance",
             "df.residual", "fitted", "formula", "glm", "hatvalues",
@@ -36,4 +36,4 @@ importFrom("stats", "anova", "as.formula", "coef", "complete.cases",
             "summary.aov", "summary.lm", "t.test", "terms", "var",
             "weights", "naprint", "printCoefmat", "setNames",
             "summary.glm", "symnum")
- importFrom("utils", "write.table")
+

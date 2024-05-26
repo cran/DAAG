@@ -18,8 +18,8 @@ library(latticeExtra)
 #  plot(mftime.lm, which=1)
 
 ## ----cap1, echo=F-------------------------------------------------------------
-cap1 <- "Record times for hill races are compared -- females versus
-  males." 
+cap1 <- "Record times for hill races are compared -- 
+females versus males." 
 
 ## ----mf, fig.width=4.0, fig.height=4.25, eval=TRUE, echo=FALSE, out.width="47%", fig.show='hold', fig.cap=cap1----
 plot(timef~time, data=nihills,

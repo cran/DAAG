@@ -1,4 +1,19 @@
-Changes in DAAG version 1.25.1-3
+Changes in DAAG version 1.25.5
+   o Add alc2018 dataset supplementing grog dataset with data for the
+     years 2005 to 2018.
+   o The qgam package, with functions qgam (single quantile) and mgam 
+     (multiple quantiles) that allow for automatic selection of 
+     smoothing parameters when fitting quantiles, replaces quantreg in 
+     vignette simulate-varselect and in function bsnVaryNvar().
+
+Changes in DAAG version 1.25.4-2
+   o Add repPsych dataset holding summary results from Reproducibility
+     Study: Psychology
+   o The function DAAGtheme() has been modified to left adjust 
+     main titles and to use font 1.
+   o Correct stated number of rows in the frostedflakes dataset to 100.
+
+Changes in DAAG version 1.25.4
    o A number of URLs have been updated.
    o The bomregions2021 dataset updates the bomregions data 
      to 2021.

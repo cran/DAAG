@@ -27,7 +27,7 @@ Columns by Rows layout for plots from the simulations.
 See \code{type} as in \code{\link{plot.lm}}.
 }
   \item{show}{
-Specify \code{points} or {residuals}.
+Specify \code{points} or \code{residuals}.
 }
   \item{...}{Other parameters to be passed to plotting functions}
 }

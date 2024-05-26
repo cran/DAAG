@@ -71,11 +71,16 @@ selection.
 ```{r cap1, echo=F}
 cap1 <- "$p$-values from the R function  `lm()`, versus number of
   variables available for selection."
+```
 
-```{r exhaust, eval=TRUE, fig.width=5, fig.height=3.75, echo=FALSE, message=FALSE, out.width="60%", fig.cap=cap1}
+```{r exhaust, eval=TRUE, echo=FALSE}
+#| fig.width: 5
+#| fig.height: 3.75
+#| message: FALSE
+#| out.width: "60%"
+#| fig.cap: cap1
 ## Code
-suppressMessages(library(quantreg, quietly=TRUE))
-library(splines, quietly=TRUE)
+suppressPackageStartupMessages(library(qgam, quietly=TRUE))
 set.seed(37)   # Use to reproduce graph that is shown
 bsnVaryNvar(m=100, nvar=3:50, nvmax=3)
 ```

@@ -12,18 +12,15 @@ suppressMessages(library(DAAG, quietly=TRUE, warn.conflicts=FALSE))
 cap1 <- "$p$-values from the R function  `lm()`, versus number of
   variables available for selection."
 
-
-## ----exhaust, eval=TRUE, fig.width=5, fig.height=3.75, echo=FALSE, message=FALSE, out.width="60%", fig.cap=cap1----
+## ----exhaust, eval=TRUE, echo=FALSE-------------------------------------------
 ## Code
-suppressMessages(library(quantreg, quietly=TRUE))
-library(splines, quietly=TRUE)
+suppressPackageStartupMessages(library(qgam, quietly=TRUE))
 set.seed(37)   # Use to reproduce graph that is shown
 bsnVaryNvar(m=100, nvar=3:50, nvmax=3)
 
 ## ----exhaust, eval=FALSE, echo=TRUE-------------------------------------------
 #  ## Code
-#  suppressMessages(library(quantreg, quietly=TRUE))
-#  library(splines, quietly=TRUE)
+#  suppressPackageStartupMessages(library(qgam, quietly=TRUE))
 #  set.seed(37)   # Use to reproduce graph that is shown
 #  bsnVaryNvar(m=100, nvar=3:50, nvmax=3)
 

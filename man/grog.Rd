@@ -1,5 +1,6 @@
 \name{grog}
 \alias{grog}
+\alias{alc2018}
 \docType{data}
 \title{Alcohol consumption in Australia and New Zealand}
 \description{
@@ -29,6 +30,8 @@ beer, wine, and spirits (including spirit-based products).
   line from later years.
 }
 \source{Australian data are from \url{https://www.abs.gov.au}.
+  For the most recent data, go to
+  \url{https://www.abs.gov.au/statistics/health/health-conditions-and-risks/apparent-consumption-alcohol-australia}
   For New Zealand data, go to
   \url{https://infoshare.stats.govt.nz/} Click on 'Industry sectors'
   and then on 'Alcohol Available for Consumption - ALC'.
